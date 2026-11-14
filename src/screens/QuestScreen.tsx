@@ -1,11 +1,11 @@
 import { Text, View } from 'react-native';
-import { quests } from '../catalog/quests';
+import { npcs, quests, regions } from '../catalog/quests';
 import { Button, Card, CheckRow, Choice, Heading, Page, SourceLink, ui } from '../components/ui';
 import { currentPart, updateQuest } from '../domain/save';
 import { useProgress } from '../state/ProgressProvider';
-import { questStatusLabels } from './QuestsScreen';
+import { questKindLabels, questStatusLabels } from '../catalog/query';
 
-export function QuestScreen({ id, onParties }: { id: string; onParties: () => void }) {
+export function QuestScreen({ id, onParties, onQuest }: { id: string; onParties: () => void; onQuest: (id: string) => void }) {
   const quest = quests.find(quest => quest.id === id);
   const { data, service } = useProgress();
   const { character, run } = currentPart(data);
@@ -20,6 +20,16 @@ export function QuestScreen({ id, onParties }: { id: string; onParties: () => vo
         onPress={() => void service.mutate(save => updateQuest(save, id, value => ({ ...value, status })))} />)}</View>
       <Text style={ui.caption}>Le statut global est indépendant des étapes cochées.</Text>
     </Card> : <Button title="Choisir une partie pour suivre cette quête" onPress={onParties} />}
+    <Card>
+      <Text style={ui.label}>{questKindLabels[quest.kind ?? 'quest']} · Départ : {regions.find(region => region.id === quest.startRegionId)?.name}</Text>
+      <Text style={ui.body}>Personnages : {[quest.npcId, ...(quest.relatedNpcIds ?? [])].map(id => npcs.find(npc => npc.id === id)?.name).join(', ')}</Text>
+      <Text style={ui.caption}>Lieux : {quest.regionIds.map(id => regions.find(region => region.id === id)?.name).join(' · ')}</Text>
+    </Card>
+    {!!quest.relatedQuestIds?.length && <Card>
+      <Heading>Parcours associés</Heading>
+      <Text style={ui.caption}>Consulter une autre fiche ne modifie aucune progression.</Text>
+      {quest.relatedQuestIds.map(id => <Button key={id} title={`Consulter : ${quests.find(entry => entry.id === id)?.name ?? id}`} variant="quiet" onPress={() => onQuest(id)} />)}
+    </Card>}
     {!!quest.requirements.length && <Card><Heading>Prérequis</Heading>{quest.requirements.map(text => <Text key={text} style={ui.body}>{text}</Text>)}</Card>}
     {!!quest.warnings.length && <Card><Heading>À savoir avant de continuer</Heading>{quest.warnings.map(text => <Text key={text} style={ui.body}>{text}</Text>)}</Card>}
     {quest.branches.map(branch => <Card key={branch.id}>

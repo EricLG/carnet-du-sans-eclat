@@ -1,109 +1,22 @@
-import type { Quest, Source } from '../domain/catalog';
+import type { Quest } from '../domain/catalog';
+import { questScope } from './questScope';
+import { pilotQuests } from './quests/pilot';
+import { limgraveQuests } from './quests/limgrave';
+import { liurniaQuests } from './quests/liurnia';
+import { roundtableQuests } from './quests/roundtable';
+import { lateQuests } from './quests/late';
+import { encountersQuests } from './quests/encounters';
 
-const source = (label: string, url: string): Source => ({ label, url, verifiedAt: '2026-11-14' });
-export const catalogVersion = '2026.11.14.1';
-export const regions = [
-  { id: 'limgrave', name: 'Nécrolimbe' }, { id: 'liurnia', name: 'Liurnia' },
-  { id: 'caelid', name: 'Caelid' }, { id: 'altus', name: 'Plateau Altus' },
-  { id: 'gelmir', name: 'Mont Gelmir' }, { id: 'underground', name: 'Régions souterraines' },
-  { id: 'roundtable', name: 'Table ronde' },
-];
-export const npcs = [
-  { id: 'npc.roderika', name: 'Roderika' }, { id: 'npc.boc', name: 'Boc' },
-  { id: 'npc.kenneth', name: 'Kenneth Haight' }, { id: 'npc.ranni', name: 'Ranni' }, { id: 'npc.sellen', name: 'Sellen' },
-];
-export const quests: Quest[] = [
-  {
-    id: 'quest.roderika', npcId: 'npc.roderika', name: 'Roderika', content: 'base', regionIds: ['limgrave', 'roundtable'],
-    summary: 'Aider Roderika à devenir harmonisatrice spirituelle.', requirements: ['Accéder à la Table ronde.'],
-    warnings: ['Le passage en Liurnia ou la défaite de Godrick peut déplacer Roderika et faire sauter sa rencontre initiale, sans empêcher l’harmonisation.'],
-    rewards: ['Accès à l’amélioration des cendres d’invocation.', 'Méduse spirituelle et graine dorée selon les étapes suivies.'],
-    sources: [source('Eldenpedia — Roderika', 'https://eldenring.wiki.gg/wiki/Roderika')], branches: [],
-    steps: [
-      { id: 'roderika.shack', title: 'Rencontrer Roderika', location: 'Cabane de Valorage', detail: 'Épuiser ses dialogues pour recevoir la méduse spirituelle.', optional: true },
-      { id: 'roderika.memento', title: 'Rapporter le souvenir des chrysalides', location: 'Château de Voilorage → cabane', detail: 'Trouver le souvenir près du rejeton greffé puis le lui apporter avant son départ.', optional: true },
-      { id: 'roderika.hold', title: 'Retrouver Roderika à la Table ronde', location: 'Table ronde', detail: 'Lui parler près de la cheminée.' },
-      { id: 'roderika.hewg', title: 'Parler de Roderika à Hewg', location: 'Table ronde', detail: 'Interroger Hewg à son sujet, puis lui rapporter ses propos.' },
-      { id: 'roderika.convince', title: 'Convaincre Hewg de l’aider', location: 'Table ronde', detail: 'Retourner auprès de Hewg et poursuivre les dialogues concernant son apprentissage.' },
-      { id: 'roderika.tuning', title: 'Débloquer l’harmonisation', location: 'Table ronde', detail: 'Recharger la zone et parler à Roderika, désormais installée face à Hewg.' },
-      { id: 'roderika.gesture', title: 'Obtenir son geste de remerciement', location: 'Table ronde', detail: 'Améliorer une invocation au moins à +4, puis lui reparler.', optional: true },
-    ],
-  },
-  {
-    id: 'quest.boc', npcId: 'npc.boc', name: 'Boc le couturier', content: 'base', regionIds: ['limgrave', 'liurnia', 'altus'],
-    summary: 'Accompagner le couturier et choisir son dénouement.', requirements: [],
-    warnings: ['Donner une larme larvaire à Boc conduit à sa mort après sa renaissance.'],
-    rewards: ['Retouches gratuites par Boc.', 'Possibilité de retoucher certains vêtements de demi-dieux avec l’aiguille d’or.'],
-    sources: [source('Eldenpedia — Boc', 'https://eldenring.wiki.gg/wiki/Boc_the_Seamster'), source('PC Gamer — quête de Boc', 'https://www.pcgamer.com/elden-ring-boc-quest/')],
-    branches: [{ id: 'boc.fate', label: 'Le souhait de Boc', options: [
-      { id: 'reassure', label: 'Le rassurer', consequence: 'Boc reste vivant et conserve son service de couture.' },
-      { id: 'rebirth', label: 'La renaissance', consequence: 'Boc devient humain puis meurt après rechargement.' },
-    ] }],
-    steps: [
-      { id: 'boc.tree', title: 'Libérer Boc de son illusion', location: 'Près du lac d’Agheel, au nord', detail: 'Repérer sa voix et frapper ou rouler contre le petit arbre qui le dissimule.' },
-      { id: 'boc.needle', title: 'Rendre son aiguille à Boc', location: 'Grotte du littoral', detail: 'Vaincre les deux chefs semi-humains et lui remettre l’aiguille récupérée.' },
-      { id: 'boc.travel', title: 'Retrouver son service en Liurnia', location: 'Falaises surplombant le lac', detail: 'Parler à Boc pour profiter des retouches gratuites.', optional: true },
-      { id: 'boc.gold', title: 'Lui donner l’aiguille d’or', location: 'Église des vœux, puis auprès de Boc', detail: 'Prendre l’aiguille dans le coffre et posséder un vêtement de demi-dieu retouchable pour débloquer le dialogue.', optional: true },
-      { id: 'boc.beautiful', title: 'Dire à Boc qu’il est beau', location: 'Rempart oriental de Leyndell', detail: 'Utiliser devant lui la caboche « Tu es beau », trouvée au village des ermites, puis confirmer ses paroles.', branch: { groupId: 'boc.fate', optionId: 'reassure' } },
-      { id: 'boc.rebirth', title: 'Lui offrir une larme larvaire', location: 'Leyndell → grande bibliothèque', detail: 'Retrouver Boc à l’académie après sa renaissance. Ce choix est fatal.', branch: { groupId: 'boc.fate', optionId: 'rebirth' } },
-    ],
-  },
-  {
-    id: 'quest.kenneth', npcId: 'npc.kenneth', name: 'Kenneth Haight', content: 'base', regionIds: ['limgrave'],
-    summary: 'Libérer le fort Haight et accompagner la recherche d’un nouveau dirigeant.', requirements: [],
-    warnings: ['La conclusion dépend aussi de Nepheli Loux. Nettoyer le fort ne suffit pas à déclencher la scène finale.'],
-    rewards: ['Dague en acier-monde après la libération du fort.'],
-    sources: [source('eXputer — Kenneth Haight', 'https://eldenring.exputer.com/quests/kenneth-haight-s-quest')], branches: [],
-    steps: [
-      { id: 'kenneth.meet', title: 'Accepter sa demande', location: 'Ruines au nord du bois brumeux', detail: 'Épuiser les dialogues de Kenneth sur la structure en ruine.' },
-      { id: 'kenneth.fort', title: 'Libérer le fort Haight', location: 'Fort Haight', detail: 'Éliminer les occupants, notamment le chevalier dans la partie supérieure.' },
-      { id: 'kenneth.report', title: 'Faire son rapport', location: 'Ruines au nord du bois brumeux', detail: 'Retourner voir Kenneth, recevoir la dague et accepter de le servir.' },
-      { id: 'kenneth.return', title: 'Retrouver Kenneth au fort', location: 'Fort Haight', detail: 'Épuiser ses nouveaux dialogues concernant la recherche d’un dirigeant.' },
-      { id: 'kenneth.nepheli', title: 'Avancer la quête de Nepheli', location: 'Table ronde', detail: 'Remettre le roi des faucons des tempêtes à Nepheli et vaincre Morgott.' },
-      { id: 'kenneth.throne', title: 'Retrouver Kenneth et Nepheli', location: 'Salle du trône de Voilorage', detail: 'Après les conditions précédentes, se reposer et retourner dans la salle du trône.' },
-    ],
-  },
-  {
-    id: 'quest.ranni', npcId: 'npc.ranni', name: 'Ranni la sorcière', content: 'base', regionIds: ['liurnia', 'caelid', 'underground'],
-    summary: 'Servir Ranni et ouvrir la voie de l’Âge des étoiles.',
-    requirements: ['Accéder aux Trois Sœurs après le manoir de Caria.', 'Vaincre Rennala pour accéder au coffre de la bibliothèque.'],
-    warnings: ['Remettre la lame digicide interrompt les projets de Seluvis : terminer ses objectifs souhaités auparavant.', 'Débloquer cette fin ne la sélectionne pas automatiquement.'],
-    rewards: ['Espadon de la lune obscure.', 'Possibilité de choisir la fin de l’Âge des étoiles.'],
-    sources: [source('eXputer — Ranni', 'https://eldenring.exputer.com/quests/ranni-s-quest'), source('PC Gamer — Ranni', 'https://www.pcgamer.com/elden-ring-ranni-quest-nokron/')], branches: [],
-    steps: [
-      { id: 'ranni.serve', title: 'Entrer au service de Ranni', location: 'Tour de Ranni', detail: 'Accepter sa proposition et parler à ses serviteurs.' },
-      { id: 'ranni.radahn', title: 'Vaincre Radahn', location: 'Château du Lion rouge', detail: 'Terminer le festival pour ouvrir le passage vers Nokron.' },
-      { id: 'ranni.blade', title: 'Récupérer la lame digicide', location: 'Nokron, sanctuaire de la nuit', detail: 'Explorer le quartier inférieur et ouvrir le coffre contenant la lame.' },
-      { id: 'ranni.deliver', title: 'Remettre la lame à Ranni', location: 'Tour de Ranni', detail: 'Recevoir la statue inversée, puis recharger la zone.' },
-      { id: 'ranni.miniature', title: 'Parler à Ranni miniature', location: 'Tour de Renna → lit principal de l’Ainsel', detail: 'Prendre le portail, ramasser la poupée et insister pour lui parler à une grâce.' },
-      { id: 'ranni.shadow', title: 'Vaincre l’ombre funeste', location: 'Bassin des cascades de Nokstella', detail: 'Poursuivre le trajet souterrain pour recevoir la clé du palais abandonné.' },
-      { id: 'ranni.ring', title: 'Prendre l’anneau de la lune noire', location: 'Grande bibliothèque de Raya Lucaria', detail: 'Utiliser la clé sur le coffre près de Rennala.' },
-      { id: 'ranni.astel', title: 'Traverser le lac putréfié et vaincre Astel', location: 'Grand cloître', detail: 'Prendre le cercueil près de la cascade puis franchir l’arène.' },
-      { id: 'ranni.cathedral', title: 'Retrouver Ranni sous la cathédrale', location: 'Cathédrale de Manus Celes', detail: 'Descendre dans la cavité, remettre l’anneau et récupérer l’espadon.' },
-      { id: 'ranni.ending', title: 'Choisir l’Âge des étoiles', location: 'Après le boss final', detail: 'Utiliser la marque bleue de Ranni pour choisir sa fin.', optional: true },
-    ],
-  },
-  {
-    id: 'quest.sellen', npcId: 'npc.sellen', name: 'Sellen la sorcière', content: 'base', regionIds: ['limgrave', 'gelmir', 'caelid', 'liurnia'],
-    summary: 'Explorer la sorcellerie primordiale et choisir entre Sellen et Jerren.',
-    requirements: ['Vaincre Radahn pour les dernières étapes.', 'Vaincre Rennala avant le duel final.'],
-    warnings: ['Les marques rouge et dorée devant la bibliothèque correspondent à deux issues exclusives.'],
-    rewards: ['Avec Sellen : kriss de pierre d’éclat et accès à Spirale d’éclats.', 'Avec Jerren : pierre de forge des dragons anciens.'],
-    sources: [source('Eldenpedia — Sellen', 'https://eldenring.wiki.gg/wiki/Sorceress_Sellen'), source('eXputer — Sellen', 'https://eldenring.exputer.com/quests/sorceress-sellen-s-quest')],
-    branches: [{ id: 'sellen.duel', label: 'Le duel de la bibliothèque', options: [
-      { id: 'sellen', label: 'Aider Sellen', consequence: 'Vaincre Jerren donne accès aux récompenses de Sellen.' },
-      { id: 'jerren', label: 'Aider Jerren', consequence: 'Sellen est tuée ; les récompenses de sa voie deviennent inaccessibles.' },
-    ] }],
-    steps: [
-      { id: 'sellen.teacher', title: 'Devenir son élève', location: 'Cave des ruines du relais', detail: 'Vaincre le boss puis accepter l’enseignement de Sellen.' },
-      { id: 'sellen.azur', title: 'Rencontrer Azur', location: 'Au-delà du village des ermites', detail: 'Recevoir Comète d’Azur et la montrer à Sellen pour obtenir le brise-sceau.' },
-      { id: 'sellen.lusat', title: 'Trouver Lusat', location: 'Antre de Sellia', detail: 'Utiliser le brise-sceau pour atteindre le sorcier, puis informer Sellen.' },
-      { id: 'sellen.radahn', title: 'Terminer le festival', location: 'Château du Lion rouge', detail: 'Vaincre Radahn et épuiser les dialogues de Jerren.' },
-      { id: 'sellen.primal', title: 'Recevoir la pierre d’éclat primordiale', location: 'Ruines du trépas des sorcières', detail: 'Parler au corps emprisonné de Sellen après sa demande.' },
-      { id: 'sellen.body', title: 'Transférer la pierre dans le nouveau corps', location: 'Cave cachée des Trois Sœurs', detail: 'Trouver le corps derrière le mur illusoire de la cave des pantins.' },
-      { id: 'sellen.jerren', title: 'Retrouver Jerren', location: 'Ruines du trépas des sorcières', detail: 'Revenir parler à Jerren après son départ du château.' },
-      { id: 'sellen.help', title: 'Utiliser la marque dorée', location: 'Devant la grande bibliothèque', detail: 'Aider Sellen contre Jerren, puis lui parler dans la bibliothèque.', branch: { groupId: 'sellen.duel', optionId: 'sellen' } },
-      { id: 'sellen.oppose', title: 'Utiliser la marque rouge', location: 'Devant la grande bibliothèque', detail: 'Aider Jerren contre Sellen, puis parler à Jerren pour sa récompense.', branch: { groupId: 'sellen.duel', optionId: 'jerren' } },
-    ],
-  },
-];
+export { regions } from './regions';
+export const catalogVersion = '2026.11.14.2';
+export const npcs = questScope.flatMap(entry => entry.characters.map(character => ({ ...character, questId: entry.questId })));
+const scopeById = new Map(questScope.map(entry => [entry.questId, entry]));
+const extraRegions: Record<string, string[]> = { 'quest.boc': ['capital'], 'quest.kenneth': ['roundtable', 'capital'] };
+export const quests: Quest[] = [pilotQuests, limgraveQuests, liurniaQuests, roundtableQuests, lateQuests, encountersQuests].flat().map(quest => {
+  const entry = scopeById.get(quest.id);
+  if (!entry) throw new Error(`Parcours absent du périmètre : ${quest.id}`);
+  // Ajouts géographiques uniquement : les identifiants et étapes du pilote restent inchangés.
+  return { ...quest, regionIds: [...quest.regionIds, ...(extraRegions[quest.id] ?? [])], kind: entry.kind, startRegionId: entry.startRegionId,
+    relatedNpcIds: entry.characters.filter(character => character.id !== quest.npcId).map(character => character.id),
+    relatedQuestIds: entry.relatedQuestIds };
+});

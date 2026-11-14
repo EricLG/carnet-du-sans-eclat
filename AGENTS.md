@@ -4,8 +4,9 @@
 
 Application mobile de suivi des quêtes d’Elden Ring, conçue pour Android et iOS avec Expo,
 React Native et TypeScript. Le navigateur en émulation mobile sert à valider l’interface.
-Les lots 1 et 2 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
-et les cinq premières quêtes. Le catalogue est partiel. La suite est détaillée dans
+Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
+et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
+dans `docs/QUEST_COVERAGE.md` ; elle ne concerne pas les autres catalogues. La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
 ## Organisation et commandes
@@ -38,6 +39,9 @@ et les cinq premières quêtes. Le catalogue est partiel. La suite est détaill�
 - Séparer le catalogue des quêtes de la progression personnelle ; vérifier les sources
   avant d’ajouter des données du jeu. Ne pas inventer de conditions de quête.
 - Les coches d’objets appartiennent au personnage ; quêtes, boss, grâces et ramassages au cycle.
+- `src/catalog/quests/` contient les fiches régionales et les rencontres ; `questScope.ts` est l’inventaire
+  éditorial indépendant. Ajouter une fiche nécessite des références documentaires, des identifiants
+  stables et un classement cohérent. Vérifier les liens et la couverture avec les tests métier.
 - Le statut global des quêtes est manuel. Aucun effet automatique entre les rubriques ni entre
   branches et coches. Conserver les identifiants pour préserver les sauvegardes.
 - Les erreurs de stockage doivent être visibles. Ne jamais remplacer une sauvegarde illisible.

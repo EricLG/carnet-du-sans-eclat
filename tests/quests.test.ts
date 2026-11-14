@@ -1,12 +1,14 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { npcs, quests, regions } from '../src/catalog/quests';
+import { questScope } from '../src/catalog/questScope';
+import { validateQuestCoverage } from '../src/catalog/coverage';
 import { validateQuests } from '../src/domain/catalog';
 import { addCharacter, currentPart, emptySave, exportSave, parseBackup, updateQuest } from '../src/domain/save';
 
 test('le catalogue livré est valide : identifiants uniques, références et branches existantes', () => {
   assert.deepEqual(validateQuests(quests, regions.map(region => region.id), npcs.map(npc => npc.id)), []);
-  assert.equal(quests.length, 5);
+  assert.deepEqual(validateQuestCoverage(quests, questScope), []);
 });
 test('le contrôle détecte les doublons, références cassées et branches inexistantes', () => {
   const invalid = structuredClone(quests[0]);

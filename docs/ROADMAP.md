@@ -1,13 +1,13 @@
 # Feuille de route
 
-Le projet est livré en plusieurs fois. Cette première livraison couvre les lots 1 et 2.
+Le projet est livré en plusieurs fois. Les lots 1 à 3 sont disponibles dans le navigateur.
 Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 
 | Lot | État | Livraison et critère |
 | --- | --- | --- |
 | 1 — Parties et sauvegarde | Livré web | Personnages/cycles, IndexedDB, export/import avec aperçu et copies. Persistance et erreurs testées. |
 | 2 — Premier suivi de quêtes | Livré web | Roderika, Boc, Kenneth Haight, Ranni et Sellen ; recherche, régions, statut manuel, étapes et branches. |
-| 3 — Quêtes du jeu de base | À réaliser | Compléter et vérifier par régions ; établir le manifeste de couverture, les liens PNJ/quêtes et les points de blocage. |
+| 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
 | 4 — Collection et obtention | À réaliser | Équipement, sorts, cendres, outils, progression et améliorations importantes ; sources multiples et filtres. |
 | 5 — Boss et grâces | À réaliser | Rencontres non réapparaissantes distinctes et grâces activées par cycle ; accès, régions et liens aux objets/quêtes. |
 | 6 — Consolidation | À réaliser | Couverture contrôlée du jeu de base, références, doublons, liens et compteurs sans fausse exhaustivité. |
@@ -29,7 +29,10 @@ Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 
 Publier de petits ensembles vérifiés ; les catalogues restent signalés comme partiels jusqu’au
 contrôle de leur couverture. Le lot 2 fournit un parcours synthétique pour cinq personnages,
-pas un relevé de tous leurs dialogues. Les noms et identifiants pourront être rapprochés
+pas un relevé de tous leurs dialogues. Le lot 3 couvre les 40 parcours retenus dans
+[le manifeste de couverture](QUEST_COVERAGE.md), avec sept rencontres courtes et le récit de
+Melina distingués des 32 quêtes. Les cinq parcours validés conservent leurs identifiants.
+Les catalogues d’objets, de boss et de grâces ne sont pas encore livrés. Les noms et identifiants pourront être rapprochés
 d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
 
 Pour les objets : marchand, boss, ennemi, exploration, dialogue PNJ, quête, échange de souvenir,

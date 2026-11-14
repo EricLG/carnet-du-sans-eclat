@@ -2,18 +2,20 @@
 
 Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 
-## Première livraison : lots 1 et 2
+## Lots 1 à 3 disponibles
 
 - Accueil sombre et doré, avec accès au carnet.
 - Personnages et cycles NG+, avec historique conservé.
 - Sauvegarde automatique IndexedDB et export/import JSON avec aperçu.
 - Imports sous forme de copies : aucune partie existante n’est remplacée.
-- Cinq parcours : Roderika, Boc, Kenneth Haight, Ranni et Sellen.
-- Recherche, filtres par région/statut, étapes cochables et choix de branches.
+- 40 parcours PNJ du jeu de base : 32 quêtes, 7 rencontres courtes et l’histoire de Melina.
+- Fiches réparties par région de départ, avec personnages et parcours associés.
+- Recherche avec noms associés (Edgar, Gowry, Masque d’or…), filtres région/statut/type, étapes cochables et branches.
 - Statut global des quêtes manuel et indépendant des étapes.
-- Toutes les informations visibles, catalogue explicitement **partiel**.
+- Toutes les informations visibles, points de blocage et références documentaires par fiche.
+- [Périmètre de couverture explicite](docs/QUEST_COVERAGE.md), consultable aussi dans le carnet : aucun catalogue d’objets, boss ou grâces à ce stade.
 
-Les autres catalogues, MongoDB et le DLC sont décrits dans [la feuille de route](docs/ROADMAP.md).
+Les catalogues suivants, MongoDB et le DLC sont décrits dans [la feuille de route](docs/ROADMAP.md).
 Ils ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
 présents ; Android et iOS ne sont pas encore validés sur appareil.
 
@@ -73,7 +75,8 @@ refusés sans modifier les données existantes.
 | `npm run ios` | Simulateur iOS sur macOS avec Xcode |
 
 Les tests métier couvrent l’isolation des parties, le NG+, les coches rapides, les erreurs de
-stockage, les exports/imports, les versions incompatibles et les branches de quêtes.
+stockage, les exports/imports, les versions incompatibles, les branches de quêtes, la couverture du catalogue, les liens croisés
+et la compatibilité des identifiants des cinq parcours initiaux.
 
 Pour les parcours navigateur, laisser Expo démarré et lancer une **instance Edge dédiée aux tests**
 depuis PowerShell, dans le dossier du projet :
@@ -85,7 +88,8 @@ npm.cmd run test:browser
 
 Les parcours créent des personnages de test sur `http://127.0.0.1:8081` dans ce profil dédié.
 Ils contrôlent les formats mobiles, la persistance, les choix de quêtes, l’import d’un vrai
-fichier et le téléchargement d’un export. Les captures et fichiers sont dans `.browser-check/`.
+fichier et le téléchargement d’un export. Ils vérifient aussi les recherches par PNJ associé,
+les filtres de type, les liens entre fiches et la persistance d’une nouvelle quête régionale. Les captures et fichiers sont dans `.browser-check/`.
 Le débogage Edge reste limité à la boucle locale ; fermer cette instance après les essais.
 Ne pas utiliser son profil personnel.
 
@@ -119,6 +123,7 @@ src/platform/        Import/export web / natif
 src/theme.ts         Couleurs et polices
 tests/               Tests métier et parcours navigateur
 docs/ROADMAP.md      Lots livrés et restants
+docs/QUEST_COVERAGE.md Périmètre et provenance des parcours PNJ
 AGENTS.md            Consignes pour les agents
 ```
 

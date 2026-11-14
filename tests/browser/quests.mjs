@@ -1,8 +1,14 @@
+import { quests, npcs } from '../../src/catalog/quests.ts';
+import { filterQuests } from '../../src/catalog/query.ts';
 import { APP_ID } from '../../src/config/identity.ts';
 import assert from 'node:assert/strict';
 import { browser } from './cdp.mjs';
 const b = await browser();
 const name = `Quêtes-${Date.now()}`;
+const allResults = `${quests.length} résultats parmi`;
+const filters = { search: '', region: 'all', status: 'all', kind: 'all' };
+const limgraveResults = `${filterQuests(quests, npcs, { ...filters, region: 'limgrave' }).length} résultats parmi`;
+const roderikaResults = `${filterQuests(quests, npcs, { ...filters, search: 'Roderika' }).length} résultats parmi`;
 async function readSave() {
   return b.evaluate(`new Promise((resolve,reject)=>{const request=indexedDB.open(${JSON.stringify(APP_ID)},1);request.onsuccess=()=>{const db=request.result;const read=db.transaction('saves').objectStore('saves').get('progress');read.onsuccess=()=>{resolve(read.result);db.close()};read.onerror=reject};request.onerror=reject})`);
 }
@@ -12,13 +18,37 @@ try {
   await b.click('Parties'); await b.wait('Nom du personnage'); await b.fill('Nom du personnage', name); await b.click('Créer le personnage'); await b.wait(`Nouveau cycle pour ${name}`);
   await b.click('Quêtes'); await b.wait('Mes quêtes');
   await b.layout('quests',390,844); await b.layout('quests',360,800);
-  await b.fill('Rechercher une quête', 'RODÉRIKA'); await b.wait('1 résultat parmi');
+  // Vérifier que la fin de la liste reste atteignable au-dessus de la barre d’onglets.
+  const last = quests.find(q => q.id === 'quest.shabriri');
+  assert.ok(last);
+  const lastLabel = JSON.stringify(`Voir la quête de ${last.name}`);
+  await b.evaluate(`(()=>{const el=[...document.querySelectorAll('[role="button"]')].find(el=>el.getAttribute('aria-label')===${lastLabel});el.scrollIntoView({block:'end'})})()`);
+  await b.layout('quests-bottom',390,844); await b.layout('quests-bottom',360,800);
+  assert.equal(await b.evaluate(`(()=>{const el=[...document.querySelectorAll('[role="button"]')].find(el=>el.getAttribute('aria-label')===${lastLabel});const r=el.getBoundingClientRect();const tab=document.querySelector('[role="tablist"]').getBoundingClientRect();return r.top>=0&&r.bottom<=tab.top+1})()`),true);
+  await b.fill('Rechercher une quête', 'RODÉRIKA'); await b.wait(roderikaResults);
   assert.equal(await b.evaluate(`document.body.innerText.includes('Voir la quête de Ranni')`), false);
-  await b.fill('Rechercher une quête', ''); await b.wait('5 résultats parmi');
+  await b.fill('Rechercher une quête', ''); await b.wait(allResults);
   await b.click('Statut : tous'); await b.click('Échouée'); await b.wait('0 résultats parmi');
-  await b.click('Toutes'); await b.wait('5 résultats parmi');
-  await b.click('Région : toutes'); await b.click('Nécrolimbe'); await b.wait('4 résultats parmi');
-  await b.click('Toutes les régions'); await b.wait('5 résultats parmi');
+  await b.click('Toutes'); await b.wait(allResults);
+  await b.click('Région : toutes'); await b.click('Nécrolimbe'); await b.wait(limgraveResults);
+  await b.click('Toutes les régions'); await b.wait(allResults);
+  await b.click('Voir le périmètre du catalogue'); await b.wait('32 quêtes · 7 rencontres · 1 parcours principal');
+  await b.layout('quest-coverage',390,844); await b.layout('quest-coverage',360,800);
+  await b.click('Masquer le périmètre du catalogue');
+  await b.click('Type : tous'); await b.click('Rencontre'); await b.wait('7 résultats parmi');
+  await b.click('Tous les parcours'); await b.wait(allResults);
+  await b.fill('Rechercher une quête', 'Goldmask'); await b.wait('1 résultat parmi');
+  await b.click('Voir la quête de Frère Corhyn et Masque d’or'); await b.wait('Révéler le secret');
+  await b.click('Révéler le secret'); await b.wait('1 étape cochée');
+  await b.layout('regional-quest',390,844); await b.layout('regional-quest',360,800);
+  await b.send('Page.reload',{ignoreCache:true}); await b.wait('Ouvrir mon carnet'); await b.click('Ouvrir mon carnet'); await b.wait('Mes quêtes');
+  await b.click('Voir la quête de Frère Corhyn et Masque d’or'); await b.wait('Révéler le secret');
+  assert.equal(await b.evaluate(`document.querySelector('[role="checkbox"][aria-label="Révéler le secret"]').getAttribute('aria-checked')`),'true');
+  await b.send('Page.reload',{ignoreCache:true}); await b.wait('Ouvrir mon carnet'); await b.click('Ouvrir mon carnet'); await b.wait('Mes quêtes');
+  await b.click('Voir la quête de Kenneth Haight'); await b.wait('Parcours associés');
+  await b.click('Consulter : Nepheli Loux'); await b.wait('Aider Nepheli à reprendre confiance');
+  await b.click('Consulter : Gostoc le gardien'); await b.wait('Visiter sa boutique finale');
+  await b.send('Page.reload',{ignoreCache:true}); await b.wait('Ouvrir mon carnet'); await b.click('Ouvrir mon carnet'); await b.wait('Mes quêtes');
   await b.click('Voir la quête de Sellen la sorcière'); await b.wait('Le duel de la bibliothèque');
   await b.click('Échouée'); await b.click('Aider Sellen'); await b.click('Devenir son élève');
   await b.wait('1 étape cochée');
@@ -38,7 +68,8 @@ try {
   save=await readSave(); character=save.characters.find(character=>character.id===save.selected.characterId);
   assert.deepEqual(character.runs.find(run=>run.id===save.selected.runId).quests,{});
   const previous=character.runs.find(run=>run.cycle===0).quests['quest.sellen'];
+  assert.equal(character.runs.find(run=>run.cycle===0).quests['quest.corhyn'].steps['corhyn.regression'],true);
   assert.equal(previous.status,'failed'); assert.equal(previous.branches['sellen.duel'],'jerren'); assert.equal(previous.steps['sellen.teacher'],false);
   assert.equal(b.errors.length,0,JSON.stringify(b.errors));
-  console.log('Lot 2: manual status, branching, check/uncheck, reload, cycle isolation and mobile layouts passed');
+  console.log('Lots 2/3 : couverture, recherche PNJ, types, liens entre fiches, statut manuel, branches, persistance et isolation des cycles vérifiés');
 } finally { b.close(); }

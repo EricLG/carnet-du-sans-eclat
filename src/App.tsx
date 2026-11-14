@@ -62,7 +62,7 @@ export default function App() {
           </Stack.Screen>
           <Stack.Screen name="Backup" component={BackupScreen} options={{ title: 'Sauvegardes' }} />
           <Stack.Screen name="Quest" options={{ title: 'Quête' }}>
-            {({ route, navigation }) => <QuestScreen id={route.params.id} onParties={() => navigation.navigate('Notebook', { screen: 'Parties' })} />}
+            {({ route, navigation }) => <QuestScreen id={route.params.id} onQuest={id => navigation.push('Quest', { id })} onParties={() => navigation.navigate('Notebook', { screen: 'Parties' })} />}
           </Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
