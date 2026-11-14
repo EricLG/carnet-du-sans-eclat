@@ -19,6 +19,7 @@ et les cinq premières quêtes. Le catalogue est partiel. La suite est détaill�
 - `app.json` contient la configuration Expo ; `assets/` contient les images du modèle officiel.
 - Installer avec `npm ci` lorsque le fichier de verrouillage existe ; utiliser npm exclusivement.
 - `npm start` : serveur Expo ; `npm run web` : aperçu navigateur.
+- `npm run lint` : analyse ESLint sans avertissement ; `npm run lint:fix` : corrections automatiques.
 - `npm run typecheck` : contrôle TypeScript ; `npm run build:web` : export web dans `dist/`.
 - `npm run android` et `npm run ios` : lancement sur environnement natif configuré.
 - `npm test` : tests métier ; `npm run test:browser` : parcours navigateur (serveur et Edge dédiés requis, voir README).
@@ -46,7 +47,8 @@ et les cinq premières quêtes. Le catalogue est partiel. La suite est détaill�
 
 ## Vérifications et compte rendu
 
-- Après une modification du code : exécuter `npm run typecheck` et `npm run build:web`.
+- Après une modification du code : exécuter `npm run lint`, `npm run typecheck` et `npm run build:web`.
+- Conserver le preset ESLint officiel Expo ; corriger les problèmes signalés plutôt que désactiver globalement les règles.
 - Après une modification visuelle : contrôler les formats 390 × 844 et 360 × 800,
   le défilement, l’absence de débordement horizontal, la lisibilité et les erreurs navigateur.
 - Pour préparer un commit, contrôler les fichiers indexés et exclure dépendances, fichiers générés et données locales.

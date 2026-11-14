@@ -63,6 +63,8 @@ refusés sans modifier les données existantes.
 | --- | --- |
 | `npm start` | Serveur Expo |
 | `npm run web` | Serveur web sur le réseau local, port 8081 |
+| `npm run lint` | Analyse ESLint ; aucun avertissement accepté |
+| `npm run lint:fix` | Corrections automatiques disponibles, puis analyse |
 | `npm run typecheck` | Vérification TypeScript stricte |
 | `npm run build:web` | Export web dans `dist/` |
 | `npm test` | Tests métier et intégrité du catalogue |
@@ -86,6 +88,21 @@ Ils contrôlent les formats mobiles, la persistance, les choix de quêtes, l’i
 fichier et le téléchargement d’un export. Les captures et fichiers sont dans `.browser-check/`.
 Le débogage Edge reste limité à la boucle locale ; fermer cette instance après les essais.
 Ne pas utiliser son profil personnel.
+
+### ESLint
+
+La configuration `eslint.config.js` utilise le [preset officiel Expo](https://docs.expo.dev/guides/using-eslint/)
+au format flat config. Il fournit les contrôles pour React, les Hooks, TypeScript, les imports
+et Expo. Les tests et la configuration disposent aussi des variables globales Node.js.
+Les dépendances, exports web, caches de test et projets natifs générés sont exclus de l’analyse.
+
+`npm run lint` analyse le projet sans modifier les fichiers. `npm run lint:fix` applique les
+corrections automatiques disponibles. Les deux commandes échouent s’il reste des erreurs
+ou des avertissements. Le contrôle des types reste assuré par `npm run typecheck`.
+
+Compatibilité actuelle : le SDK Expo 58 et ses plugins React/import utilisent ESLint 9.
+Cette branche est [en fin de support](https://eslint.org/version-support/) ; passer à ESLint 10
+nécessitera une combinaison de preset et de plugins compatible, sans forcer leurs dépendances.
 
 ## Organisation
 

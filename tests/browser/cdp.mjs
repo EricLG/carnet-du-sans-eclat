@@ -12,7 +12,12 @@ export async function browser() {
     if (message.method === 'Runtime.exceptionThrown') errors.push(message.params.exceptionDetails);
     if (message.method === 'Runtime.consoleAPICalled' && message.params.type === 'error') errors.push(message.params.args);
     const request = pending.get(message.id);
-    if (request) { clearTimeout(request.timer); pending.delete(message.id); message.error ? request.reject(new Error(JSON.stringify(message.error))) : request.resolve(message.result); }
+    if (request) {
+      clearTimeout(request.timer);
+      pending.delete(message.id);
+      if (message.error) request.reject(new Error(JSON.stringify(message.error)));
+      else request.resolve(message.result);
+    }
   };
   function send(method, params = {}) {
     return new Promise((resolve, reject) => { const requestId = ++id; const timer = setTimeout(() => { pending.delete(requestId); reject(new Error(`Timeout ${method}`)); }, 30000);
