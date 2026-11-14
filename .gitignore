@@ -1,0 +1,14 @@
+# Dépendances, fichiers générés et données locales
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+*.tsbuildinfo
+*.tgz
+npm-debug.*
+.DS_Store
+.env*.local
+/android/
+/ios/
+.browser-check/
