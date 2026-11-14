@@ -1,10 +1,11 @@
 import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { theme } from '../theme';
 import { APP_NAME } from '../config/identity';
+import { Button } from '../components/ui';
 
 const { colors, fonts } = theme;
 
-export function HomeScreen() {
+export function HomeScreen({ onOpen }: { onOpen: () => void }) {
   return (
     <ScrollView
       style={styles.screen}
@@ -56,6 +57,7 @@ export function HomeScreen() {
             Retrouvez vos personnages et leurs voyages. Votre progression reste sur cet appareil,
             avec une sauvegarde exportable à tout moment.
           </Text>
+          <Button title="Ouvrir mon carnet" onPress={onOpen} />
           <View style={styles.noticeFooter}>
             <View accessible={false} style={styles.statusDot} />
             <Text style={styles.statusText}>Votre aventure, un voyage à la fois</Text>

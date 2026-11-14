@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import { browser } from './cdp.mjs';
+const b = await browser();
+try {
+  await b.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+  await b.send('Page.navigate', { url: 'http://127.0.0.1:8081' });
+  await b.wait('Ouvrir mon carnet');
+  await b.click('Ouvrir mon carnet');
+  await b.wait('Mes quêtes');
+  await b.click('Parties');
+  await b.wait('Créer le personnage');
+  const name = `Test-${Date.now()}`;
+  await b.fill('Nom du personnage', name);
+  await b.click('Créer le personnage');
+  await b.wait(`Nouveau cycle pour ${name}`);
+  await b.click(`Nouveau cycle pour ${name}`);
+  await b.click('Confirmer le nouveau cycle');
+  await b.wait('NG+');
+  await b.layout('parties', 390, 844);
+  await b.layout('parties', 360, 800);
+  await b.click('Sauvegardes et transfert');
+  await b.wait('Exporter mes parties');
+  await b.layout('backup', 390, 844);
+  await b.layout('backup', 360, 800);
+  await b.send('Page.reload', { ignoreCache: true });
+  await b.wait('Ouvrir mon carnet');
+  await b.click('Ouvrir mon carnet');
+  await b.wait('Mes quêtes');
+  await b.click('Parties');
+  await b.wait(name);
+  assert.equal(await b.evaluate(`[...document.querySelectorAll('[role="radio"]')].filter(el=>el.textContent.trim()==='NG+' && el.getAttribute('aria-checked')==='true').length`), 1);
+  assert.equal(b.errors.length, 0, JSON.stringify(b.errors));
+  console.log('Parties : création, nouveau cycle, sélection après rechargement et formats mobiles vérifiés');
+} finally { b.close(); }
