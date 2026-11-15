@@ -6,19 +6,18 @@ Application mobile de suivi des quêtes d’Elden Ring, conçue pour Android et 
 React Native et TypeScript. Le navigateur en émulation mobile sert à valider l’interface.
 Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
 et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
-dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
+dans `docs/CATALOG_AUDIT.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
 avec 1 418 types dans 11 catégories, 1 414 objets de collection et 1 454 acquisitions
 dans la publication `2026.11.15.4`. Les 308 armes, 69 boucliers, 559 pièces d’armure,
 70 sorcelleries, 114 talismans, 101 incantations, 91 cendres de guerre et 64 cendres
 d’invocation du jeu de base d’origine sont répertoriés : 1 376/1 376 types avec au moins
 une obtention. Les outils permanents (8), objets de progression (30), améliorations (4)
 et acquisitions alternatives restent partiels ; le DLC et les ajouts ultérieurs sont exclus.
-Voir `docs/ITEM_COVERAGE.md`, `docs/ITEM_COMPLETION.md` et `docs/SECONDARY_ITEM_COMPLETION.md`.
+Le périmètre, les sources et les limites sont regroupés dans `docs/CATALOG_AUDIT.md`.
 Le lot 5 fournit le suivi par cycle de 134 rencontres de boss et
-40 sites de grâce, catalogue partiel détaillé dans `docs/WORLD_COVERAGE.md`.
+40 sites de grâce, catalogue partiel décrit dans le même document.
 Le lot 6 fournit l’audit transversal, les compteurs consolidés et la protection des anciens
-identifiants, avec 226 URL documentaires uniques dans l’audit courant ; voir
-`docs/CONSOLIDATION.md` et `docs/CATALOG_AUDIT.md`. Les catalogues restent partiels.
+identifiants, avec 226 URL documentaires uniques dans l’audit courant. Les catalogues restent partiels.
 La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
@@ -87,6 +86,9 @@ La suite est détaillée dans
 - Pour préparer un commit, contrôler les fichiers indexés et exclure dépendances, fichiers générés et données locales.
 - Exécuter `npm test` après une modification des règles métier, de la sauvegarde ou du catalogue.
 - Après une modification du catalogue, exécuter `npm run catalog:check` et actualiser son rapport.
+  `docs/CATALOG_AUDIT.md` est la synthèse unique du contenu, des sources et des contrôles ;
+  ses explications et tableaux sont générés par `formatCatalogAudit` dans `src/catalog/audit.ts`.
+  Modifier ce générateur pour les conserver lors des régénérations ; ne pas recréer de documents par lot d’enrichissement.
   Préserver les références historiques `tests/fixtures/catalog-ids.v1.json`,
   `tests/fixtures/item-completion-ids.json` et `tests/fixtures/secondary-item-completion-ids.json` : un ajout de contenu
   ne doit pas masquer la suppression ou la réaffectation d’un identifiant déjà publié.

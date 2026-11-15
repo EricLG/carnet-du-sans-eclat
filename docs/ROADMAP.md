@@ -29,42 +29,27 @@ La publication courante est `2026.11.15.4` : huit catégories d’objets sont re
 - Catalogue distinct de la progression, identifiants stables, références et dates de vérification.
 - Navigation web d’abord, compatibilité native conservée. Aucun dépôt Git sans demande explicite.
 
-## Lots de contenu
+## Contenu à poursuivre
 
-Publier de petits ensembles vérifiés ; les catalogues restent signalés comme partiels jusqu’au
-contrôle de leur couverture. Le lot 2 fournit un parcours synthétique pour cinq personnages,
-pas un relevé de tous leurs dialogues. Le lot 3 couvre les 40 parcours retenus dans
-[le manifeste de couverture](QUEST_COVERAGE.md), avec sept rencontres courtes et le récit de
-Melina distingués des 32 quêtes. Les cinq parcours validés conservent leurs identifiants.
-Le lot 4 publie une première [sélection d’objets](ITEM_COVERAGE.md) ; les régions et les sources
-restent partielles. L’[enrichissement des quatre catégories prioritaires](ITEM_COMPLETION.md)
-recense leurs 1 006 types du jeu de base d’origine, sans annoncer toutes les obtentions possibles.
-La [complétion des talismans, incantations et cendres](SECONDARY_ITEM_COMPLETION.md) ajoute
-les quatre autres catégories chiffrées : les huit catégories atteignent 1 376 types sur
-1 376. Les outils permanents (8 types publiés), objets de progression (30) et améliorations
-importantes (4) restent à recenser ; les acquisitions alternatives restent partielles.
-Le lot 5 publie une [sélection de boss et de grâces](WORLD_COVERAGE.md),
-elle aussi partielle, en reprenant les références des objets. Les noms et identifiants pourront être rapprochés
-d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
+L’[audit du catalogue](CATALOG_AUDIT.md) est le document de référence pour les chiffres,
+le périmètre des quêtes, objets, boss et grâces, les sources et les commandes de contrôle.
+Son tableau régional compte les fiches et les obtentions présentes dans le carnet ;
+il ne mesure pas la progression personnelle ni l’exhaustivité des régions du jeu.
 
-Le [lot 6 de consolidation](CONSOLIDATION.md) fournit les commandes d’audit et un
-[rapport de couverture](CATALOG_AUDIT.md). Il ne transforme pas ces sélections en catalogues
-exhaustifs : huit catégories d’objets ont tous leurs types recensés, trois restent à recenser ;
-aucun pourcentage global du jeu n’est publié. Les contrôles HTTP signalent séparément
-les liens accessibles, les absences confirmées et les accès non vérifiés.
-L’audit courant porte sur 226 URL documentaires uniques. Les trois références historiques
-`catalog-ids.v1.json`, `item-completion-ids.json` et `secondary-item-completion-ids.json`,
-dans `tests/fixtures/`, protègent les identifiants déjà publiés.
+Les prochains enrichissements doivent :
 
-Pour les objets : marchand, boss, ennemi, exploration, dialogue PNJ, quête, échange de souvenir,
-énigme et autre. Conserver lieu, conditions, prix éventuel, PNJ/ennemi/boss associé et grâce
-de référence. Séparer la méthode de l’obtention garantie, aléatoire avec taux sourcé, ou inconnue.
-Ne jamais inventer de pourcentage. Exclure consommables ordinaires, munitions, matériaux de
-fabrication et ressources ordinaires d’amélioration ; inclure les souvenirs comme progression.
+1. Établir les inventaires attendus des outils permanents, objets de progression et améliorations.
+2. Compléter les obtentions alternatives des objets et les emplacements d’amélioration encore partiels.
+3. Ajouter les rencontres de boss et sites de grâce manquants, au-delà des rencontres déjà liées aux récompenses.
+4. Revoir les sources dont l’accès réseau n’a pas pu être vérifié et recouper les conditions documentaires.
 
-Pour les boss : une fiche par rencontre, même pour les homonymes ; exclure invasions et ennemis
-uniques ordinaires. Une carte interactive, les builds, les quantités d’inventaire et l’analyse des
-sauvegardes du jeu sont hors périmètre.
+Publier de petits ensembles sourcés, garder les identifiants existants et actualiser l’audit
+après chaque ajout. Une couverture de 100 % des types d’une catégorie ne signifie pas que
+toutes leurs obtentions sont répertoriées. Le DLC et les ajouts ultérieurs hors inventaire
+restent exclus du périmètre actuel.
+
+Une carte interactive, les builds, les quantités d’inventaire et l’analyse des sauvegardes
+du jeu sont hors périmètre.
 
 ## Sauvegarde distante prévue
 

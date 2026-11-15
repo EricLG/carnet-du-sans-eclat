@@ -14,18 +14,19 @@ Catalogue publié : `2026.11.15.4`.
 - Recherche avec noms associés (Edgar, Gowry, Masque d’or…), filtres région/statut/type, étapes cochables et branches.
 - Statut global des quêtes manuel et indépendant des étapes.
 - Toutes les informations visibles, points de blocage et références documentaires par fiche.
-- [Périmètre des parcours PNJ](docs/QUEST_COVERAGE.md), consultable aussi dans le carnet.
 - Onglet **Collection** : 1 414 objets dans 10 catégories et 4 types d’améliorations, soit 1 418 types et 1 454 acquisitions documentées.
-- Huit catégories du jeu de base d’origine recensées : 308 armes, 69 boucliers, 559 pièces d’armure, 70 sorcelleries, 114 talismans, 101 incantations, 91 cendres de guerre et 64 cendres d’invocation, soit 1 376/1 376 types avec au moins une obtention ; [première complétion](docs/ITEM_COMPLETION.md) et [talismans, incantations et cendres](docs/SECONDARY_ITEM_COMPLETION.md).
+- Huit catégories du jeu de base d’origine recensées : armes, boucliers, armures, talismans, sorcelleries, incantations et cendres de guerre/d’invocation, avec au moins une obtention par type.
 - Recherche française/anglaise ; filtres par catégorie, région, méthode et statut.
 - Collection « déjà obtenu » conservée par personnage ; 27 emplacements d’amélioration suivis par cycle.
 - Prix, conditions, grâces de référence, taux sourcés, échanges de souvenir et liens vers les quêtes.
-- [Catalogue d’objets explicitement partiel](docs/ITEM_COVERAGE.md), à enrichir par régions.
 - Onglet **Exploration** : 134 rencontres de boss et 40 sites de grâce du jeu de base,
   avec recherche, filtres, coches par cycle et liens aux objets et quêtes.
-- [Couverture de l’exploration explicitement partielle](docs/WORLD_COVERAGE.md).
-- [Consolidation et compatibilité du catalogue](docs/CONSOLIDATION.md), avec un
-  [rapport de couverture reproductible](docs/CATALOG_AUDIT.md) et des contrôles transversaux.
+
+Deux documents regroupent les informations du projet :
+
+- [ROADMAP.md](docs/ROADMAP.md) : lots livrés, travaux restants et périmètre prévu.
+- [CATALOG_AUDIT.md](docs/CATALOG_AUDIT.md) : contenu référencé, sens des compteurs,
+  couverture, sources et explication des commandes de vérification.
 
 Les outils permanents (8 types), objets de progression (30), améliorations importantes (4),
 obtentions alternatives, boss et grâces restent à enrichir. Le catalogue exclut le DLC et les
@@ -91,8 +92,9 @@ refusés sans modifier les données existantes.
 | `npm run typecheck` | Vérification TypeScript stricte |
 | `npm run build:web` | Export web dans `dist/` |
 | `npm test` | Tests métier et intégrité du catalogue |
-| `npm run catalog:check` | Audit hors ligne ; `-- --json` pour le détail ou `-- --write-report` pour régénérer le rapport |
-| `npm run catalog:links` | Disponibilité HTTP des sources ; codes 0 accessible, 1 absence/erreur, 2 accès non vérifiés |
+| `npm run catalog:check` | Vérifier la cohérence des données locales, sans Internet et sans modifier de fichier |
+| `npm run catalog:check -- --write-report` | Faire le même contrôle et actualiser les chiffres de `docs/CATALOG_AUDIT.md` |
+| `npm run catalog:links` | Tester sur Internet si les pages citées comme sources répondent encore ; aucune mise à jour des données |
 | `npm run test:browser` | Parcours web réels, prérequis ci-dessous |
 | `npm run android` | Appareil ou émulateur Android configuré |
 | `npm run ios` | Simulateur iOS sur macOS avec Xcode |
@@ -107,6 +109,8 @@ Les références historiques `tests/fixtures/catalog-ids.v1.json`,
 `tests/fixtures/item-completion-ids.json` et `tests/fixtures/secondary-item-completion-ids.json`
 protègent les identifiants déjà publiés ; les compteurs ignorent les coches inconnues sans les
 effacer. Le contrôle réseau reste distinct et ne modifie pas les dates de revue documentaire.
+Le [guide des contrôles du catalogue](docs/CATALOG_AUDIT.md#vérifier-et-actualiser-ce-document)
+précise quand utiliser ces commandes, leurs options et leurs résultats possibles.
 
 Pour les parcours navigateur, laisser Expo démarré et lancer une **instance Edge dédiée aux tests**
 depuis PowerShell, dans le dossier du projet :
@@ -157,9 +161,7 @@ src/platform/        Import/export web / natif
 src/theme.ts         Couleurs et polices
 tests/               Tests métier et parcours navigateur
 docs/ROADMAP.md      Lots livrés et restants
-docs/QUEST_COVERAGE.md Périmètre et provenance des parcours PNJ
-docs/ITEM_COVERAGE.md Périmètre et provenance des objets publiés
-docs/WORLD_COVERAGE.md Périmètre et provenance des boss et grâces publiés
+docs/CATALOG_AUDIT.md Contenu, couverture, sources et contrôles du catalogue
 AGENTS.md            Consignes pour les agents
 ```
 
