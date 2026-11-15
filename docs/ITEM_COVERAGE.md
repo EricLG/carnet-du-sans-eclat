@@ -139,9 +139,9 @@ pour ces sélections. Les noms anglais sont conservés comme alias de recherche.
 - `query.ts` : filtres et contrôle de couverture ; `index.ts` : catalogue agrégé.
 - `ItemsScreen` et `ItemScreen` : présentation ; les écritures passent par le service existant.
 
-Les identifiants de rencontres et de grâces sont des références documentaires.
-Ils ne constituent pas les listes complètes prévues au lot 5. Réutiliser ces identifiants
-lorsque les fiches de ces catalogues seront ajoutées.
+Les identifiants de rencontres et de grâces sont repris dans le
+[catalogue d’exploration du lot 5](WORLD_COVERAGE.md), qui reste partiel. Les acquisitions
+permettent désormais d’ouvrir les fiches correspondantes ; les coches restent indépendantes.
 
 `verifiedAt` indique la date de revue documentaire, sans validation en jeu.
 Les références et dates sont consultables dans les fiches d’obtention.
@@ -243,7 +243,7 @@ coches rapides, erreurs de stockage, NG+, export/import et compatibilité des an
 
 Les parcours navigateur vérifient les fiches et filtres, les liens, la persistance,
 les personnages, le NG+, l’export/import réel, les formats 390 × 844 et 360 × 800,
-le défilement et les trois onglets avec des libellés agrandis.
+le défilement et les quatre onglets avec des libellés agrandis.
 Les essais Android/iOS et Firefox sur téléphone restent à effectuer.
 
 La suite du contenu doit compléter les sélections régionales puis publier les autres régions,

@@ -41,7 +41,7 @@
     "typecheck": "tsc --noEmit",
     "build:web": "expo export --platform web",
     "test": "tsx --test tests/*.test.ts",
-    "test:browser": "node tests/browser/parties.mjs && node --import tsx tests/browser/quests.mjs && node --import tsx tests/browser/items.mjs && node tests/browser/backups.mjs",
+    "test:browser": "node tests/browser/parties.mjs && node --import tsx tests/browser/quests.mjs && node --import tsx tests/browser/items.mjs && node --import tsx tests/browser/world.mjs && node tests/browser/backups.mjs",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix --max-warnings 0"
   }

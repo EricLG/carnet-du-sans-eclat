@@ -44,8 +44,8 @@ export function Choice({ label, selected, onPress }: { label: string; selected: 
   return <Pressable accessibilityRole="radio" accessibilityState={{ checked: selected }} aria-checked={selected} onPress={onPress}
     style={[ui.chip, selected && ui.chipSelected]}><Text style={[ui.chipText, selected && ui.chipTextSelected]}>{label}</Text></Pressable>;
 }
-export function CheckRow({ label, checked, onPress, detail }: { label: string; checked: boolean; onPress: () => void; detail?: string }) {
-  return <Pressable accessibilityRole="checkbox" accessibilityLabel={label} accessibilityState={{ checked }} aria-checked={checked} onPress={onPress} style={ui.checkRow}>
+export function CheckRow({ label, checked, onPress, detail, disabled = false }: { label: string; checked: boolean; onPress: () => void; detail?: string; disabled?: boolean }) {
+  return <Pressable accessibilityRole="checkbox" accessibilityLabel={label} accessibilityState={{ checked, disabled }} aria-checked={checked} aria-disabled={disabled} disabled={disabled} onPress={onPress} style={[ui.checkRow, disabled && ui.dim]}>
     <View style={[ui.checkbox, checked && ui.checked]}><Text style={ui.tick}>{checked ? '✓' : ''}</Text></View>
     <View style={ui.grow}><Text style={ui.checkLabel}>{label}</Text>{detail && <Text style={ui.caption}>{detail}</Text>}</View>
   </Pressable>;

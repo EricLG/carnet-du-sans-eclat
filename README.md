@@ -19,9 +19,12 @@ Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 - Collection « déjà obtenu » conservée par personnage ; 27 emplacements d’amélioration suivis par cycle.
 - Prix, conditions, grâces de référence, taux sourcés, échanges de souvenir et liens vers les quêtes.
 - [Catalogue d’objets explicitement partiel](docs/ITEM_COVERAGE.md), à enrichir par régions.
+- Onglet **Exploration** : 32 rencontres de boss et 40 sites de grâce du jeu de base,
+  avec recherche, filtres, coches par cycle et liens aux objets et quêtes.
+- [Couverture de l’exploration explicitement partielle](docs/WORLD_COVERAGE.md).
 
-Les catalogues de boss et de grâces, MongoDB et le DLC sont décrits dans [la feuille de route](docs/ROADMAP.md).
-Ils ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
+Les catalogues d’objets, boss et grâces restent à enrichir. MongoDB et le DLC sont décrits dans
+[la feuille de route](docs/ROADMAP.md) et ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
 présents ; Android et iOS ne sont pas encore validés sur appareil.
 
 ## Installation et démarrage
@@ -58,7 +61,10 @@ Dans **Collection**, choisir **Objets du personnage** pour cocher les objets dé
 ou **Améliorations du cycle** pour suivre les améliorations, regroupées par type avec une ligne
 à cocher par emplacement. Elles apparaissent uniquement dans cette seconde vue. La collection reste commune
 aux cycles du personnage, même si un objet a été utilisé, vendu ou échangé.
-Les ramassages et quêtes appartiennent au cycle ; boss et grâces suivront la même règle. Aucun effet automatique entre rubriques : un statut « terminée » ne coche pas les étapes
+Les ramassages, quêtes, boss et grâces appartiennent au cycle. Dans **Exploration**, choisir
+**Boss** ou **Sites de grâce** ; la coche signifie « vaincu » ou « activée ». Une fiche décrit
+une seule rencontre, même si plusieurs boss portent le même nom. Aucun effet automatique
+entre rubriques : un boss vaincu ne coche pas sa grâce ni ses récompenses ; un statut « terminée » ne coche pas les étapes
 et un changement de branche ne supprime pas les coches saisies. Les améliorations se cochent uniquement par emplacement et par cycle. Obtenir un objet
 ne complète pas une quête.
 
@@ -102,7 +108,9 @@ Ils contrôlent les formats mobiles, la persistance, les choix de quêtes, l’i
 fichier et le téléchargement d’un export. Ils vérifient aussi les recherches par PNJ associé,
 les filtres de type, les liens entre fiches et la persistance d’une nouvelle quête régionale.
 Le parcours de collection ajoute les filtres, les acquisitions, les coches, le NG+, l’isolation
-des personnages, le défilement et des libellés d’onglets agrandis. Les captures et fichiers sont dans `.browser-check/`.
+des personnages, le défilement et des libellés d’onglets agrandis. Le parcours d’exploration
+vérifie les homonymes, les liens réciproques, les grâces d’arène et l’indépendance des coches
+après rechargement et changement de cycle. Les captures et fichiers sont dans `.browser-check/`.
 Le débogage Edge reste limité à la boucle locale ; fermer cette instance après les essais.
 Ne pas utiliser son profil personnel.
 
@@ -138,6 +146,7 @@ tests/               Tests métier et parcours navigateur
 docs/ROADMAP.md      Lots livrés et restants
 docs/QUEST_COVERAGE.md Périmètre et provenance des parcours PNJ
 docs/ITEM_COVERAGE.md Périmètre et provenance des objets publiés
+docs/WORLD_COVERAGE.md Périmètre et provenance des boss et grâces publiés
 AGENTS.md            Consignes pour les agents
 ```
 

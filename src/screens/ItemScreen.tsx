@@ -3,13 +3,15 @@ import { itemActors, itemGraces, items, pickups } from '../catalog/items';
 import { armorSlotLabels, categoryLabels, methodLabels } from '../catalog/items/query';
 import { quests } from '../catalog/quests';
 import { regions } from '../catalog/regions';
+import { bosses, graces } from '../catalog/world';
+import type { WorldKind } from '../domain/world';
 import { Button, Card, CheckRow, Heading, Page, SourceLink, ui } from '../components/ui';
 import { probabilityLabel } from '../domain/items';
 import { currentPart, cycleLabel, toggleFlag } from '../domain/save';
 import { useProgress } from '../state/ProgressProvider';
 
-export function ItemScreen({ id, onParties, onQuest, onItem }: {
-  id: string; onParties: () => void; onQuest: (id: string) => void; onItem: (id: string) => void;
+export function ItemScreen({ id, onParties, onQuest, onItem, onWorld }: {
+  id: string; onParties: () => void; onQuest: (id: string) => void; onItem: (id: string) => void; onWorld: (kind: WorldKind, id: string) => void;
 }) {
   const { data, service } = useProgress();
   const { character, run } = currentPart(data);
@@ -32,6 +34,8 @@ export function ItemScreen({ id, onParties, onQuest, onItem }: {
     {item.acquisitions.map(acquisition => {
       const actor = itemActors.find(actor => actor.id === acquisition.sourceEntityId);
       const grace = itemGraces.find(grace => grace.id === acquisition.graceId);
+      const boss = bosses.find(boss => boss.id === acquisition.sourceEntityId);
+      const publishedGrace = graces.find(entry => entry.id === acquisition.graceId);
       const pickup = pickups.find(pickup => pickup.acquisitionId === acquisition.id);
       const required = items.find(item => item.id === acquisition.requiredItemId);
       const relatedQuest = quests.find(quest => quest.id === acquisition.relatedQuestId);
@@ -40,9 +44,9 @@ export function ItemScreen({ id, onParties, onQuest, onItem }: {
         <Text style={ui.label}>{probabilityLabel(acquisition.probability)}</Text>
         {acquisition.probability.kind === 'chance' && <Text style={ui.body}>{acquisition.probability.conditions}</Text>}
         {acquisition.probability.kind === 'unknown' && <Text style={ui.caption}>Aucun pourcentage vérifié n’est renseigné pour cette source.</Text>}
-        {actor && <Text style={ui.body}>{actor.name}</Text>}
+        {boss ? <Button title={`Rencontre : ${boss.name}`} variant="quiet" onPress={() => onWorld('boss', boss.id)} /> : actor && <Text style={ui.body}>{actor.name}</Text>}
         <Text style={ui.label}>{regions.find(region => region.id === acquisition.regionId)?.name} · {acquisition.location}</Text>
-        {grace && <Text style={ui.caption}>Grâce de référence : {grace.name}</Text>}
+        {publishedGrace ? <Button title={`Grâce de référence : ${publishedGrace.name}`} variant="quiet" onPress={() => onWorld('grace', publishedGrace.id)} /> : grace && <Text style={ui.caption}>Grâce de référence : {grace.name}</Text>}
         <Text style={ui.body}>{acquisition.description}</Text>
         {acquisition.price && <Text style={ui.body}>Prix : {acquisition.price}</Text>}
         {acquisition.conditions.map(condition => <Text key={condition} style={ui.body}>{condition}</Text>)}

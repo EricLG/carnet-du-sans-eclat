@@ -1,0 +1,102 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
+import { bosses, graces, worldScope } from '../src/catalog/world';
+import { emptyWorldFilter, filterWorld, validateWorldScope, worldItems, worldProgress } from '../src/catalog/world/query';
+import { itemActors, itemGraces, items } from '../src/catalog/items';
+import { quests, regions } from '../src/catalog/quests';
+import { bossSchema, validateWorld } from '../src/domain/world';
+import { addCharacter, addCycle, currentPart, emptySave, exportSave, importCopies, parseBackup, selectRun, toggleFlag, updateQuest, type SaveData } from '../src/domain/save';
+import { ProgressService } from '../src/state/ProgressService';
+import type { ProgressStorage } from '../src/storage/types';
+
+const refs = { actors: itemActors, graces: itemGraces, items, regionIds: regions.map(region => region.id), questIds: quests.map(quest => quest.id) };
+test('le catalogue d’exploration reprend toutes les références existantes et reste explicitement partiel', () => {
+  assert.deepEqual(validateWorld(bosses, graces, refs), []);
+  assert.deepEqual(validateWorldScope(bosses, graces, worldScope), []);
+  assert.equal(worldScope.status, 'partial');
+  assert.equal(bosses.length, 32); assert.equal(graces.length, 40);
+  assert.ok([...bosses, ...graces].every(entry => entry.content === 'base'));
+  for (const actor of itemActors.filter(actor => actor.kind === 'boss')) assert.equal(bosses.find(boss => boss.id === actor.id)!.name, actor.name);
+  for (const grace of itemGraces) assert.equal(graces.find(entry => entry.id === grace.id)!.name, grace.name);
+});
+test('les fiches invalides, doublons et références cassées sont rejetés', () => {
+  const brokenBosses = structuredClone(bosses), brokenGraces = structuredClone(graces);
+  brokenBosses[0].regionIds = ['absent']; brokenBosses[0].graceIds = ['grace.absent']; brokenBosses[0].relatedQuestIds = ['absent'];
+  brokenGraces[0].bossId = 'boss.absent';
+  const errors = validateWorld([...brokenBosses, brokenBosses[0]], brokenGraces, refs);
+  for (const fragment of ['Région inconnue', 'Grâce de boss invalide', 'Quête inconnue', 'Boss de grâce invalide', 'dupliqué']) assert.ok(errors.some(error => error.includes(fragment)), fragment);
+  assert.equal(bossSchema.safeParse({ ...bosses[0], respawns: true }).success, false);
+  assert.equal(bossSchema.safeParse({ ...bosses[0], id: 'enemy.moongrum.raya-lucaria' }).success, false);
+  assert.ok(validateWorld([{ ...bosses[0], sources: [] }], graces, refs).some(error => error.includes('invalide')));
+  assert.ok(validateWorldScope(bosses.slice(1), graces, worldScope).length);
+  assert.ok(validateWorldScope(bosses, graces.slice(1), worldScope).length);
+  assert.ok(validateWorldScope(bosses, graces, { ...worldScope, bossIds: [...worldScope.bossIds, worldScope.bossIds[0]] }).length);
+});
+test('une grâce d’arène ne peut pas être présentée comme point de repère d’un autre boss', () => {
+  const broken = structuredClone(bosses);
+  broken[0].graceIds = ['grace.godrick'];
+  assert.ok(validateWorld(broken, graces, refs).some(error => error.includes('Grâce de boss invalide')));
+  const changedItems = structuredClone(items);
+  changedItems.find(item => item.id === 'item.golden-halberd')!.acquisitions[0].regionId = 'weeping';
+  assert.ok(validateWorld(bosses, graces, { ...refs, items: changedItems }).some(error => error.includes('Acquisition hors région')));
+});
+test('la recherche française et anglaise distingue les homonymes par région et les compteurs ignorent les coches inconnues', () => {
+  const watchdogs = filterWorld(bosses, { ...emptyWorldFilter, search: 'Erdtree Burial Watchdog' });
+  assert.equal(watchdogs.length, 2); assert.notEqual(watchdogs[0].id, watchdogs[1].id);
+  assert.deepEqual(filterWorld(watchdogs, { ...emptyWorldFilter, region: 'weeping' }).map(entry => entry.id), ['boss.watchdog.impalers']);
+  assert.ok(filterWorld(graces, { ...emptyWorldFilter, search: '  EGLISE D’ELLEH ' }).some(entry => entry.id === 'grace.elleh'));
+  assert.deepEqual(filterWorld(graces, { ...emptyWorldFilter, search: 'Church of Elleh' }).map(entry => entry.id), ['grace.elleh']);
+  const flags = { 'boss.watchdog.impalers': true, 'boss.future': true };
+  assert.deepEqual(worldProgress(bosses, flags), { done: 1, total: 32 });
+  assert.equal(filterWorld(bosses, { ...emptyWorldFilter, status: 'missing' }, flags).length, 31);
+  assert.deepEqual(filterWorld(bosses, { ...emptyWorldFilter, status: 'done' }, flags).map(entry => entry.id), ['boss.watchdog.impalers']);
+});
+test('les liens aux objets décrivent la même acquisition et ne créent pas de nouvelles récompenses', () => {
+  assert.ok(worldItems('boss', 'boss.godrick.stormveil', items).some(item => item.id === 'item.remembrance-grafted'));
+  assert.ok(!worldItems('boss', 'boss.godrick.stormveil', items).some(item => item.id === 'item.axe-godrick'));
+  assert.ok(worldItems('grace', 'grace.elleh', items).some(item => item.id === 'item.torch'));
+  for (const actor of itemActors.filter(actor => actor.kind === 'enemy')) assert.ok(!bosses.some(boss => boss.id === actor.id));
+});
+test('les homonymes, boss, grâces d’arène, objets et quêtes conservent des coches indépendantes et leur historique', () => {
+  let save = addCharacter(emptySave(), 'A');
+  const first = currentPart(save);
+  save = toggleFlag(save, 'collection', 'item.golden-halberd');
+  save = updateQuest(save, 'quest.gostoc', quest => ({ ...quest, status: 'in_progress' }));
+  save = toggleFlag(save, 'bosses', 'boss.watchdog.stormfoot');
+  save = toggleFlag(save, 'bosses', 'boss.godrick.stormveil');
+  assert.equal(currentPart(save).run!.bosses['boss.watchdog.impalers'], undefined);
+  assert.deepEqual(currentPart(save).run!.graces, {});
+  save = toggleFlag(save, 'graces', 'grace.godrick');
+  save = toggleFlag(save, 'bosses', 'boss.godrick.stormveil');
+  assert.equal(currentPart(save).run!.graces['grace.godrick'], true);
+  assert.deepEqual(currentPart(save).character!.collection, { 'item.golden-halberd': true });
+  assert.equal(currentPart(save).run!.quests['quest.gostoc'].status, 'in_progress');
+  assert.deepEqual(currentPart(save).run!.pickups, {});
+  save = addCycle(save, first.character!.id);
+  assert.deepEqual(currentPart(save).run!.bosses, {}); assert.deepEqual(currentPart(save).run!.graces, {});
+  assert.equal(currentPart(save).character!.collection['item.golden-halberd'], true);
+  save = addCharacter(save, 'B'); assert.deepEqual(currentPart(save).run!.graces, {});
+  save = selectRun(save, first.character!.id, first.run!.id);
+  assert.equal(currentPart(save).run!.graces['grace.godrick'], true);
+});
+test('l’import en copie conserve les nouvelles coches et les entrées de catalogues futurs', () => {
+  let save = addCharacter(emptySave(), 'Import');
+  for (const [kind, id] of [['bosses', 'boss.godrick.stormveil'], ['graces', 'grace.godrick'], ['bosses', 'boss.future'], ['graces', 'grace.future']] as const) save = toggleFlag(save, kind, id);
+  const copied = importCopies(save, parseBackup(exportSave(save)));
+  assert.deepEqual(copied.characters[0], save.characters[0]);
+  assert.deepEqual(copied.characters[1].runs[0].bosses, save.characters[0].runs[0].bosses);
+  assert.deepEqual(copied.characters[1].runs[0].graces, save.characters[0].runs[0].graces);
+});
+test('les coches rapides persistent et une écriture refusée ne valide aucune grâce', async () => {
+  let stored: SaveData | null = null;
+  const storage: ProgressStorage = { async read() { return stored; }, async write(save) { stored = save; } };
+  const service = new ProgressService(storage); await service.load();
+  await service.mutate(save => addCharacter(save, 'Persistance'));
+  await Promise.all(Array.from({ length: 9 }, () => service.mutate(save => toggleFlag(save, 'bosses', 'boss.godrick.stormveil'))));
+  const reloaded = new ProgressService(storage); await reloaded.load();
+  assert.equal(currentPart(reloaded.getSnapshot().data).run!.bosses['boss.godrick.stormveil'], true);
+  storage.write = async () => { throw new Error('Écriture refusée'); };
+  assert.equal(await reloaded.mutate(save => toggleFlag(save, 'graces', 'grace.godrick')), false);
+  assert.deepEqual(currentPart(reloaded.getSnapshot().data).run!.graces, {});
+  assert.match(reloaded.getSnapshot().error!, /Écriture refusée/);
+});

@@ -17,8 +17,7 @@ export type Content = Quest['content'];
 export type Source = z.infer<typeof sourceSchema>;
 export type CatalogEntry = { id: string; name: string; content: Content; regionIds: string[]; sources: Source[] };
 export type { Acquisition, Item, Pickup } from './items';
-export type Boss = CatalogEntry & { location: string; access: string; respawns: false; kind: 'boss' | 'mini_boss'; itemIds: string[] };
-export type Grace = CatalogEntry & { location: string; access: string };
+export type { Boss, Grace } from './world';
 
 export function validateQuests(quests: Quest[], regionIds: string[], npcIds: string[]): string[] {
   const errors: string[] = [];

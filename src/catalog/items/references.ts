@@ -1,8 +1,8 @@
 import type { AcquisitionActor, GraceReference } from '../../domain/items';
 import { npcs } from '../quests';
 
-// Références documentaires : les fiches complètes de boss/grâces arrivent au lot 5.
-// Conserver ces identifiants lors de leur intégration.
+// Références reprises dans le catalogue partiel d’exploration du lot 5.
+// La validation croisée impose de conserver leurs identifiants et leurs noms.
 export const itemActors: AcquisitionActor[] = [
   { id: 'boss.scaly-misbegotten.morne-tunnel', name: 'Chimère écailleuse · Galerie de Vent-Hurlant', kind: 'boss' },
   { id: 'boss.leonine-misbegotten.morne', name: 'Chimère léonine · Château de Vent-Hurlant', kind: 'boss' },

@@ -8,7 +8,8 @@ Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’im
 et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
 dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
 avec une sélection de 154 objets dans 11 catégories : catalogue partiel, détaillé dans
-`docs/ITEM_COVERAGE.md`. Les boss/grâces n’ont pas encore leurs listes. La suite est détaillée dans
+`docs/ITEM_COVERAGE.md`. Le lot 5 fournit le suivi par cycle de 32 rencontres de boss et
+40 sites de grâce, catalogue partiel détaillé dans `docs/WORLD_COVERAGE.md`. La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
 ## Organisation et commandes
@@ -49,8 +50,11 @@ avec une sélection de 154 objets dans 11 catégories : catalogue partiel, déta
   ajouter du contenu ne doit jamais changer les identifiants existants ou effacer des coches inconnues.
 - Méthode d’obtention et garantie sont distinctes. Aucun taux inventé ; conserver les conditions
   et sources d’un pourcentage. Un taux inconnu reste absent, sans devenir 0 %.
-- Les références de boss/grâces dans les acquisitions ne constituent pas leurs catalogues complets.
-  Réutiliser leurs identifiants au lot 5.
+- `src/catalog/world/` contient les boss, grâces et leur inventaire de publication indépendant.
+  `src/domain/world.ts` valide leurs références. Les catalogues restent partiels ; conserver
+  les identifiants de boss/grâces utilisés par les acquisitions et contrôler leur cohérence.
+  Une fiche par rencontre non réapparaissante ; exclure invasions et ennemis uniques ordinaires.
+  Cocher un boss ne coche jamais sa grâce, ses récompenses ou une étape de quête.
 - Les améliorations importantes apparaissent uniquement dans « Améliorations du cycle »,
   regroupées par objet puis par emplacement. Chaque case concerne une acquisition et un cycle.
   Elles sont exclues de la collection du personnage et de ses compteurs. Conserver les éventuelles
