@@ -1,13 +1,16 @@
 # Couverture des objets — catalogue partiel du lot 4
 
-Catalogue `2026.11.15.2`, revues documentaires des 14 et 15 novembre 2026.
+Catalogue `2026.11.15.3`, revues documentaires des 14 et 15 novembre 2026.
 
 ## État de publication
 
 Les fonctions de collection et d’obtention sont disponibles dans le navigateur.
-Le contenu reste **partiel** : **154 types d’objets, 190 sources et 27 emplacements
-d’amélioration** : 150 objets sont affichés dans la collection du personnage et 4 types
-d’améliorations sont réservés au suivi par cycle. Aucun de ces nombres ne désigne la totalité du jeu ni d’une région.
+Le catalogue contient **1 071 types d’objets, 1 107 acquisitions et 27 emplacements
+d’amélioration** : 1 067 objets sont affichés dans la collection du personnage et 4 types
+d’améliorations sont réservés au suivi par cycle. Les **308 armes, 69 boucliers, 559 pièces
+d’armure et 70 sorcelleries du jeu de base d’origine** ont une fiche et au moins une obtention.
+Les autres catégories et les itinéraires d’obtention restent **partiels**. Ce catalogue
+n’inclut ni le DLC ni les ajouts de versions ultérieures ; voir [le détail de cette complétion](ITEM_COMPLETION.md).
 
 L’inventaire de publication `src/catalog/items/scope.ts` conserve les identifiants attendus.
 Les contrôles détectent une fiche ou un emplacement manquant, ajouté hors inventaire ou dupliqué.
@@ -15,19 +18,19 @@ Il ne s’agit pas encore d’un inventaire exhaustif des objets à produire.
 
 | Catégorie | Types publiés | Total connu — jeu de base | Couverture |
 | --- | ---: | ---: | ---: |
-| Armes | 46 | 308 | 14,94 % |
-| Boucliers | 15 | 69 | 21,74 % |
-| Pièces d’armure | 24 | 559 | 4,29 % |
+| Armes | 308 | 308 | 100,00 % |
+| Boucliers | 69 | 69 | 100,00 % |
+| Pièces d’armure | 559 | 559 | 100,00 % |
 | Talismans | 9 | 114 | 7,89 % |
-| Sorcelleries | 19 | 70 | 27,14 % |
+| Sorcelleries | 70 | 70 | 100,00 % |
 | Incantations | 6 | 101 | 5,94 % |
 | Cendres de guerre | 13 | 91 | 14,29 % |
 | Cendres d’invocation | 6 | 64 | 9,38 % |
 | Outils permanents | 8 | À recenser | — |
-| Objets de progression | 4 | À recenser | — |
+| Objets de progression | 19 | À recenser | — |
 | Améliorations importantes | 4 | À recenser | — |
-| **Sous-total des catégories chiffrées** | **138** | **1 376** | **10,03 %** |
-| **Total du catalogue publié** | **154** | **À établir** | **—** |
+| **Sous-total des catégories chiffrées** | **1 040** | **1 376** | **75,58 %** |
+| **Total du catalogue publié** | **1 071** | **À établir** | **—** |
 
 Les totaux portent sur les **types du jeu de base d’origine**, hors DLC et ajouts de versions
 ultérieures. La couverture est calculée par `types publiés / total connu × 100`, arrondie à
@@ -69,16 +72,20 @@ ordinaires d’amélioration ne sont pas publiés.
 
 | Région | Sources publiées | État |
 | --- | ---: | --- |
-| Nécrolimbe, dont Voilorage | 83 | Sélection partielle |
-| Péninsule larmoyante | 28 | Sélection partielle |
-| Table ronde | 27 | Boutiques, rattrapages, récompenses et échanges sélectionnés |
-| Liurnia | 41 | Boutiques, trois tenues, équipement, sorcelleries et améliorations sélectionnés |
-| Caelid | 5 | Bâton météorique, Fronde, Perce-roche, une larme de vie et une pierre de mémoire |
-| Plateau Altus | 2 | Deux larmes de vie |
-| Cimes des Géants | 2 | Deux larmes de vie |
-| Mont Gelmir | 1 | Pierre de mémoire de Maggie |
-| Leyndell | 1 | Talisman de la rosée bénie, au pont divin |
-| Autres régions et DLC | 0 | Non publiés |
+| Nécrolimbe, dont Voilorage | 191 | Itinéraires sélectionnés, non exhaustifs |
+| Péninsule larmoyante | 48 | Itinéraires sélectionnés, non exhaustifs |
+| Table ronde | 106 | Boutiques, rattrapages, récompenses et échanges sélectionnés |
+| Liurnia | 210 | Itinéraires sélectionnés, non exhaustifs |
+| Caelid | 102 | Itinéraires sélectionnés, non exhaustifs |
+| Plateau Altus | 106 | Itinéraires sélectionnés, non exhaustifs |
+| Mont Gelmir | 69 | Itinéraires sélectionnés, non exhaustifs |
+| Leyndell | 67 | Capitale royale, souterrains et capitale des cendres distingués |
+| Régions souterraines | 66 | Siofra, Ainsel, Nokron, Nokstella, Fonderacine, lac putréfié et Mohgwyn |
+| Cimes des Géants | 61 | Itinéraires sélectionnés, non exhaustifs |
+| Champs enneigés consacrés | 33 | Itinéraires sélectionnés, non exhaustifs |
+| Arbre-Sacré | 26 | Itinéraires sélectionnés, non exhaustifs |
+| Farum Azula | 22 | Itinéraires sélectionnés, non exhaustifs |
+| DLC | 0 | Hors de cette publication |
 
 Les sources d’un objet ne sont pas nécessairement toutes répertoriées. Par exemple,
 un parcours PNJ peut mentionner une récompense encore absente du catalogue d’objets.
@@ -126,14 +133,17 @@ d’un catalogue futur. Aucune migration ni réinitialisation n’est nécessair
 ## Provenance et organisation
 
 Les descriptions sont des synthèses françaises rédigées à partir des références propres
-aux acquisitions, principalement Eldenpedia. Elles sont livrées avec l’application ;
-aucune API communautaire n’est nécessaire pendant l’utilisation. ERDB n’a pas été importé
-pour ces sélections. Les noms anglais sont conservés comme alias de recherche.
+aux acquisitions. La complétion utilise les inventaires de Completion Sheets et Roundtable,
+les noms français extraits du jeu et les obtentions documentées par Tarnished, PowerPyx
+et Eldenpedia. Les révisions et adaptations sont détaillées dans [ITEM_COMPLETION.md](ITEM_COMPLETION.md).
+Les données sont livrées avec l’application ; aucune API communautaire n’est nécessaire
+pendant l’utilisation. ERDB n’a pas été importé. Les noms anglais restent des alias de recherche.
 
 - `src/domain/items.ts` : schémas, taux et validation des références.
 - `src/catalog/items/gear.ts`, `magic.ts`, `tools.ts`, `upgrades.ts` : premières fiches et améliorations.
 - `merchants.ts`, `teachings.ts`, `early-rewards.ts` : boutiques, enseignements et récompenses ajoutés le 15 novembre.
 - `exploration-equipment.ts`, `liurnia-armor.ts`, `regional-sorceries.ts` : nouvel équipement et sorcelleries du jeu de base.
+- `base-inventory.json`, `complete-*.ts`, `completion.ts` : inventaire des quatre catégories, obtentions et adaptation au format du carnet.
 - `pickups.ts` : emplacements suivis par cycle ; `scope.ts` : inventaire de publication.
 - `references.ts` : intervenants et grâces nécessaires aux acquisitions.
 - `query.ts` : filtres et contrôle de couverture ; `index.ts` : catalogue agrégé.
@@ -225,8 +235,9 @@ Principales références de ce lot, consultées le 15 novembre 2026 :
 
 L’API FanAPI a été évaluée pour le recensement ; ses données brutes n’ont pas été
 importées dans ce lot. Les fiches sont des synthèses documentaires françaises et
-conservent les alias anglais. Les autres acquisitions possibles, les catalogues complets
-des quatre catégories et le DLC restent à produire. Aucune API n’est appelée à l’usage.
+conservent les alias anglais. À l’issue de cette étape, les quatre catégories restaient
+partielles ; la [complétion suivante](ITEM_COMPLETION.md) en recense désormais les types.
+Les obtentions alternatives et le DLC restent hors de cette complétion. Aucune API n’est appelée à l’usage.
 
 Contrôles de ce lot : ESLint sans avertissement, TypeScript, export web et 35 tests métier
 réussis. La comparaison à un instantané confirme la préservation des 106 anciennes fiches

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "item.academy-scroll",
+    "name": "Parchemin de l'Académie",
+    "english": "Academy Scroll",
+    "category": "key_item",
+    "textId": "8866",
+    "wiki": "https://eldenring.wiki.gg/wiki/Academy_Scroll"
+  },
+  {
+    "id": "item.conspectus-scroll",
+    "name": "Parchemin de cursus",
+    "english": "Conspectus Scroll",
+    "category": "key_item",
+    "textId": "8850",
+    "wiki": "https://eldenring.wiki.gg/wiki/Conspectus_Scroll"
+  },
+  {
+    "id": "item.remembrance-of-the-full-moon-queen",
+    "name": "Souvenir de la reine de la pleine lune",
+    "english": "Remembrance of the Full Moon Queen",
+    "category": "key_item",
+    "textId": "2959",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Full_Moon_Queen"
+  },
+  {
+    "id": "item.remembrance-of-the-starscourge",
+    "name": "Souvenir du Fléau des astres",
+    "english": "Remembrance of the Starscourge",
+    "category": "key_item",
+    "textId": "2951",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Starscourge"
+  },
+  {
+    "id": "item.remembrance-of-the-regal-ancestor",
+    "name": "Souvenir de l'Esprit ancestral royal",
+    "english": "Remembrance of the Regal Ancestor",
+    "category": "key_item",
+    "textId": "2962",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Regal_Ancestor"
+  },
+  {
+    "id": "item.remembrance-of-the-naturalborn",
+    "name": "Souvenir du Rejeton",
+    "english": "Remembrance of the Naturalborn",
+    "category": "key_item",
+    "textId": "2964",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Naturalborn"
+  },
+  {
+    "id": "item.remembrance-of-the-omen-king",
+    "name": "Souvenir du Roi des Réprouvés",
+    "english": "Remembrance of the Omen King",
+    "category": "key_item",
+    "textId": "2952",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Omen_King"
+  },
+  {
+    "id": "item.remembrance-of-the-blasphemous",
+    "name": "Souvenir du seigneur du blasphème",
+    "english": "Remembrance of the Blasphemous",
+    "category": "key_item",
+    "textId": "2953",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Blasphemous"
+  },
+  {
+    "id": "item.remembrance-of-the-fire-giant",
+    "name": "Souvenir du Géant de feu",
+    "english": "Remembrance of the Fire Giant",
+    "category": "key_item",
+    "textId": "2961",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Fire_Giant"
+  },
+  {
+    "id": "item.remembrance-of-the-black-blade",
+    "name": "Souvenir de la Lame d'ébène",
+    "english": "Remembrance of the Black Blade",
+    "category": "key_item",
+    "textId": "2956",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Black_Blade"
+  },
+  {
+    "id": "item.remembrance-of-the-dragonlord",
+    "name": "Souvenir du Seigneur draconique",
+    "english": "Remembrance of the Dragonlord",
+    "category": "key_item",
+    "textId": "2958",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Dragonlord"
+  },
+  {
+    "id": "item.remembrance-of-hoarah-loux",
+    "name": "Souvenir de Hoarah Loux",
+    "english": "Remembrance of Hoarah Loux",
+    "category": "key_item",
+    "textId": "2957",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_Hoarah_Loux"
+  },
+  {
+    "id": "item.elden-remembrance",
+    "name": "Souvenir d'Elden",
+    "english": "Elden Remembrance",
+    "category": "key_item",
+    "textId": "2963",
+    "wiki": "https://eldenring.wiki.gg/wiki/Elden_Remembrance"
+  },
+  {
+    "id": "item.remembrance-of-the-rot-goddess",
+    "name": "Souvenir de la déesse de la putréfaction",
+    "english": "Remembrance of the Rot Goddess",
+    "category": "key_item",
+    "textId": "2954",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Rot_Goddess"
+  },
+  {
+    "id": "item.remembrance-of-the-blood-lord",
+    "name": "Souvenir du seigneur du sang",
+    "english": "Remembrance of the Blood Lord",
+    "category": "key_item",
+    "textId": "2955",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Blood_Lord"
+  }
+]

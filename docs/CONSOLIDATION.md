@@ -7,13 +7,17 @@ du jeu de base ; la [feuille de route](ROADMAP.md) conserve les enrichissements 
 
 ## Catalogue et couverture
 
-La publication conserve 40 parcours PNJ, 154 types d’objets (150 dans la collection),
-190 acquisitions, 27 ramassages, 32 rencontres de boss et 40 sites de grâce.
+Lors de la consolidation initiale, la publication conservait 40 parcours PNJ, 154 types
+d’objets (150 dans la collection), 190 acquisitions, 27 ramassages, 32 rencontres de boss
+et 40 sites de grâce.
 Aucune fiche de jeu n’est ajoutée dans ce lot. Les données et identifiants précédents
 sont conservés ; seuls les contrôles et la construction des références sont consolidés.
+La [complétion ultérieure des quatre catégories prioritaires](ITEM_COMPLETION.md) porte
+le catalogue à 1 071 types et 1 107 acquisitions ; le rapport d’audit décrit cet état actuel.
 
 Les totaux documentaires des objets sont centralisés dans `src/catalog/itemCoverage.ts`.
-Ils concernent huit catégories du jeu de base d’origine : 138 types publiés sur 1 376 recensés.
+Ils concernent huit catégories du jeu de base d’origine : 138 types publiés sur 1 376 recensés
+lors de la consolidation initiale, puis 1 040 après la complétion de l’équipement et des sorcelleries.
 Les outils, objets de progression et améliorations ont un dénominateur inconnu, sans
 pourcentage. Aucun pourcentage global du jeu, des boss ou des grâces n’est déduit de ce sous-total.
 Les variantes nommées et armures altérées sont distinctes ; les niveaux d’amélioration et

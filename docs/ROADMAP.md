@@ -11,8 +11,8 @@ Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 | 1 — Parties et sauvegarde | Livré web | Personnages/cycles, IndexedDB, export/import avec aperçu et copies. Persistance et erreurs testées. |
 | 2 — Premier suivi de quêtes | Livré web | Roderika, Boc, Kenneth Haight, Ranni et Sellen ; recherche, régions, statut manuel, étapes et branches. |
 | 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
-| 4 — Collection et obtention | Fonctions livrées web ; contenu partiel | 154 objets, 11 catégories, 190 sources, 27 emplacements ; recherche/filtres, fiches, collection par personnage et ramassages par cycle. Catalogue à poursuivre par régions. |
-| 5 — Boss et grâces | Fonctions livrées web ; contenu partiel | Onglet Exploration, 32 rencontres non réapparaissantes et 40 sites de grâce ; coches par cycle, recherche/filtres, accès, régions et liens réciproques aux objets/quêtes. Catalogue à poursuivre par régions. |
+| 4 — Collection et obtention | Fonctions livrées web ; quatre catégories recensées | 1 071 types, 11 catégories, 1 107 acquisitions, 27 emplacements. Les 308 armes, 69 boucliers, 559 pièces d’armure et 70 sorcelleries du jeu de base d’origine ont une fiche et au moins une obtention. Autres catégories et obtentions alternatives à poursuivre. |
+| 5 — Boss et grâces | Fonctions livrées web ; contenu partiel | Onglet Exploration, 93 rencontres non réapparaissantes et 40 sites de grâce ; ajout des rencontres liées à l’équipement et aux sorcelleries. Coches par cycle, recherche/filtres, accès, régions et liens aux objets/quêtes. Catalogue à poursuivre. |
 | 6 — Consolidation | Contrôles livrés ; contenu encore partiel | Audit reproductible des périmètres, références, doublons, liens, compteurs et anciens identifiants ; rapport régional et dénominateurs sourcés. Enrichissement du jeu de base et revue des accès documentaires refusés à poursuivre. |
 | 7 — Comptes privés / MongoDB | À réaliser | API Node.js/TypeScript avec Fastify et pilote MongoDB, invitations, sessions et synchronisation par personnage. |
 | 8 — Shadow of the Erdtree | À réaliser | Catalogues et filtres DLC, progression conservée et remplissage régional. |
@@ -36,7 +36,9 @@ pas un relevé de tous leurs dialogues. Le lot 3 couvre les 40 parcours retenus 
 [le manifeste de couverture](QUEST_COVERAGE.md), avec sept rencontres courtes et le récit de
 Melina distingués des 32 quêtes. Les cinq parcours validés conservent leurs identifiants.
 Le lot 4 publie une première [sélection d’objets](ITEM_COVERAGE.md) ; les régions et les sources
-restent partielles. Le lot 5 publie une première [sélection de boss et de grâces](WORLD_COVERAGE.md),
+restent partielles. L’[enrichissement des quatre catégories prioritaires](ITEM_COMPLETION.md)
+recense leurs 1 006 types du jeu de base d’origine, sans annoncer toutes les obtentions possibles.
+Le lot 5 publie une [sélection de boss et de grâces](WORLD_COVERAGE.md),
 elle aussi partielle, en reprenant les références des objets. Les noms et identifiants pourront être rapprochés
 d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
 

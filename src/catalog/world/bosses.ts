@@ -1,6 +1,7 @@
 import type { Boss } from '../../domain/world';
 import type { Source } from '../../domain/catalog';
 import { worldGuide } from './sources';
+import { completionBosses } from '../items/completion-routes';
 
 type BossInput = { id: string; name: string; alias: string; region: string; location: string; access: string;
   slug: string; conditions?: string[]; graceIds?: string[]; questIds?: string[]; source?: Source };
@@ -11,7 +12,7 @@ function boss({ alias, region, slug, questIds, source, ...input }: BossInput): B
 }
 
 // Une entrée par affrontement. Les variantes homonymes gardent des coches distinctes.
-export const bosses: Boss[] = [
+const regionalBosses: Boss[] = [
   boss({ id: 'boss.tree-sentinel.limgrave', name: 'Sentinelle de l’Arbre · Nécrolimbe', alias: 'Tree Sentinel', region: 'limgrave',
     location: 'Plaine au sud de l’église d’Elleh', access: 'Rejoindre la plaine entre les premiers pas et l’église d’Elleh.',
     slug: 'sentinelle-de-l-arbre-monde', graceIds: ['grace.elleh', 'grace.first-step'] }),
@@ -104,3 +105,5 @@ export const bosses: Boss[] = [
     location: 'Au nord-est du village des ermites', access: 'Traverser le village des ermites et rejoindre Maggie près du sorcier Azur.',
     slug: 'village-des-ermites', graceIds: ['grace.primeval-sorcerer'], questIds: ['quest.sellen'] }),
 ];
+
+export const bosses: Boss[] = [...regionalBosses, ...completionBosses.filter(entry => !regionalBosses.some(existing => existing.id === entry.id))];

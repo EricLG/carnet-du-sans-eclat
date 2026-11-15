@@ -64,7 +64,7 @@ try {
   await exploration(); await b.click('Sites de grâce'); await b.fill('Rechercher dans l’exploration','Church of Elleh'); await checked('Activée : Église d’Elleh',true);
   saved = part(await readSave()); const originalRun = saved.run.id; const originalCharacter = saved.character.id;
   await b.click('Parties'); await b.click(`Nouveau cycle pour ${name}`); await b.click('Confirmer le nouveau cycle'); await b.wait('NG+');
-  await b.click('Exploration'); await b.wait('0/32 boss référencés vaincus'); await b.wait('0/40 grâces référencées activées');
+  await b.click('Exploration'); await b.wait(`0/${bosses.length} boss référencés vaincus`); await b.wait(`0/${graces.length} grâces référencées activées`);
   saved = part(await readSave()); assert.deepEqual(saved.run.bosses,{}); assert.deepEqual(saved.run.graces,{}); assert.equal(saved.character.collection['item.remembrance-grafted'],true);
   await b.click('Parties'); await b.fill('Nom du personnage',name+'-B'); await b.click('Créer le personnage'); await b.wait(`Nouveau cycle pour ${name}-B`);
   saved=part(await readSave()); assert.deepEqual(saved.run.bosses,{}); assert.deepEqual(saved.run.graces,{}); assert.deepEqual(saved.character.collection,{});

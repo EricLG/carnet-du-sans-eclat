@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { APP_ID } from '../../src/config/identity.ts';
-import { collectionItems, collectionScope, items, pickups } from '../../src/catalog/items/index.ts';
-import { collectionCategoryLabels } from '../../src/catalog/items/query.ts';
+import { collectionItems, collectionScope, itemActors, items, pickups } from '../../src/catalog/items/index.ts';
+import { collectionCategoryLabels, emptyCollectionFilter, filterItems } from '../../src/catalog/items/query.ts';
 import { regions } from '../../src/catalog/regions.ts';
 import { browser } from './cdp.mjs';
 
@@ -99,7 +99,10 @@ try {
   await collection(); await b.fill('Rechercher un objet','Carian Slicer'); await b.click('Voir l’objet : Trancheuse de Caria'); await b.wait('Église des vœux');
   await b.click('Objet requis : Parchemin de la maison royale'); await b.wait('Comment l’obtenir'); await checked('Déjà obtenu : Parchemin de la maison royale',false);
   await b.layout('item-new-scroll',390,844); await b.layout('item-new-scroll',360,800);
-  await collection(); await b.fill('Rechercher un objet','Graine dorée'); await b.wait('0 résultats parmi les objets');
+  await collection(); await b.fill('Rechercher un objet','Graine dorée');
+  const seedReferences = filterItems(collectionItems,itemActors,{...emptyCollectionFilter,search:'Graine dorée'});
+  await b.wait(`${seedReferences.length} résultat${seedReferences.length!==1?'s':''} parmi les objets`);
+  assert.equal(await b.evaluate(`!!document.querySelector('[role="checkbox"][aria-label="Déjà obtenu : Graine dorée"]')`),false);
   await b.click('Améliorations du cycle'); await b.wait('6 résultats parmi les emplacements');
   const pickup='Récupéré : Graine dorée · Route de Valorage';
   const otherPickup='Récupéré : Graine dorée · Devant le fort Haight';

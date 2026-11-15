@@ -14,18 +14,19 @@ Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 - Statut global des quêtes manuel et indépendant des étapes.
 - Toutes les informations visibles, points de blocage et références documentaires par fiche.
 - [Périmètre des parcours PNJ](docs/QUEST_COVERAGE.md), consultable aussi dans le carnet.
-- Onglet **Collection** : 150 objets dans 10 catégories et 4 types d’améliorations, avec 190 sources d’obtention documentées.
+- Onglet **Collection** : 1 067 objets dans 10 catégories et 4 types d’améliorations, avec 1 107 acquisitions documentées.
+- Types du jeu de base d’origine répertoriés pour les 308 armes, 69 boucliers, 559 pièces d’armure et 70 sorcelleries ; [périmètre de cette complétion](docs/ITEM_COMPLETION.md).
 - Recherche française/anglaise ; filtres par catégorie, région, méthode et statut.
 - Collection « déjà obtenu » conservée par personnage ; 27 emplacements d’amélioration suivis par cycle.
 - Prix, conditions, grâces de référence, taux sourcés, échanges de souvenir et liens vers les quêtes.
 - [Catalogue d’objets explicitement partiel](docs/ITEM_COVERAGE.md), à enrichir par régions.
-- Onglet **Exploration** : 32 rencontres de boss et 40 sites de grâce du jeu de base,
+- Onglet **Exploration** : 93 rencontres de boss et 40 sites de grâce du jeu de base,
   avec recherche, filtres, coches par cycle et liens aux objets et quêtes.
 - [Couverture de l’exploration explicitement partielle](docs/WORLD_COVERAGE.md).
 - [Consolidation et compatibilité du catalogue](docs/CONSOLIDATION.md), avec un
   [rapport de couverture reproductible](docs/CATALOG_AUDIT.md) et des contrôles transversaux.
 
-Les catalogues d’objets, boss et grâces restent à enrichir. MongoDB et le DLC sont décrits dans
+Les autres catégories d’objets, les obtentions alternatives, les boss et les grâces restent à enrichir. MongoDB et le DLC sont décrits dans
 [la feuille de route](docs/ROADMAP.md) et ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
 présents ; Android et iOS ne sont pas encore validés sur appareil.
 

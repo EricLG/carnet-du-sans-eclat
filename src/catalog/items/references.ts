@@ -2,6 +2,7 @@ import type { AcquisitionActor, GraceReference } from '../../domain/items';
 import { npcs } from '../quests';
 import { bosses } from '../world/bosses';
 import { graces } from '../world/graces';
+import { completionActors } from './completion-routes';
 
 function bossReference(id: string): AcquisitionActor {
   const boss = bosses.find(entry => entry.id === id);
@@ -16,7 +17,7 @@ function graceReference(id: string): GraceReference {
 
 // Les noms et régions proviennent du catalogue d’exploration ; les identifiants
 // de cette sélection restent stables pour conserver les anciennes acquisitions.
-export const itemActors: AcquisitionActor[] = [
+const selectedActors: AcquisitionActor[] = [
   bossReference('boss.scaly-misbegotten.morne-tunnel'),
   bossReference('boss.leonine-misbegotten.morne'),
   bossReference('boss.loretta.caria-manor'),
@@ -113,6 +114,8 @@ export const itemActors: AcquisitionActor[] = [
   }
 ] as AcquisitionActor[],
 ];
+export const itemActors: AcquisitionActor[] = [...selectedActors, ...completionActors.filter(actor => !selectedActors.some(existing => existing.id === actor.id))
+  .map(actor => actor.kind === 'boss' ? bossReference(actor.id) : actor)];
 export const itemGraces: GraceReference[] = [
   'grace.elleh',
   'grace.gatefront',

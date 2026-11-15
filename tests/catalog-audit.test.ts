@@ -15,18 +15,19 @@ test('l’audit consolidé contrôle tous les catalogues et sépare publication 
   const report = auditCatalog(publishedCatalog, asOf);
   assert.deepEqual(report.errors, []);
   assert.deepEqual(publishedCatalog, before);
-  assert.deepEqual(report.publication, { quests: 40, items: 154, collection: 150, acquisitions: 190, pickups: 27, bosses: 32, graces: 40 });
-  assert.deepEqual(report.knownSubtotal, { published: 138, knownTotal: 1376 });
+  assert.deepEqual(report.publication, { quests: 40, items: 1071, collection: 1067, acquisitions: 1107, pickups: 27, bosses: 93, graces: 40 });
+  assert.deepEqual(report.knownSubtotal, { published: 1040, knownTotal: 1376 });
   for (const category of ['tool', 'key_item', 'upgrade']) {
     const row = report.itemCoverage.find(row => row.category === category)!;
     assert.equal(row.knownTotal, null); assert.equal(row.percent, null);
   }
-  assert.ok(report.regionalCoverage.some(row => row.bosses === 0 && row.graces === 0));
-  assert.equal(report.sources.unique, 184);
+  assert.equal(report.regionalCoverage.length, publishedCatalog.regions.length);
+  assert.ok(report.regionalCoverage.some(row => row.graces === 0));
+  assert.equal(report.sources.unique, 199);
   assert.equal(report.sources.versionedCitations, 0);
   assert.ok(report.limits.some(limit => limit.includes('aucun pourcentage global')));
   const markdown = formatCatalogAudit(report);
-  assert.match(markdown, /138\/1376/); assert.match(markdown, /À recenser/); assert.match(markdown, /disponibilité actuelle des pages/);
+  assert.match(markdown, /1040\/1376/); assert.match(markdown, /À recenser/); assert.match(markdown, /disponibilité actuelle des pages/);
 });
 test('l’audit détecte une collision entre catalogues et un doublon probable sans les fusionner', () => {
   const collision = clone();
@@ -37,7 +38,7 @@ test('l’audit détecte une collision entre catalogues et un doublon probable s
   item.id = 'item.duplicate'; item.acquisitions.forEach((acquisition, index) => { acquisition.id = `acquisition.duplicate.${index}`; });
   duplicate.items.push(item); duplicate.collectionScope.itemIds.push(item.id);
   assert.ok(auditCatalog(duplicate, asOf).errors.some(error => error.includes('Doublon probable')));
-  assert.equal(duplicate.items.length, 155);
+  assert.equal(duplicate.items.length, publishedCatalog.items.length + 1);
 });
 test('les références répétées, dates futures et URL non documentaires ne passent pas l’audit', () => {
   const duplicate = clone();
@@ -83,7 +84,7 @@ test('les compteurs partagés ignorent doublons, anciennes améliorations et coc
   const original = structuredClone(save);
   assert.deepEqual(catalogProgress(entries, currentPart(save).character!.collection), { done: 1, total: 2 });
   const bosses = publishedCatalog.bosses;
-  assert.deepEqual(worldProgress([...bosses, bosses[0]], currentPart(save).run!.bosses), { done: 1, total: 32 });
+  assert.deepEqual(worldProgress([...bosses, bosses[0]], currentPart(save).run!.bosses), { done: 1, total: 93 });
   assert.deepEqual(save, original);
   const copied = importCopies(save, parseBackup(exportSave(save)));
   assert.deepEqual(copied.characters[0], original.characters[0]);

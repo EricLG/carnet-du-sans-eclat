@@ -7,8 +7,10 @@ React Native et TypeScript. Le navigateur en émulation mobile sert à valider l
 Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
 et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
 dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
-avec une sélection de 154 objets dans 11 catégories : catalogue partiel, détaillé dans
-`docs/ITEM_COVERAGE.md`. Le lot 5 fournit le suivi par cycle de 32 rencontres de boss et
+avec 1 071 types dans 11 catégories : les 308 armes, 69 boucliers, 559 pièces d’armure et
+70 sorcelleries du jeu de base d’origine sont répertoriés. Les autres catégories et les
+acquisitions restent partielles ; voir `docs/ITEM_COVERAGE.md` et `docs/ITEM_COMPLETION.md`.
+Le lot 5 fournit le suivi par cycle de 93 rencontres de boss et
 40 sites de grâce, catalogue partiel détaillé dans `docs/WORLD_COVERAGE.md`.
 Le lot 6 fournit l’audit transversal, les compteurs consolidés et la protection des anciens
 identifiants ; voir `docs/CONSOLIDATION.md` et `docs/CATALOG_AUDIT.md`. Les catalogues restent partiels.
@@ -80,7 +82,8 @@ La suite est détaillée dans
 - Pour préparer un commit, contrôler les fichiers indexés et exclure dépendances, fichiers générés et données locales.
 - Exécuter `npm test` après une modification des règles métier, de la sauvegarde ou du catalogue.
 - Après une modification du catalogue, exécuter `npm run catalog:check` et actualiser son rapport.
-  Préserver la référence historique `tests/fixtures/catalog-ids.v1.json` : un ajout de contenu
+  Préserver les références historiques `tests/fixtures/catalog-ids.v1.json` et
+  `tests/fixtures/item-completion-ids.json` : un ajout de contenu
   ne doit pas masquer la suppression ou la réaffectation d’un identifiant déjà publié.
 - Ne pas écrire de tests qui reproduisent l’accueil statique. Tester les invariants métier,
   les échecs de sauvegarde, les imports et les références du catalogue.
