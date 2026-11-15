@@ -6,7 +6,9 @@ Application mobile de suivi des quêtes d’Elden Ring, conçue pour Android et 
 React Native et TypeScript. Le navigateur en émulation mobile sert à valider l’interface.
 Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
 et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
-dans `docs/QUEST_COVERAGE.md` ; elle ne concerne pas les autres catalogues. La suite est détaillée dans
+dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 13 ramassages d’améliorations
+avec une première sélection de 45 objets dans 11 catégories : catalogue partiel, détaillé dans
+`docs/ITEM_COVERAGE.md`. Les boss/grâces n’ont pas encore leurs listes. La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
 ## Organisation et commandes
@@ -42,6 +44,17 @@ dans `docs/QUEST_COVERAGE.md` ; elle ne concerne pas les autres catalogues. La s
 - `src/catalog/quests/` contient les fiches régionales et les rencontres ; `questScope.ts` est l’inventaire
   éditorial indépendant. Ajouter une fiche nécessite des références documentaires, des identifiants
   stables et un classement cohérent. Vérifier les liens et la couverture avec les tests métier.
+- `src/domain/items.ts` valide les objets/acquisitions ; `src/catalog/items/` contient les fiches,
+  emplacements, références et périmètre de publication. Les sources et le catalogue restent partiels :
+  ajouter du contenu ne doit jamais changer les identifiants existants ou effacer des coches inconnues.
+- Méthode d’obtention et garantie sont distinctes. Aucun taux inventé ; conserver les conditions
+  et sources d’un pourcentage. Un taux inconnu reste absent, sans devenir 0 %.
+- Les références de boss/grâces dans les acquisitions ne constituent pas leurs catalogues complets.
+  Réutiliser leurs identifiants au lot 5.
+- Les améliorations importantes apparaissent uniquement dans « Améliorations du cycle »,
+  regroupées par objet puis par emplacement. Chaque case concerne une acquisition et un cycle.
+  Elles sont exclues de la collection du personnage et de ses compteurs. Conserver les éventuelles
+  anciennes coches de collection dans les sauvegardes, sans les convertir en ramassages.
 - Le statut global des quêtes est manuel. Aucun effet automatique entre les rubriques ni entre
   branches et coches. Conserver les identifiants pour préserver les sauvegardes.
 - Les erreurs de stockage doivent être visibles. Ne jamais remplacer une sauvegarde illisible.

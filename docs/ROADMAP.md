@@ -1,6 +1,7 @@
 # Feuille de route
 
-Le projet est livré en plusieurs fois. Les lots 1 à 3 sont disponibles dans le navigateur.
+Le projet est livré en plusieurs fois. Les lots 1 à 3 sont disponibles dans le navigateur. Le lot 4 fournit les fonctions
+de collection et une première sélection de contenu, à enrichir par régions.
 Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 
 | Lot | État | Livraison et critère |
@@ -8,7 +9,7 @@ Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 | 1 — Parties et sauvegarde | Livré web | Personnages/cycles, IndexedDB, export/import avec aperçu et copies. Persistance et erreurs testées. |
 | 2 — Premier suivi de quêtes | Livré web | Roderika, Boc, Kenneth Haight, Ranni et Sellen ; recherche, régions, statut manuel, étapes et branches. |
 | 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
-| 4 — Collection et obtention | À réaliser | Équipement, sorts, cendres, outils, progression et améliorations importantes ; sources multiples et filtres. |
+| 4 — Collection et obtention | Fonctions livrées web ; contenu partiel | 45 objets, 11 catégories, 63 sources, 13 emplacements ; recherche/filtres, fiches, collection par personnage et ramassages par cycle. Catalogue à poursuivre par régions. |
 | 5 — Boss et grâces | À réaliser | Rencontres non réapparaissantes distinctes et grâces activées par cycle ; accès, régions et liens aux objets/quêtes. |
 | 6 — Consolidation | À réaliser | Couverture contrôlée du jeu de base, références, doublons, liens et compteurs sans fausse exhaustivité. |
 | 7 — Comptes privés / MongoDB | À réaliser | API Node.js/TypeScript avec Fastify et pilote MongoDB, invitations, sessions et synchronisation par personnage. |
@@ -32,7 +33,8 @@ contrôle de leur couverture. Le lot 2 fournit un parcours synthétique pour cin
 pas un relevé de tous leurs dialogues. Le lot 3 couvre les 40 parcours retenus dans
 [le manifeste de couverture](QUEST_COVERAGE.md), avec sept rencontres courtes et le récit de
 Melina distingués des 32 quêtes. Les cinq parcours validés conservent leurs identifiants.
-Les catalogues d’objets, de boss et de grâces ne sont pas encore livrés. Les noms et identifiants pourront être rapprochés
+Le lot 4 publie une première [sélection d’objets](ITEM_COVERAGE.md) ; les régions et les sources
+restent partielles. Les catalogues de boss et de grâces ne sont pas encore livrés. Les noms et identifiants pourront être rapprochés
 d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
 
 Pour les objets : marchand, boss, ennemi, exploration, dialogue PNJ, quête, échange de souvenir,

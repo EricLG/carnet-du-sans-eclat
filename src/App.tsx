@@ -9,12 +9,14 @@ import { PartiesScreen } from './screens/PartiesScreen';
 import { BackupScreen } from './screens/BackupScreen';
 import { QuestsScreen } from './screens/QuestsScreen';
 import { QuestScreen } from './screens/QuestScreen';
+import { ItemsScreen } from './screens/ItemsScreen';
+import { ItemScreen } from './screens/ItemScreen';
 import { ProgressProvider } from './state/ProgressProvider';
 import { theme } from './theme';
 import { APP_NAME } from './config/identity';
 
-type NotebookParams = { Quests: undefined; Parties: undefined };
-export type RootStackParams = { Home: undefined; Notebook: NavigatorScreenParams<NotebookParams> | undefined; Backup: undefined; Quest: { id: string } };
+type NotebookParams = { Quests: undefined; Collection: undefined; Parties: undefined };
+export type RootStackParams = { Home: undefined; Notebook: NavigatorScreenParams<NotebookParams> | undefined; Backup: undefined; Quest: { id: string }; Item: { id: string } };
 const Stack = createNativeStackNavigator<RootStackParams>();
 const Tabs = createBottomTabNavigator<NotebookParams>();
 const navigationTheme = { ...DarkTheme, colors: { ...DarkTheme.colors,
@@ -55,6 +57,9 @@ export default function App() {
               <Tabs.Screen name="Quests" options={{ title: 'Quêtes', tabBarAccessibilityLabel: 'Quêtes', tabBarIcon: ({ color }) => <Text accessible={false} style={{ color, fontSize: 20 }}>✧</Text> }}>
                 {({ navigation: tabs }) => <QuestsScreen onOpen={id => navigation.navigate('Quest', { id })} onParties={() => tabs.navigate('Parties')} />}
               </Tabs.Screen>
+              <Tabs.Screen name="Collection" options={{ title: 'Collection', tabBarAccessibilityLabel: 'Collection', tabBarIcon: ({ color }) => <Text accessible={false} style={{ color, fontSize: 20 }}>◇</Text> }}>
+                {({ navigation: tabs }) => <ItemsScreen onOpen={id => navigation.navigate('Item', { id })} onParties={() => tabs.navigate('Parties')} />}
+              </Tabs.Screen>
               <Tabs.Screen name="Parties" options={{ title: 'Parties', tabBarAccessibilityLabel: 'Parties', tabBarIcon: ({ color }) => <Text accessible={false} style={{ color, fontSize: 20 }}>☷</Text> }}>
                 {() => <PartiesScreen onBackup={() => navigation.navigate('Backup')} />}
               </Tabs.Screen>
@@ -62,7 +67,10 @@ export default function App() {
           </Stack.Screen>
           <Stack.Screen name="Backup" component={BackupScreen} options={{ title: 'Sauvegardes' }} />
           <Stack.Screen name="Quest" options={{ title: 'Quête' }}>
-            {({ route, navigation }) => <QuestScreen id={route.params.id} onQuest={id => navigation.push('Quest', { id })} onParties={() => navigation.navigate('Notebook', { screen: 'Parties' })} />}
+            {({ route, navigation }) => <QuestScreen id={route.params.id} onItem={id => navigation.push('Item', { id })} onQuest={id => navigation.push('Quest', { id })} onParties={() => navigation.navigate('Notebook', { screen: 'Parties' })} />}
+          </Stack.Screen>
+          <Stack.Screen name="Item" options={{ title: 'Objet' }}>
+            {({ route, navigation }) => <ItemScreen id={route.params.id} onQuest={id => navigation.push('Quest', { id })} onItem={id => navigation.push('Item', { id })} onParties={() => navigation.navigate('Notebook', { screen: 'Parties' })} />}
           </Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>

@@ -16,21 +16,9 @@ export type Quest = z.infer<typeof questSchema>;
 export type Content = Quest['content'];
 export type Source = z.infer<typeof sourceSchema>;
 export type CatalogEntry = { id: string; name: string; content: Content; regionIds: string[]; sources: Source[] };
-export type Acquisition = {
-  id: string;
-  method: 'merchant' | 'boss_reward' | 'enemy_drop' | 'exploration' | 'npc_dialogue' | 'quest_reward' | 'remembrance_exchange' | 'puzzle' | 'other';
-  location: string; description: string; sourceEntityId?: string; graceId?: string;
-  price?: string; conditions: string[];
-  probability: { kind: 'guaranteed' } | { kind: 'chance'; percent: number; conditions: string } | { kind: 'unknown' };
-  sources: Source[];
-};
-export type Item = CatalogEntry & {
-  category: 'weapon' | 'shield' | 'armor' | 'talisman' | 'sorcery' | 'incantation' | 'ash_of_war' | 'spirit_ash' | 'tool' | 'key_item' | 'upgrade';
-  acquisitions: Acquisition[];
-};
+export type { Acquisition, Item, Pickup } from './items';
 export type Boss = CatalogEntry & { location: string; access: string; respawns: false; kind: 'boss' | 'mini_boss'; itemIds: string[] };
 export type Grace = CatalogEntry & { location: string; access: string };
-export type Pickup = CatalogEntry & { itemId: string; acquisitionId: string };
 
 export function validateQuests(quests: Quest[], regionIds: string[], npcIds: string[]): string[] {
   const errors: string[] = [];

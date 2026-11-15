@@ -35,7 +35,7 @@ export function QuestsScreen({ onOpen, onParties }: { onOpen: (id: string) => vo
       <Heading>Couverture du catalogue</Heading>
       <Text style={ui.body}>{coverage.quests} quêtes · {coverage.encounters} rencontres · {coverage.stories} parcours principal</Text>
       <Text style={ui.body}>{scopeDescription}</Text>
-      <Text style={ui.caption}>Fiches synthétiques et vérification documentaire ; elles ne recensent pas chaque réplique. La collection, les boss et les grâces auront leurs propres catalogues.</Text>
+      <Text style={ui.caption}>Fiches synthétiques et vérification documentaire ; elles ne recensent pas chaque réplique. Cette couverture concerne uniquement les parcours PNJ, pas les objets, les boss ou les grâces.</Text>
       <SourceLink label={scopeSource.label} url={scopeSource.url} />
     </Card>}
     <Field label="Rechercher une quête" value={search} onChangeText={setSearch} placeholder="Nom d’un personnage…" />

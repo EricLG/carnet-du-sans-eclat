@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { collectionItems } from '../catalog/items';
 import { Text, View } from 'react-native';
 import { addCharacter, addCycle, cycleLabel, selectRun } from '../domain/save';
 import { Button, Card, Choice, Field, Heading, Page, ui } from '../components/ui';
@@ -22,7 +23,7 @@ export function PartiesScreen({ onBackup }: { onBackup: () => void }) {
     {data.characters.length === 0 && <Text style={ui.body}>Créez votre premier personnage pour commencer à remplir le carnet.</Text>}
     {data.characters.map(character => <Card key={character.id}>
       <Heading>{character.name}</Heading>
-      <Text style={ui.caption}>{Object.values(character.collection).filter(Boolean).length} objets déjà obtenus · Collection conservée entre les cycles</Text>
+      <Text style={ui.caption}>{collectionItems.filter(item => character.collection[item.id]).length} objets déjà obtenus · Collection conservée entre les cycles</Text>
       <View style={ui.wrap}>{character.runs.map(run => <Choice key={run.id} label={cycleLabel(run.cycle)}
         selected={data.selected?.characterId === character.id && data.selected.runId === run.id}
         onPress={() => void service.mutate(save => selectRun(save, character.id, run.id))} />)}</View>
