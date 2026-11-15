@@ -41,6 +41,8 @@
     "typecheck": "tsc --noEmit",
     "build:web": "expo export --platform web",
     "test": "tsx --test tests/*.test.ts",
+    "catalog:check": "tsx scripts/check-catalog.ts",
+    "catalog:links": "node --use-system-ca --import tsx scripts/check-source-links.ts",
     "test:browser": "node tests/browser/parties.mjs && node --import tsx tests/browser/quests.mjs && node --import tsx tests/browser/items.mjs && node --import tsx tests/browser/world.mjs && node tests/browser/backups.mjs",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix --max-warnings 0"

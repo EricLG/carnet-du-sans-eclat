@@ -3,6 +3,7 @@
 Le projet est livré en plusieurs fois. Les lots 1 à 3 sont disponibles dans le navigateur. Le lot 4 fournit les fonctions
 de collection et une première sélection de contenu, à enrichir par régions. Le lot 5 ajoute
 le suivi des boss et des sites de grâce avec un premier catalogue régional.
+Le lot 6 fournit l’audit transversal et les contrôles de compatibilité de cette publication.
 Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 
 | Lot | État | Livraison et critère |
@@ -12,7 +13,7 @@ Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 | 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
 | 4 — Collection et obtention | Fonctions livrées web ; contenu partiel | 154 objets, 11 catégories, 190 sources, 27 emplacements ; recherche/filtres, fiches, collection par personnage et ramassages par cycle. Catalogue à poursuivre par régions. |
 | 5 — Boss et grâces | Fonctions livrées web ; contenu partiel | Onglet Exploration, 32 rencontres non réapparaissantes et 40 sites de grâce ; coches par cycle, recherche/filtres, accès, régions et liens réciproques aux objets/quêtes. Catalogue à poursuivre par régions. |
-| 6 — Consolidation | À réaliser | Couverture contrôlée du jeu de base, références, doublons, liens et compteurs sans fausse exhaustivité. |
+| 6 — Consolidation | Contrôles livrés ; contenu encore partiel | Audit reproductible des périmètres, références, doublons, liens, compteurs et anciens identifiants ; rapport régional et dénominateurs sourcés. Enrichissement du jeu de base et revue des accès documentaires refusés à poursuivre. |
 | 7 — Comptes privés / MongoDB | À réaliser | API Node.js/TypeScript avec Fastify et pilote MongoDB, invitations, sessions et synchronisation par personnage. |
 | 8 — Shadow of the Erdtree | À réaliser | Catalogues et filtres DLC, progression conservée et remplissage régional. |
 | 9 — Natif | Adaptateurs présents, validation à réaliser | Tester stockage, import/export, ergonomie et futures sessions sur Android puis iOS. |
@@ -38,6 +39,12 @@ Le lot 4 publie une première [sélection d’objets](ITEM_COVERAGE.md) ; les r�
 restent partielles. Le lot 5 publie une première [sélection de boss et de grâces](WORLD_COVERAGE.md),
 elle aussi partielle, en reprenant les références des objets. Les noms et identifiants pourront être rapprochés
 d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
+
+Le [lot 6 de consolidation](CONSOLIDATION.md) fournit les commandes d’audit et un
+[rapport de couverture](CATALOG_AUDIT.md). Il ne transforme pas ces sélections en catalogues
+exhaustifs : huit catégories d’objets ont un total documentaire, trois restent à recenser ;
+aucun pourcentage global du jeu n’est publié. Les contrôles HTTP signalent séparément
+les liens accessibles, les absences confirmées et les accès non vérifiés.
 
 Pour les objets : marchand, boss, ennemi, exploration, dialogue PNJ, quête, échange de souvenir,
 énigme et autre. Conserver lieu, conditions, prix éventuel, PNJ/ennemi/boss associé et grâce

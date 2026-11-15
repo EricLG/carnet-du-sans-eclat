@@ -1,6 +1,7 @@
 import type { Item } from '../../domain/items';
 import type { WorldEntry, WorldKind } from '../../domain/world';
 import { normalizeSearch } from '../query';
+import { catalogProgress } from '../../domain/catalogProgress';
 
 export type WorldFilter = { search: string; region: string; status: 'all' | 'done' | 'missing' };
 export const emptyWorldFilter: WorldFilter = { search: '', region: 'all', status: 'all' };
@@ -12,10 +13,10 @@ export function filterWorld<T extends WorldEntry>(entries: T[], filter: WorldFil
     .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
 }
 export function worldItems(kind: WorldKind, id: string, items: Item[]): Item[] {
-  return items.filter(item => item.acquisitions.some(acquisition => kind === 'boss' ? acquisition.sourceEntityId === id : acquisition.graceId === id));
+  return items.filter(item => item.acquisitions.some(acquisition => kind === 'boss' ? acquisition.method === 'boss_reward' && acquisition.sourceEntityId === id : acquisition.graceId === id));
 }
 export function worldProgress(entries: WorldEntry[], flags: Record<string, boolean> = {}) {
-  return { done: entries.filter(entry => !!flags[entry.id]).length, total: entries.length };
+  return catalogProgress(entries, flags);
 }
 export function validateWorldScope(bosses: WorldEntry[], graces: WorldEntry[], scope: { bossIds: string[]; graceIds: string[] }) {
   const errors: string[] = [];

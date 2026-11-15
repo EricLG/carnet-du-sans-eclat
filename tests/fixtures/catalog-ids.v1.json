@@ -1,0 +1,1225 @@
+{
+  "version": 1,
+  "quests": {
+    "quest.roderika": {
+      "npcId": "npc.roderika",
+      "steps": [
+        "roderika.shack",
+        "roderika.memento",
+        "roderika.hold",
+        "roderika.hewg",
+        "roderika.convince",
+        "roderika.tuning",
+        "roderika.gesture"
+      ],
+      "branches": {}
+    },
+    "quest.boc": {
+      "npcId": "npc.boc",
+      "steps": [
+        "boc.tree",
+        "boc.needle",
+        "boc.travel",
+        "boc.gold",
+        "boc.beautiful",
+        "boc.rebirth"
+      ],
+      "branches": {
+        "boc.fate": [
+          "reassure",
+          "rebirth"
+        ]
+      }
+    },
+    "quest.kenneth": {
+      "npcId": "npc.kenneth",
+      "steps": [
+        "kenneth.meet",
+        "kenneth.fort",
+        "kenneth.report",
+        "kenneth.return",
+        "kenneth.nepheli",
+        "kenneth.throne"
+      ],
+      "branches": {}
+    },
+    "quest.ranni": {
+      "npcId": "npc.ranni",
+      "steps": [
+        "ranni.serve",
+        "ranni.radahn",
+        "ranni.blade",
+        "ranni.deliver",
+        "ranni.miniature",
+        "ranni.shadow",
+        "ranni.ring",
+        "ranni.astel",
+        "ranni.cathedral",
+        "ranni.ending"
+      ],
+      "branches": {}
+    },
+    "quest.sellen": {
+      "npcId": "npc.sellen",
+      "steps": [
+        "sellen.teacher",
+        "sellen.azur",
+        "sellen.lusat",
+        "sellen.radahn",
+        "sellen.primal",
+        "sellen.body",
+        "sellen.jerren",
+        "sellen.help",
+        "sellen.oppose"
+      ],
+      "branches": {
+        "sellen.duel": [
+          "sellen",
+          "jerren"
+        ]
+      }
+    },
+    "quest.alexander": {
+      "npcId": "npc.alexander",
+      "steps": [
+        "alexander.hole",
+        "alexander.tunnel",
+        "alexander.radahn",
+        "alexander.oil",
+        "alexander.lava",
+        "alexander.giant",
+        "alexander.duel"
+      ],
+      "branches": {}
+    },
+    "quest.blaidd": {
+      "npcId": "npc.blaidd",
+      "steps": [
+        "blaidd.howl",
+        "blaidd.darriwil",
+        "blaidd.ranni",
+        "blaidd.radahn",
+        "blaidd.gaol",
+        "blaidd.return",
+        "blaidd.iji"
+      ],
+      "branches": {}
+    },
+    "quest.yura": {
+      "npcId": "npc.yura",
+      "steps": [
+        "yura.meet",
+        "yura.nerijus",
+        "yura.river",
+        "yura.academy",
+        "yura.eleonora"
+      ],
+      "branches": {}
+    },
+    "quest.patches": {
+      "npcId": "npc.patches",
+      "steps": [
+        "patches.spare",
+        "patches.travel",
+        "patches.manor",
+        "patches.tragoth",
+        "patches.reward",
+        "patches.castanets",
+        "patches.return"
+      ],
+      "branches": {}
+    },
+    "quest.irina": {
+      "npcId": "npc.irina",
+      "steps": [
+        "irina.letter",
+        "irina.edgar",
+        "irina.boss",
+        "irina.report",
+        "irina.irina",
+        "irina.revenge"
+      ],
+      "branches": {}
+    },
+    "quest.varre": {
+      "npcId": "npc.varre",
+      "steps": [
+        "varre.fingers",
+        "varre.rose",
+        "varre.invasions",
+        "varre.blood",
+        "varre.medal",
+        "varre.palace"
+      ],
+      "branches": {}
+    },
+    "quest.nepheli": {
+      "npcId": "npc.nepheli",
+      "steps": [
+        "nepheli.stormveil",
+        "nepheli.village",
+        "nepheli.gideon",
+        "nepheli.king",
+        "nepheli.give",
+        "nepheli.throne"
+      ],
+      "branches": {}
+    },
+    "quest.rogier": {
+      "npcId": "npc.rogier",
+      "steps": [
+        "rogier.chapel",
+        "rogier.hold",
+        "rogier.corpse",
+        "rogier.imprint",
+        "rogier.ranni",
+        "rogier.sleep"
+      ],
+      "branches": {}
+    },
+    "quest.bernahl": {
+      "npcId": "npc.bernahl",
+      "steps": [
+        "bernahl.shack",
+        "bernahl.letter",
+        "bernahl.duo",
+        "bernahl.report",
+        "bernahl.rykard",
+        "bernahl.invasion"
+      ],
+      "branches": {}
+    },
+    "quest.gostoc": {
+      "npcId": "npc.gostoc",
+      "steps": [
+        "gostoc.gate",
+        "gostoc.godrick",
+        "gostoc.nepheli",
+        "gostoc.throne"
+      ],
+      "branches": {}
+    },
+    "quest.d": {
+      "npcId": "npc.d",
+      "steps": [
+        "d.deathroot",
+        "d.gurranq",
+        "d.dagger",
+        "d.armor",
+        "d.twin",
+        "d.fia",
+        "d.return"
+      ],
+      "branches": {}
+    },
+    "quest.rya": {
+      "npcId": "npc.rya",
+      "steps": [
+        "rya.necklace",
+        "rya.invitation",
+        "rya.snake",
+        "rya.amnion",
+        "rya.spare",
+        "rya.tonic",
+        "rya.kill"
+      ],
+      "branches": {
+        "rya.fate": [
+          "spare",
+          "tonic",
+          "kill"
+        ]
+      }
+    },
+    "quest.boggart": {
+      "npcId": "npc.boggart",
+      "steps": [
+        "boggart.necklace",
+        "boggart.shrimp",
+        "boggart.crab",
+        "boggart.safe",
+        "boggart.curse"
+      ],
+      "branches": {
+        "boggart.fate": [
+          "alive",
+          "curse"
+        ]
+      }
+    },
+    "quest.hyetta": {
+      "npcId": "npc.hyetta",
+      "steps": [
+        "hyetta.irina",
+        "hyetta.cliffs",
+        "hyetta.ruins",
+        "hyetta.bridge",
+        "hyetta.fingerprint",
+        "hyetta.flame"
+      ],
+      "branches": {}
+    },
+    "quest.thops": {
+      "npcId": "npc.thops",
+      "steps": [
+        "thops.church",
+        "thops.first",
+        "thops.second",
+        "thops.give",
+        "thops.desk"
+      ],
+      "branches": {}
+    },
+    "quest.latenna": {
+      "npcId": "npc.latenna",
+      "steps": [
+        "latenna.albus",
+        "latenna.cave",
+        "latenna.recruit",
+        "latenna.sol",
+        "latenna.secret",
+        "latenna.summon"
+      ],
+      "branches": {}
+    },
+    "quest.jar-bairn": {
+      "npcId": "npc.jar-bairn",
+      "steps": [
+        "jar-bairn.meet",
+        "jar-bairn.talk",
+        "jar-bairn.diallos",
+        "jar-bairn.raid",
+        "jar-bairn.innards",
+        "jar-bairn.departure"
+      ],
+      "branches": {}
+    },
+    "quest.seluvis": {
+      "npcId": "npc.seluvis",
+      "steps": [
+        "seluvis.receive-potion",
+        "seluvis.gideon",
+        "seluvis.nepheli",
+        "seluvis.dung",
+        "seluvis.cellar",
+        "seluvis.scheme",
+        "seluvis.amber",
+        "seluvis.betray"
+      ],
+      "branches": {
+        "seluvis.potion": [
+          "gideon",
+          "nepheli",
+          "dung"
+        ]
+      }
+    },
+    "quest.diallos": {
+      "npcId": "npc.diallos",
+      "steps": [
+        "diallos.lanya",
+        "diallos.lake",
+        "diallos.manor",
+        "diallos.village",
+        "diallos.raid",
+        "diallos.legacy"
+      ],
+      "branches": {}
+    },
+    "quest.fia": {
+      "npcId": "npc.fia",
+      "steps": [
+        "fia.hug",
+        "fia.dagger",
+        "fia.depths",
+        "fia.embrace",
+        "fia.cursemark",
+        "fia.dream",
+        "fia.fortissax"
+      ],
+      "branches": {}
+    },
+    "quest.corhyn": {
+      "npcId": "npc.corhyn",
+      "steps": [
+        "corhyn.hold",
+        "corhyn.altus",
+        "corhyn.capital",
+        "corhyn.regression",
+        "corhyn.report",
+        "corhyn.bridge",
+        "corhyn.rune"
+      ],
+      "branches": {}
+    },
+    "quest.dung-eater": {
+      "npcId": "npc.dung-eater",
+      "steps": [
+        "dung-eater.curse",
+        "dung-eater.cell",
+        "dung-eater.moat",
+        "dung-eater.return",
+        "dung-eater.five",
+        "dung-eater.potion"
+      ],
+      "branches": {
+        "dung-eater.fate": [
+          "rune",
+          "puppet"
+        ]
+      }
+    },
+    "quest.gideon": {
+      "npcId": "npc.gideon",
+      "steps": [
+        "gideon.audience",
+        "gideon.medallion",
+        "gideon.nepheli",
+        "gideon.haligtree",
+        "gideon.malenia",
+        "gideon.mohg",
+        "gideon.final"
+      ],
+      "branches": {}
+    },
+    "quest.millicent": {
+      "npcId": "npc.millicent",
+      "steps": [
+        "millicent.needle",
+        "millicent.cure",
+        "millicent.prosthesis",
+        "millicent.windmill",
+        "millicent.snow",
+        "millicent.prayer",
+        "millicent.spirit",
+        "millicent.assist",
+        "millicent.challenge",
+        "millicent.miquella",
+        "millicent.gowry"
+      ],
+      "branches": {
+        "millicent.fate": [
+          "assist",
+          "challenge"
+        ]
+      }
+    },
+    "quest.gurranq": {
+      "npcId": "npc.gurranq",
+      "steps": [
+        "gurranq.meet",
+        "gurranq.village",
+        "gurranq.catacombs",
+        "gurranq.liurnia",
+        "gurranq.blackknife",
+        "gurranq.calm",
+        "gurranq.wyndham",
+        "gurranq.gelmir",
+        "gurranq.giants",
+        "gurranq.mariner",
+        "gurranq.hidden"
+      ],
+      "branches": {}
+    },
+    "quest.tanith": {
+      "npcId": "npc.tanith",
+      "steps": [
+        "tanith.join",
+        "tanith.istvan",
+        "tanith.rileigh",
+        "tanith.juno",
+        "tanith.rykard",
+        "tanith.aftermath",
+        "tanith.knight"
+      ],
+      "branches": {}
+    },
+    "quest.shabriri": {
+      "npcId": "npc.shabriri",
+      "steps": [
+        "shabriri.zamor",
+        "shabriri.sewers",
+        "shabriri.door",
+        "shabriri.keep",
+        "shabriri.cure"
+      ],
+      "branches": {
+        "shabriri.flame": [
+          "keep",
+          "cure"
+        ]
+      }
+    },
+    "quest.albus": {
+      "npcId": "npc.albus",
+      "steps": [
+        "albus.pot",
+        "albus.medallion",
+        "albus.latenna"
+      ],
+      "branches": {}
+    },
+    "quest.ensha": {
+      "npcId": "npc.ensha",
+      "steps": [
+        "ensha.silent",
+        "ensha.medallion",
+        "ensha.invasion",
+        "ensha.armor"
+      ],
+      "branches": {}
+    },
+    "quest.hewg": {
+      "npcId": "npc.hewg",
+      "steps": [
+        "hewg.meet",
+        "hewg.roderika",
+        "hewg.prayer",
+        "hewg.ending"
+      ],
+      "branches": {}
+    },
+    "quest.iji": {
+      "npcId": "npc.iji",
+      "steps": [
+        "iji.meet",
+        "iji.blaidd",
+        "iji.service",
+        "iji.news",
+        "iji.remains"
+      ],
+      "branches": {}
+    },
+    "quest.miriel": {
+      "npcId": "npc.miriel",
+      "steps": [
+        "miriel.church",
+        "miriel.books",
+        "miriel.dew"
+      ],
+      "branches": {}
+    },
+    "quest.pidia": {
+      "npcId": "npc.pidia",
+      "steps": [
+        "pidia.roof",
+        "pidia.shop",
+        "pidia.puppets"
+      ],
+      "branches": {}
+    },
+    "quest.great-jar": {
+      "npcId": "npc.great-jar",
+      "steps": [
+        "great-jar.well",
+        "great-jar.talk",
+        "great-jar.trial",
+        "great-jar.reward"
+      ],
+      "branches": {}
+    },
+    "quest.melina": {
+      "npcId": "npc.melina",
+      "steps": [
+        "melina.accord",
+        "melina.hold",
+        "melina.churches",
+        "melina.thorns",
+        "melina.reach-forge",
+        "melina.decision"
+      ],
+      "branches": {
+        "melina.forge": [
+          "sacrifice",
+          "flame"
+        ]
+      }
+    }
+  },
+  "items": {
+    "item.lordsworn-greatsword": [
+      "acquisition.lordsworn-greatsword.exploration"
+    ],
+    "item.flail": [
+      "acquisition.flail.exploration"
+    ],
+    "item.twinblade": [
+      "acquisition.twinblade.exploration"
+    ],
+    "item.uchigatana": [
+      "acquisition.uchigatana.exploration",
+      "acquisition.uchigatana.samurai"
+    ],
+    "item.claymore": [
+      "acquisition.claymore.exploration"
+    ],
+    "item.bloodhound-fang": [
+      "acquisition.bloodhound-fang.boss"
+    ],
+    "item.golden-halberd": [
+      "acquisition.golden-halberd.boss"
+    ],
+    "item.erdsteel-dagger": [
+      "acquisition.erdsteel-dagger.kenneth"
+    ],
+    "item.axe-godrick": [
+      "acquisition.axe-godrick.enia"
+    ],
+    "item.grafted-dragon": [
+      "acquisition.grafted-dragon.enia"
+    ],
+    "item.lordsworn-straight-sword": [
+      "acquisition.lordsworn-straight-sword.soldiers"
+    ],
+    "item.torch": [
+      "acquisition.torch.kale"
+    ],
+    "item.large-leather-shield": [
+      "acquisition.large-leather-shield.kale"
+    ],
+    "item.chain-coif": [
+      "acquisition.chain-coif.kale"
+    ],
+    "item.chain-armor": [
+      "acquisition.chain-armor.kale"
+    ],
+    "item.gauntlets": [
+      "acquisition.gauntlets.kale"
+    ],
+    "item.chain-leggings": [
+      "acquisition.chain-leggings.kale"
+    ],
+    "item.brass-shield": [
+      "acquisition.brass-shield.soldiers"
+    ],
+    "item.green-turtle": [
+      "acquisition.green-turtle.cellar"
+    ],
+    "item.flamedrake": [
+      "acquisition.flamedrake.boss"
+    ],
+    "item.assassin-crimson": [
+      "acquisition.assassin-crimson.boss"
+    ],
+    "item.crimson-amber": [
+      "acquisition.crimson-amber.merchant"
+    ],
+    "item.glintstone-pebble": [
+      "acquisition.glintstone-pebble.sellen",
+      "acquisition.glintstone-pebble.thops"
+    ],
+    "item.glintstone-arc": [
+      "acquisition.glintstone-arc.sellen",
+      "acquisition.glintstone-arc.thops"
+    ],
+    "item.flame-sling": [
+      "acquisition.flame-sling.corhyn"
+    ],
+    "item.heal": [
+      "acquisition.heal.corhyn"
+    ],
+    "item.storm-stomp": [
+      "acquisition.storm-stomp.cellar"
+    ],
+    "item.bloody-slash": [
+      "acquisition.bloody-slash.knight"
+    ],
+    "item.determination": [
+      "acquisition.determination.scarab"
+    ],
+    "item.lone-wolf-ashes": [
+      "acquisition.lone-wolf-ashes.renna",
+      "acquisition.lone-wolf-ashes.husks"
+    ],
+    "item.jellyfish-ashes": [
+      "acquisition.jellyfish-ashes.shack",
+      "acquisition.jellyfish-ashes.hold"
+    ],
+    "item.noble-sorcerer-ashes": [
+      "acquisition.noble-sorcerer-ashes.watchdog"
+    ],
+    "item.whetstone-knife": [
+      "acquisition.whetstone-knife.cellar",
+      "acquisition.whetstone-knife.husks"
+    ],
+    "item.wondrous-physick": [
+      "acquisition.wondrous-physick.church",
+      "acquisition.wondrous-physick.husks"
+    ],
+    "item.lantern": [
+      "acquisition.lantern.weeping",
+      "acquisition.lantern.liurnia"
+    ],
+    "item.telescope": [
+      "acquisition.telescope.kale"
+    ],
+    "item.crafting-kit": [
+      "acquisition.crafting-kit.kale"
+    ],
+    "item.spirit-calling-bell": [
+      "acquisition.spirit-calling-bell.renna",
+      "acquisition.spirit-calling-bell.husks"
+    ],
+    "item.spectral-steed-whistle": [
+      "acquisition.spectral-steed-whistle.melina"
+    ],
+    "item.dectus-left": [
+      "acquisition.dectus-left.fort"
+    ],
+    "item.remembrance-grafted": [
+      "acquisition.remembrance-grafted.godrick"
+    ],
+    "item.golden-seed": [
+      "acquisition.golden-seed.stormhill",
+      "acquisition.golden-seed.fort-haight",
+      "acquisition.golden-seed.stormveil",
+      "acquisition.golden-seed.morne",
+      "acquisition.golden-seed.fringefolk",
+      "acquisition.golden-seed.stormveil-spirit"
+    ],
+    "item.sacred-tear": [
+      "acquisition.sacred-tear.third-marika",
+      "acquisition.sacred-tear.pilgrimage",
+      "acquisition.sacred-tear.fourth-marika",
+      "acquisition.sacred-tear.callu",
+      "acquisition.sacred-tear.irith",
+      "acquisition.sacred-tear.bellum",
+      "acquisition.sacred-tear.inhibition",
+      "acquisition.sacred-tear.plague",
+      "acquisition.sacred-tear.second-marika",
+      "acquisition.sacred-tear.stormcaller",
+      "acquisition.sacred-tear.repose",
+      "acquisition.sacred-tear.first-marika"
+    ],
+    "item.memory-stone": [
+      "acquisition.memory-stone.oridys",
+      "acquisition.memory-stone.husks",
+      "acquisition.memory-stone.testu",
+      "acquisition.memory-stone.converted",
+      "acquisition.memory-stone.seluvis",
+      "acquisition.memory-stone.lenne",
+      "acquisition.memory-stone.red-wolf",
+      "acquisition.memory-stone.maggie"
+    ],
+    "item.crimson-crystal-tear": [
+      "acquisition.crimson-crystal-tear.third-marika"
+    ],
+    "item.short-sword": [
+      "acquisition.short-sword.north-limgrave"
+    ],
+    "item.halberd": [
+      "acquisition.halberd.north-limgrave"
+    ],
+    "item.bandit-mask": [
+      "acquisition.bandit-mask.north-limgrave"
+    ],
+    "item.hand-axe": [
+      "acquisition.hand-axe.east-limgrave"
+    ],
+    "item.riveted-wooden-shield": [
+      "acquisition.riveted-wooden-shield.east-limgrave"
+    ],
+    "item.blue-gold-kite-shield": [
+      "acquisition.blue-gold-kite-shield.east-limgrave"
+    ],
+    "item.broadsword": [
+      "acquisition.broadsword.west-limgrave"
+    ],
+    "item.club": [
+      "acquisition.club.west-limgrave"
+    ],
+    "item.shortbow": [
+      "acquisition.shortbow.west-limgrave"
+    ],
+    "item.iron-roundshield": [
+      "acquisition.iron-roundshield.west-limgrave"
+    ],
+    "item.bastard-sword": [
+      "acquisition.bastard-sword.morne"
+    ],
+    "item.light-crossbow": [
+      "acquisition.light-crossbow.morne"
+    ],
+    "item.red-thorn-roundshield": [
+      "acquisition.red-thorn-roundshield.morne"
+    ],
+    "item.round-shield": [
+      "acquisition.round-shield.morne"
+    ],
+    "item.iron-helmet": [
+      "acquisition.iron-helmet.morne"
+    ],
+    "item.scale-armor": [
+      "acquisition.scale-armor.morne"
+    ],
+    "item.iron-gauntlets": [
+      "acquisition.iron-gauntlets.morne"
+    ],
+    "item.leather-trousers": [
+      "acquisition.leather-trousers.morne"
+    ],
+    "item.zweihander": [
+      "acquisition.zweihander.isolated-weeping"
+    ],
+    "item.longsword": [
+      "acquisition.longsword.husks"
+    ],
+    "item.rapier": [
+      "acquisition.rapier.husks"
+    ],
+    "item.scimitar": [
+      "acquisition.scimitar.husks"
+    ],
+    "item.battle-axe": [
+      "acquisition.battle-axe.husks"
+    ],
+    "item.mace": [
+      "acquisition.mace.husks"
+    ],
+    "item.finger-seal": [
+      "acquisition.finger-seal.husks"
+    ],
+    "item.longbow": [
+      "acquisition.longbow.husks"
+    ],
+    "item.heater-shield": [
+      "acquisition.heater-shield.husks"
+    ],
+    "item.knight-helm": [
+      "acquisition.knight-helm.husks"
+    ],
+    "item.knight-armor": [
+      "acquisition.knight-armor.husks"
+    ],
+    "item.knight-gauntlets": [
+      "acquisition.knight-gauntlets.husks"
+    ],
+    "item.knight-greaves": [
+      "acquisition.knight-greaves.husks"
+    ],
+    "item.glintstone-stars": [
+      "acquisition.glintstone-stars.teacher"
+    ],
+    "item.crystal-barrage": [
+      "acquisition.crystal-barrage.teacher"
+    ],
+    "item.scholar-armament": [
+      "acquisition.scholar-armament.teacher"
+    ],
+    "item.scholar-shield": [
+      "acquisition.scholar-shield.teacher"
+    ],
+    "item.urgent-heal": [
+      "acquisition.urgent-heal.teacher"
+    ],
+    "item.rejection": [
+      "acquisition.rejection.teacher"
+    ],
+    "item.magic-fortification": [
+      "acquisition.magic-fortification.teacher"
+    ],
+    "item.flame-fortification": [
+      "acquisition.flame-fortification.teacher"
+    ],
+    "item.stamp-upward-cut": [
+      "acquisition.stamp-upward-cut.teacher"
+    ],
+    "item.kick": [
+      "acquisition.kick.teacher"
+    ],
+    "item.endure": [
+      "acquisition.endure.teacher"
+    ],
+    "item.war-cry": [
+      "acquisition.war-cry.teacher"
+    ],
+    "item.spinning-slash": [
+      "acquisition.spinning-slash.teacher"
+    ],
+    "item.impaling-thrust": [
+      "acquisition.impaling-thrust.teacher"
+    ],
+    "item.quickstep": [
+      "acquisition.quickstep.teacher"
+    ],
+    "item.storm-blade": [
+      "acquisition.storm-blade.teacher"
+    ],
+    "item.parry": [
+      "acquisition.parry.teacher"
+    ],
+    "item.no-skill": [
+      "acquisition.no-skill.teacher"
+    ],
+    "item.carian-slicer": [
+      "acquisition.carian-slicer.sellen",
+      "acquisition.carian-slicer.miriel",
+      "acquisition.carian-slicer.seluvis"
+    ],
+    "item.arsenal-charm": [
+      "acquisition.arsenal-charm.reward"
+    ],
+    "item.erdtree-favor": [
+      "acquisition.erdtree-favor.reward"
+    ],
+    "item.claw-talisman": [
+      "acquisition.claw-talisman.reward"
+    ],
+    "item.axe-talisman": [
+      "acquisition.axe-talisman.reward"
+    ],
+    "item.blessed-dew": [
+      "acquisition.blessed-dew.reward"
+    ],
+    "item.wandering-noble-ashes": [
+      "acquisition.wandering-noble-ashes.reward"
+    ],
+    "item.lhutel-headless": [
+      "acquisition.lhutel-headless.reward"
+    ],
+    "item.demi-human-ashes": [
+      "acquisition.demi-human-ashes.reward"
+    ],
+    "item.tailoring-tools": [
+      "acquisition.tailoring-tools.reward"
+    ],
+    "item.royal-house-scroll": [
+      "acquisition.royal-house-scroll.reward"
+    ],
+    "item.godrick-great-rune": [
+      "acquisition.godrick-great-rune.reward"
+    ],
+    "item.great-epee": [
+      "acquisition.great-epee.agheel-camp"
+    ],
+    "item.greataxe": [
+      "acquisition.greataxe.limgrave-carriage"
+    ],
+    "item.lance": [
+      "acquisition.lance.stormhill-ruins"
+    ],
+    "item.morning-star": [
+      "acquisition.morning-star.weeping-carriage"
+    ],
+    "item.rusted-anchor": [
+      "acquisition.rusted-anchor.morne-tunnel"
+    ],
+    "item.grafted-blade-greatsword": [
+      "acquisition.grafted-blade-greatsword.morne"
+    ],
+    "item.whip": [
+      "acquisition.whip.morne-rats-room"
+    ],
+    "item.hookclaws": [
+      "acquisition.hookclaws.stormveil"
+    ],
+    "item.highland-axe": [
+      "acquisition.highland-axe.stormveil-painting"
+    ],
+    "item.misericorde": [
+      "acquisition.misericorde.stormveil-sealed-room"
+    ],
+    "item.sword-night-flame": [
+      "acquisition.sword-night-flame.caria-chest"
+    ],
+    "item.carian-knight-sword": [
+      "acquisition.carian-knight-sword.liurnia-carriage"
+    ],
+    "item.icerind-hatchet": [
+      "acquisition.icerind-hatchet.temple-quarter"
+    ],
+    "item.crystal-sword": [
+      "acquisition.crystal-sword.albinauric-village"
+    ],
+    "item.meteorite-staff": [
+      "acquisition.meteorite-staff.street-sages"
+    ],
+    "item.demi-human-queen-staff": [
+      "acquisition.demi-human-queen-staff.forest-ruins"
+    ],
+    "item.estoc": [
+      "acquisition.estoc.liurnia-shore"
+    ],
+    "item.astrologer-staff": [
+      "acquisition.astrologer-staff.liurnia-shore"
+    ],
+    "item.beast-crest-heater-shield": [
+      "acquisition.beast-crest-heater-shield.stormhill-camp"
+    ],
+    "item.great-turtle-shell": [
+      "acquisition.great-turtle-shell.morne-rampart"
+    ],
+    "item.shield-guilty": [
+      "acquisition.shield-guilty.forest-ruins-cellar"
+    ],
+    "item.hawk-crest-wooden-shield": [
+      "acquisition.hawk-crest-wooden-shield.stormveil-sealed-room"
+    ],
+    "item.carian-knight-shield": [
+      "acquisition.carian-knight-shield.moongrum"
+    ],
+    "item.jellyfish-shield": [
+      "acquisition.jellyfish-shield.four-belfries-road"
+    ],
+    "item.kite-shield": [
+      "acquisition.kite-shield.liurnia-shore"
+    ],
+    "item.astrologer-hood": [
+      "acquisition.astrologer-hood.liurnia-shore"
+    ],
+    "item.astrologer-robe": [
+      "acquisition.astrologer-robe.liurnia-shore"
+    ],
+    "item.astrologer-gloves": [
+      "acquisition.astrologer-gloves.liurnia-shore"
+    ],
+    "item.astrologer-trousers": [
+      "acquisition.astrologer-trousers.liurnia-shore"
+    ],
+    "item.carian-knight-helm": [
+      "acquisition.carian-knight-helm.academy-graveyard"
+    ],
+    "item.carian-knight-armor": [
+      "acquisition.carian-knight-armor.academy-graveyard"
+    ],
+    "item.carian-knight-gauntlets": [
+      "acquisition.carian-knight-gauntlets.academy-graveyard"
+    ],
+    "item.carian-knight-greaves": [
+      "acquisition.carian-knight-greaves.academy-graveyard"
+    ],
+    "item.sage-hood": [
+      "acquisition.sage-hood.stillwater-cave"
+    ],
+    "item.sage-robe": [
+      "acquisition.sage-robe.stillwater-cave"
+    ],
+    "item.sage-trousers": [
+      "acquisition.sage-trousers.stillwater-cave"
+    ],
+    "item.glintblade-phalanx": [
+      "acquisition.glintblade-phalanx.sellen",
+      "acquisition.glintblade-phalanx.miriel",
+      "acquisition.glintblade-phalanx.seluvis"
+    ],
+    "item.magic-glintblade": [
+      "acquisition.magic-glintblade.miriel"
+    ],
+    "item.carian-greatsword": [
+      "acquisition.carian-greatsword.miriel"
+    ],
+    "item.starlight": [
+      "acquisition.starlight.thops"
+    ],
+    "item.carian-piercer": [
+      "acquisition.carian-piercer.caria-scarab"
+    ],
+    "item.loretta-greatbow": [
+      "acquisition.loretta-greatbow.royal-knight"
+    ],
+    "item.rock-blaster": [
+      "acquisition.rock-blaster.sellia-chest"
+    ],
+    "item.rock-sling": [
+      "acquisition.rock-sling.street-sages-cellar"
+    ],
+    "item.crystal-burst": [
+      "acquisition.crystal-burst.forest-ruins"
+    ],
+    "item.ambush-shard": [
+      "acquisition.ambush-shard.witchbane-ruins"
+    ],
+    "item.meteorite": [
+      "acquisition.meteorite.royal-grave-evergaol"
+    ],
+    "item.magic-downpour": [
+      "acquisition.magic-downpour.miriam-study-hall"
+    ]
+  },
+  "pickups": {
+    "pickup.golden-seed.stormhill": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.stormhill"
+    },
+    "pickup.golden-seed.fort-haight": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.fort-haight"
+    },
+    "pickup.golden-seed.stormveil": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.stormveil"
+    },
+    "pickup.golden-seed.morne": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.morne"
+    },
+    "pickup.golden-seed.fringefolk": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.fringefolk"
+    },
+    "pickup.golden-seed.stormveil-spirit": {
+      "itemId": "item.golden-seed",
+      "acquisitionId": "acquisition.golden-seed.stormveil-spirit"
+    },
+    "pickup.sacred-tear.third-marika": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.third-marika"
+    },
+    "pickup.sacred-tear.pilgrimage": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.pilgrimage"
+    },
+    "pickup.sacred-tear.fourth-marika": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.fourth-marika"
+    },
+    "pickup.sacred-tear.callu": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.callu"
+    },
+    "pickup.memory-stone.oridys": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.oridys"
+    },
+    "pickup.memory-stone.husks": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.husks"
+    },
+    "pickup.crimson-crystal-tear.third-marika": {
+      "itemId": "item.crimson-crystal-tear",
+      "acquisitionId": "acquisition.crimson-crystal-tear.third-marika"
+    },
+    "pickup.sacred-tear.irith": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.irith"
+    },
+    "pickup.sacred-tear.bellum": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.bellum"
+    },
+    "pickup.sacred-tear.inhibition": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.inhibition"
+    },
+    "pickup.sacred-tear.plague": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.plague"
+    },
+    "pickup.sacred-tear.second-marika": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.second-marika"
+    },
+    "pickup.sacred-tear.stormcaller": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.stormcaller"
+    },
+    "pickup.sacred-tear.repose": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.repose"
+    },
+    "pickup.sacred-tear.first-marika": {
+      "itemId": "item.sacred-tear",
+      "acquisitionId": "acquisition.sacred-tear.first-marika"
+    },
+    "pickup.memory-stone.testu": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.testu"
+    },
+    "pickup.memory-stone.converted": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.converted"
+    },
+    "pickup.memory-stone.seluvis": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.seluvis"
+    },
+    "pickup.memory-stone.lenne": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.lenne"
+    },
+    "pickup.memory-stone.red-wolf": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.red-wolf"
+    },
+    "pickup.memory-stone.maggie": {
+      "itemId": "item.memory-stone",
+      "acquisitionId": "acquisition.memory-stone.maggie"
+    }
+  },
+  "bossIds": [
+    "boss.tree-sentinel.limgrave",
+    "boss.agheel.limgrave",
+    "boss.beastman.groveside",
+    "boss.watchdog.stormfoot",
+    "boss.demi-human-chiefs.coastal-cave",
+    "boss.stonedigger-troll.limgrave-tunnels",
+    "boss.darriwil.limgrave",
+    "boss.mad-pumpkin.waypoint",
+    "boss.grave-warden.murkwater",
+    "boss.black-knife.deathtouched",
+    "boss.crucible-knight.stormhill",
+    "boss.nights-cavalry.limgrave",
+    "boss.deathbird.stormhill",
+    "boss.bell-bearing-hunter.warmaster",
+    "boss.tibia-mariner.summonwater",
+    "boss.tree-spirit.fringefolk",
+    "boss.margit.stormveil",
+    "boss.godrick.stormveil",
+    "boss.leonine-misbegotten.morne",
+    "boss.watchdog.impalers",
+    "boss.runebear.earthbore",
+    "boss.scaly-misbegotten.morne-tunnel",
+    "boss.cemetery-shade.tombsward",
+    "boss.miranda.tombsward-cave",
+    "boss.nights-cavalry.weeping",
+    "boss.deathbird.weeping",
+    "boss.erdtree-avatar.weeping",
+    "boss.ancient-hero.weeping",
+    "boss.red-wolf.raya-lucaria",
+    "boss.loretta.caria-manor",
+    "boss.alabaster-lord.royal-grave",
+    "boss.maggie.gelmir"
+  ],
+  "graceIds": [
+    "grace.elleh",
+    "grace.gatefront",
+    "grace.agheel-north",
+    "grace.agheel-south",
+    "grace.deathtouched",
+    "grace.morne-lift",
+    "grace.morne-rampart",
+    "grace.isolated-weeping",
+    "grace.liurnia-shore",
+    "grace.waypoint",
+    "grace.stormhill-shack",
+    "grace.third-marika",
+    "grace.fort-haight-west",
+    "grace.secluded-cell",
+    "grace.stranded",
+    "grace.groveside",
+    "grace.stormfoot",
+    "grace.summonwater",
+    "grace.pilgrimage",
+    "grace.fourth-marika",
+    "grace.first-step",
+    "grace.castleward-tunnel",
+    "grace.margit",
+    "grace.stormveil-main-gate",
+    "grace.rampart-tower",
+    "grace.godrick",
+    "grace.coastal-cave",
+    "grace.limgrave-tunnels",
+    "grace.murkwater-catacombs",
+    "grace.morne-behind",
+    "grace.morne-beside-rampart",
+    "grace.morne-moangrave",
+    "grace.morne-tunnel",
+    "grace.tombsward",
+    "grace.impalers",
+    "grace.debate-parlor",
+    "grace.caria-upper",
+    "grace.church-vows",
+    "grace.primeval-sorcerer",
+    "grace.roundtable"
+  ]
+}

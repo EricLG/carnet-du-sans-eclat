@@ -73,6 +73,8 @@ action sur une autre quête.
 - Présentation à 390 × 844 et 360 × 800, avec défilement et contrôle des erreurs.
 
 Ces contrôles vérifient l’intégrité technique et le comportement de l’application.
-Ils ne prouvent pas l’exactitude de chaque détail du jeu. Le lot 6 prévoit une consolidation
-du contenu et des liens entre catalogues. Toute correction future doit préserver les identifiants
+Ils ne prouvent pas l’exactitude de chaque détail du jeu. Le [lot 6](CONSOLIDATION.md) ajoute
+l’audit transversal des liens, des sources et de la publication. La couverture compte les
+fiches réellement présentes ; les identifiants des étapes et branches sont protégés par
+une référence historique. Toute correction future doit préserver les identifiants
 existants pour conserver les coches, y compris celles d’entrées inconnues d’un export.

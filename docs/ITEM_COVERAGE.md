@@ -248,5 +248,9 @@ Les essais Android/iOS et Firefox sur téléphone restent à effectuer.
 
 La suite du contenu doit compléter les sélections régionales puis publier les autres régions,
 avec leurs sources et emplacements. Garder l’état « partiel » tant que l’inventaire complet
-n’est pas établi et contrôlé. La consolidation entre objets, quêtes, boss et grâces reste
-prévue au lot 6.
+n’est pas établi et contrôlé. La [consolidation du lot 6](CONSOLIDATION.md) contrôle désormais
+les références entre objets, quêtes, boss et grâces, les anciens identifiants et les compteurs.
+Les dénominateurs documentaires sont centralisés dans `src/catalog/itemCoverage.ts` ;
+le [rapport d’audit](CATALOG_AUDIT.md) sépare les huit catégories chiffrées des trois à recenser.
+Les noms et régions des références de boss/grâces proviennent du catalogue d’exploration,
+sans changer les identifiants ni les valeurs publiées.

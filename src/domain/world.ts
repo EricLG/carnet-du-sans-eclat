@@ -51,6 +51,7 @@ export function validateWorld(bosses: Boss[], graces: Grace[], refs: References)
   for (const grace of validGraces) if (grace.bossId) {
     const boss = bossById.get(grace.bossId);
     if (!boss || boss.regionIds[0] !== grace.regionIds[0]) errors.push(`Boss de grâce invalide : ${grace.id}`);
+    else if (!boss.graceIds.includes(grace.id)) errors.push(`Grâce d’arène sans lien réciproque : ${grace.id}`);
   }
   for (const actor of refs.actors.filter(actor => actor.kind === 'boss')) {
     const boss = bossById.get(actor.id);

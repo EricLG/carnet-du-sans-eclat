@@ -22,6 +22,8 @@ Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 - Onglet **Exploration** : 32 rencontres de boss et 40 sites de grâce du jeu de base,
   avec recherche, filtres, coches par cycle et liens aux objets et quêtes.
 - [Couverture de l’exploration explicitement partielle](docs/WORLD_COVERAGE.md).
+- [Consolidation et compatibilité du catalogue](docs/CONSOLIDATION.md), avec un
+  [rapport de couverture reproductible](docs/CATALOG_AUDIT.md) et des contrôles transversaux.
 
 Les catalogues d’objets, boss et grâces restent à enrichir. MongoDB et le DLC sont décrits dans
 [la feuille de route](docs/ROADMAP.md) et ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
@@ -85,6 +87,8 @@ refusés sans modifier les données existantes.
 | `npm run typecheck` | Vérification TypeScript stricte |
 | `npm run build:web` | Export web dans `dist/` |
 | `npm test` | Tests métier et intégrité du catalogue |
+| `npm run catalog:check` | Audit hors ligne ; `-- --json` pour le détail ou `-- --write-report` pour régénérer le rapport |
+| `npm run catalog:links` | Disponibilité HTTP des sources ; codes 0 accessible, 1 absence/erreur, 2 accès non vérifiés |
 | `npm run test:browser` | Parcours web réels, prérequis ci-dessous |
 | `npm run android` | Appareil ou émulateur Android configuré |
 | `npm run ios` | Simulateur iOS sur macOS avec Xcode |
@@ -94,6 +98,9 @@ stockage, les exports/imports, les versions incompatibles, les branches de quêt
 et la compatibilité des identifiants des cinq parcours initiaux. Ils couvrent aussi les objets à
 sources multiples, les taux inconnus/invalides, les filtres région-méthode, les emplacements,
 les coches indépendantes et leur conservation à l’export.
+L’audit transversal contrôle les références et dénominateurs sourcés. Une référence historique
+protège les identifiants déjà publiés ; les compteurs ignorent les coches inconnues sans les
+effacer. Le contrôle réseau reste distinct et ne modifie pas les dates de revue documentaire.
 
 Pour les parcours navigateur, laisser Expo démarré et lancer une **instance Edge dédiée aux tests**
 depuis PowerShell, dans le dossier du projet :

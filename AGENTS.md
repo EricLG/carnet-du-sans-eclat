@@ -9,7 +9,10 @@ et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couvert
 dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
 avec une sélection de 154 objets dans 11 catégories : catalogue partiel, détaillé dans
 `docs/ITEM_COVERAGE.md`. Le lot 5 fournit le suivi par cycle de 32 rencontres de boss et
-40 sites de grâce, catalogue partiel détaillé dans `docs/WORLD_COVERAGE.md`. La suite est détaillée dans
+40 sites de grâce, catalogue partiel détaillé dans `docs/WORLD_COVERAGE.md`.
+Le lot 6 fournit l’audit transversal, les compteurs consolidés et la protection des anciens
+identifiants ; voir `docs/CONSOLIDATION.md` et `docs/CATALOG_AUDIT.md`. Les catalogues restent partiels.
+La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
 ## Organisation et commandes
@@ -27,6 +30,8 @@ avec une sélection de 154 objets dans 11 catégories : catalogue partiel, déta
 - `npm run typecheck` : contrôle TypeScript ; `npm run build:web` : export web dans `dist/`.
 - `npm run android` et `npm run ios` : lancement sur environnement natif configuré.
 - `npm test` : tests métier ; `npm run test:browser` : parcours navigateur (serveur et Edge dédiés requis, voir README).
+- `npm run catalog:check` : audit hors ligne ; `-- --write-report` régénère le rapport de couverture.
+- `npm run catalog:links` : contrôle HTTP distinct ; un accès refusé reste non vérifié.
 
 ## Règles de développement
 
@@ -74,6 +79,9 @@ avec une sélection de 154 objets dans 11 catégories : catalogue partiel, déta
   le défilement, l’absence de débordement horizontal, la lisibilité et les erreurs navigateur.
 - Pour préparer un commit, contrôler les fichiers indexés et exclure dépendances, fichiers générés et données locales.
 - Exécuter `npm test` après une modification des règles métier, de la sauvegarde ou du catalogue.
+- Après une modification du catalogue, exécuter `npm run catalog:check` et actualiser son rapport.
+  Préserver la référence historique `tests/fixtures/catalog-ids.v1.json` : un ajout de contenu
+  ne doit pas masquer la suppression ou la réaffectation d’un identifiant déjà publié.
 - Ne pas écrire de tests qui reproduisent l’accueil statique. Tester les invariants métier,
   les échecs de sauvegarde, les imports et les références du catalogue.
 - Indiquer les contrôles effectués, leurs résultats et ceux impossibles à exécuter.

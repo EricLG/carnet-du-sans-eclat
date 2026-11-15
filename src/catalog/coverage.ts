@@ -26,12 +26,13 @@ export function validateQuestCoverage(quests: Quest[], scope: QuestScopeEntry[])
 }
 
 export function questCoverage(quests: Quest[], scope: QuestScopeEntry[]) {
-  const published = new Set(quests.map(quest => quest.id));
+  const expected = new Map(scope.map(entry => [entry.questId, entry]));
+  const published = new Map(quests.filter(quest => expected.has(quest.id)).map(quest => [quest.id, quest]));
   return {
-    expected: scope.length,
-    published: scope.filter(entry => published.has(entry.questId)).length,
-    quests: scope.filter(entry => entry.kind === 'quest').length,
-    encounters: scope.filter(entry => entry.kind === 'encounter').length,
-    stories: scope.filter(entry => entry.kind === 'story').length,
+    expected: expected.size,
+    published: published.size,
+    quests: [...published.values()].filter(entry => entry.kind === 'quest').length,
+    encounters: [...published.values()].filter(entry => entry.kind === 'encounter').length,
+    stories: [...published.values()].filter(entry => entry.kind === 'story').length,
   };
 }

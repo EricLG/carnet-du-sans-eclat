@@ -128,5 +128,8 @@ navigateur observé aux deux formats mobiles. La comparaison à l’instantané 
 confirme la préservation du catalogue d’objets et de ses références.
 
 Les prochains ensembles doivent enrichir les régions puis la couverture du jeu de base.
-La consolidation du lot 6, le DLC du lot 8 et la validation sur appareils Android/iOS
+La [consolidation du lot 6](CONSOLIDATION.md) contrôle désormais les références communes,
+les liens réciproques d’arène, les doublons, les compteurs et les anciens identifiants.
+Le [rapport régional](CATALOG_AUDIT.md) rend visibles les régions encore sans sélection.
+Le catalogue reste partiel ; le DLC du lot 8 et la validation sur appareils Android/iOS
 restent à réaliser.

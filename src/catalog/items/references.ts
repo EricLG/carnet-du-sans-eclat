@@ -1,13 +1,26 @@
 import type { AcquisitionActor, GraceReference } from '../../domain/items';
 import { npcs } from '../quests';
+import { bosses } from '../world/bosses';
+import { graces } from '../world/graces';
 
-// Références reprises dans le catalogue partiel d’exploration du lot 5.
-// La validation croisée impose de conserver leurs identifiants et leurs noms.
+function bossReference(id: string): AcquisitionActor {
+  const boss = bosses.find(entry => entry.id === id);
+  if (!boss) throw new Error(`Référence de boss absente : ${id}`);
+  return { id, name: boss.name, kind: 'boss' };
+}
+function graceReference(id: string): GraceReference {
+  const grace = graces.find(entry => entry.id === id);
+  if (!grace) throw new Error(`Référence de grâce absente : ${id}`);
+  return { id, name: grace.name, regionId: grace.regionIds[0] };
+}
+
+// Les noms et régions proviennent du catalogue d’exploration ; les identifiants
+// de cette sélection restent stables pour conserver les anciennes acquisitions.
 export const itemActors: AcquisitionActor[] = [
-  { id: 'boss.scaly-misbegotten.morne-tunnel', name: 'Chimère écailleuse · Galerie de Vent-Hurlant', kind: 'boss' },
-  { id: 'boss.leonine-misbegotten.morne', name: 'Chimère léonine · Château de Vent-Hurlant', kind: 'boss' },
-  { id: 'boss.loretta.caria-manor', name: 'Loretta, chevaleresse royale · Manoir de Caria', kind: 'boss' },
-  { id: 'boss.alabaster-lord.royal-grave', name: 'Seigneur d’albâtre · Geôle éternelle de la tombe royale', kind: 'boss' },
+  bossReference('boss.scaly-misbegotten.morne-tunnel'),
+  bossReference('boss.leonine-misbegotten.morne'),
+  bossReference('boss.loretta.caria-manor'),
+  bossReference('boss.alabaster-lord.royal-grave'),
   { id: 'enemy.demi-human-queen.forest-ruins', name: 'Reine semi-humaine des ruines sylvestres', kind: 'enemy' },
   { id: 'enemy.moongrum.raya-lucaria', name: 'Moongrum, chevalier de Caria', kind: 'enemy' },
   { id: 'enemy.scarab.carian-piercer', name: 'Scarabée d’Empaleuse de Caria', kind: 'enemy' },
@@ -28,31 +41,11 @@ export const itemActors: AcquisitionActor[] = [
     "name": "Marchand nomade de la plage de Nécrolimbe",
     "kind": "npc"
   },
-  {
-    "id": "boss.cemetery-shade.tombsward",
-    "name": "Ombre du cimetière · Catacombes du Val-aux-Tombes",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.watchdog.impalers",
-    "name": "Chat de garde funéraire · Catacombes de l’Empaleur",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.demi-human-chiefs.coastal-cave",
-    "name": "Chefs semi-humains · Grotte littorale",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.red-wolf.raya-lucaria",
-    "name": "Loup cramoisi de Radagon · Raya Lucaria",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.maggie.gelmir",
-    "name": "Maggie, reine des semi-humains · Mont Gelmir",
-    "kind": "boss"
-  }
+  bossReference('boss.cemetery-shade.tombsward'),
+  bossReference('boss.watchdog.impalers'),
+  bossReference('boss.demi-human-chiefs.coastal-cave'),
+  bossReference('boss.red-wolf.raya-lucaria'),
+  bossReference('boss.maggie.gelmir')
 ] as AcquisitionActor[],
   ...npcs.map(npc => ({ id: npc.id, name: npc.name, kind: 'npc' as const })),
   ...[
@@ -86,41 +79,13 @@ export const itemActors: AcquisitionActor[] = [
     "name": "Marchand nomade des rives de Liurnia",
     "kind": "npc"
   },
-  {
-    "id": "boss.darriwil.limgrave",
-    "name": "Darriwil, chevalier-limier · Nécrolimbe",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.tree-sentinel.limgrave",
-    "name": "Sentinelle de l’Arbre · Nécrolimbe",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.godrick.stormveil",
-    "name": "Godrick le Greffé · Voilorage",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.beastman.groveside",
-    "name": "Homme-bête de Farum Azula · Grotte du bosquet",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.black-knife.deathtouched",
-    "name": "Assassin des Couteaux noirs · Catacombes funestes",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.watchdog.stormfoot",
-    "name": "Chat de garde funéraire de l’Arbre-Monde · Catacombes orageuses",
-    "kind": "boss"
-  },
-  {
-    "id": "boss.tree-spirit.fringefolk",
-    "name": "Esprit d’arbre ulcéreux · Tombe des héros des confins",
-    "kind": "boss"
-  },
+  bossReference('boss.darriwil.limgrave'),
+  bossReference('boss.tree-sentinel.limgrave'),
+  bossReference('boss.godrick.stormveil'),
+  bossReference('boss.beastman.groveside'),
+  bossReference('boss.black-knife.deathtouched'),
+  bossReference('boss.watchdog.stormfoot'),
+  bossReference('boss.tree-spirit.fringefolk'),
   {
     "id": "enemy.godrick-soldier.sword",
     "name": "Soldat de Godrick portant une épée droite",
@@ -149,104 +114,24 @@ export const itemActors: AcquisitionActor[] = [
 ] as AcquisitionActor[],
 ];
 export const itemGraces: GraceReference[] = [
-  {
-    "id": "grace.elleh",
-    "name": "Église d’Elleh",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.gatefront",
-    "name": "Portorage",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.agheel-north",
-    "name": "Lac d’Agheel, nord",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.agheel-south",
-    "name": "Lac d’Agheel, sud",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.deathtouched",
-    "name": "Catacombes funestes",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.morne-lift",
-    "name": "Ascenseur du château de Vent-Hurlant",
-    "regionId": "weeping"
-  },
-  {
-    "id": "grace.morne-rampart",
-    "name": "Rempart du château de Vent-Hurlant",
-    "regionId": "weeping"
-  },
-  {
-    "id": "grace.isolated-weeping",
-    "name": "Cabane du marchand ascétique",
-    "regionId": "weeping"
-  },
-  {
-    "id": "grace.liurnia-shore",
-    "name": "Rive sud du lac de Liurnia",
-    "regionId": "liurnia"
-  },
-  {
-    "id": "grace.waypoint",
-    "name": "Cave des ruines du relais",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.stormhill-shack",
-    "name": "Cabane de Valorage",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.third-marika",
-    "name": "Troisième église de Marika",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.fort-haight-west",
-    "name": "Fort Haight, ouest",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.secluded-cell",
-    "name": "Cellule isolée",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.stranded",
-    "name": "Cimetière abandonné",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.groveside",
-    "name": "Grotte du bosquet",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.stormfoot",
-    "name": "Catacombes orageuses",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.summonwater",
-    "name": "Abords du village des eaux nécromantes",
-    "regionId": "limgrave"
-  },
-  {
-    "id": "grace.pilgrimage",
-    "name": "Église des pèlerinages",
-    "regionId": "weeping"
-  },
-  {
-    "id": "grace.fourth-marika",
-    "name": "Quatrième église de Marika",
-    "regionId": "weeping"
-  }
-];
+  'grace.elleh',
+  'grace.gatefront',
+  'grace.agheel-north',
+  'grace.agheel-south',
+  'grace.deathtouched',
+  'grace.morne-lift',
+  'grace.morne-rampart',
+  'grace.isolated-weeping',
+  'grace.liurnia-shore',
+  'grace.waypoint',
+  'grace.stormhill-shack',
+  'grace.third-marika',
+  'grace.fort-haight-west',
+  'grace.secluded-cell',
+  'grace.stranded',
+  'grace.groveside',
+  'grace.stormfoot',
+  'grace.summonwater',
+  'grace.pilgrimage',
+  'grace.fourth-marika',
+].map(graceReference);

@@ -6,6 +6,7 @@ import { regions } from '../catalog/regions';
 import { Button, Card, Choice, Field, Heading, Page, ui } from '../components/ui';
 import { Select } from '../components/Select';
 import { currentPart, cycleLabel, toggleFlag } from '../domain/save';
+import { catalogProgress } from '../domain/catalogProgress';
 import { theme } from '../theme';
 import { useProgress } from '../state/ProgressProvider';
 
@@ -53,13 +54,13 @@ export function ItemsScreen({ onOpen, onParties }: { onOpen: (id: string) => voi
   const pickupGroups = useMemo(() => groupPickupsByItem(filteredPickups, items), [filteredPickups]);
   const isCollection = view === 'collection';
   const count = isCollection ? filteredItems.length : filteredPickups.length;
-  const obtained = collectionItems.filter(item => character?.collection[item.id]).length;
-  const pickedUp = pickups.filter(pickup => run?.pickups[pickup.id]).length;
+  const collectionProgress = catalogProgress(collectionItems, character?.collection);
+  const pickupProgress = catalogProgress(pickups, run?.pickups);
   return <Page title="Ma collection" subtitle="Retrouvez les objets et les moyens de les obtenir.">
     <Card>
       {character && run ? <><View style={ui.row}><View style={ui.grow}><Text style={ui.checkLabel}>{character.name}</Text><Text style={ui.label}>{cycleLabel(run.cycle)}</Text></View>
         <Button title="Changer de partie" variant="quiet" onPress={onParties} /></View>
-        <Text style={ui.caption}>{obtained}/{collectionItems.length} objets référencés déjà obtenus · {pickedUp}/{pickups.length} améliorations référencées récupérées dans ce cycle.</Text></> :
+        <Text style={ui.caption}>{collectionProgress.done}/{collectionProgress.total} objets référencés déjà obtenus · {pickupProgress.done}/{pickupProgress.total} améliorations référencées récupérées dans ce cycle.</Text></> :
         <><Heading>Choisissez votre voyage</Heading><Text style={ui.body}>Le catalogue est consultable. Choisissez une partie pour enregistrer vos coches.</Text>
           <Button title="Choisir une partie pour la collection" onPress={onParties} /></>}
     </Card>
