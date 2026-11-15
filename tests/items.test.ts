@@ -13,8 +13,8 @@ test('la sélection d’objets et ses emplacements sont valides, sourcés et exp
   assert.deepEqual(validateItems(items, pickups, refs), []);
   assert.deepEqual(validateCollectionScope(items, pickups, collectionScope), []);
   assert.equal(collectionScope.status, 'partial');
-  assert.equal(items.length, 45);
-  assert.equal(pickups.length, 13);
+  assert.equal(items.length, 154);
+  assert.equal(pickups.length, 27);
   assert.deepEqual([...new Set(items.map(item => item.category))].sort(), [...itemCategorySchema.options].sort());
   assert.equal(new Set(items.filter(item => item.category === 'armor').map(item => item.armorSlot)).size, 4);
   assert.equal(new Set(items.flatMap(item => item.acquisitions.map(a => a.method))).size, 9);
@@ -74,7 +74,7 @@ test('recherche française/anglaise, marchand, région, catégorie et statut se 
   assert.deepEqual(find('  ÉPÉE À DOUBLE LAME  '), ['item.twinblade']);
   assert.deepEqual(find('Twinblade'), ['item.twinblade']);
   assert.ok(find('Kalé').includes('item.torch'));
-  assert.deepEqual(filterItems(items, itemActors, { ...emptyCollectionFilter, category: 'armor' }).map(item => item.armorSlot).sort(), ['chest', 'hands', 'head', 'legs']);
+  assert.deepEqual([...new Set(filterItems(items, itemActors, { ...emptyCollectionFilter, category: 'armor' }).map(item => item.armorSlot))].sort(), ['chest', 'hands', 'head', 'legs']);
   assert.deepEqual(filterItems(items, itemActors, { ...emptyCollectionFilter, status: 'obtained' }, { 'item.torch': true, 'item.future': true }).map(item => item.id), ['item.torch']);
   assert.ok(!filterItems(items, itemActors, { ...emptyCollectionFilter, status: 'missing' }, { 'item.torch': true }).some(item => item.id === 'item.torch'));
 });
@@ -176,4 +176,62 @@ test('le regroupement des améliorations conserve chaque emplacement et respecte
   assert.equal(obtained.length, 1);
   assert.equal(obtained[0].item.id, 'item.golden-seed');
   assert.deepEqual(obtained[0].pickups.map(pickup => pickup.id), ['pickup.golden-seed.stormhill']);
+});
+
+test('les emplacements complets de larmes et de mémoire restent uniques et reliés à leurs acquisitions', () => {
+  for (const [itemId, count] of [['item.sacred-tear', 12], ['item.memory-stone', 8]] as const) {
+    const item = items.find(item => item.id === itemId)!;
+    const places = pickups.filter(pickup => pickup.itemId === itemId);
+    assert.equal(item.acquisitions.length, count);
+    assert.equal(places.length, count);
+    assert.equal(new Set(places.map(place => place.acquisitionId)).size, count);
+    assert.deepEqual([...new Set(item.acquisitions.map(a => a.regionId))].sort(), [...item.regionIds].sort());
+  }
+  const result = filterPickups(pickups, items, itemActors, { ...emptyCollectionFilter, search: 'Église du repos', region: 'mountaintops' });
+  assert.deepEqual(result.map(pickup => pickup.id), ['pickup.sacred-tear.repose']);
+});
+
+test('un parchemin débloque plusieurs boutiques sans partager leurs lieux ni modifier la progression', () => {
+  for (const [id, price] of [['item.carian-slicer', '1 500 runes'], ['item.glintblade-phalanx', '2 500 runes']]) {
+    const spell = items.find(item => item.id === id)!;
+    assert.equal(spell.acquisitions.length, 3);
+    assert.ok(spell.acquisitions.every(a => a.requiredItemId === 'item.royal-house-scroll' && a.price === price));
+    assert.equal(filterItems([spell], itemActors, { ...emptyCollectionFilter, region: 'liurnia', method: 'merchant' }).length, 1);
+    assert.equal(filterItems([spell], itemActors, { ...emptyCollectionFilter, region: 'roundtable', method: 'merchant' }).length, 0);
+  }
+  let save = addCharacter(emptySave(), 'Nouvelle sélection');
+  save = toggleFlag(save, 'collection', 'item.glintblade-phalanx');
+  save = toggleFlag(save, 'pickups', 'pickup.memory-stone.red-wolf');
+  assert.equal(currentPart(save).character!.collection['item.royal-house-scroll'], undefined);
+  assert.deepEqual(currentPart(save).run!.bosses, {});
+  assert.deepEqual(currentPart(save).run!.quests, {});
+});
+
+test('une tenue ramassée au même endroit conserve une coche indépendante par pièce', () => {
+  const ids = ['item.carian-knight-helm', 'item.carian-knight-armor', 'item.carian-knight-gauntlets', 'item.carian-knight-greaves'];
+  const pieces = ids.map(id => items.find(item => item.id === id)!);
+  assert.deepEqual(pieces.map(item => item.armorSlot).sort(), ['chest', 'hands', 'head', 'legs']);
+  assert.equal(new Set(pieces.map(item => item.acquisitions[0].location)).size, 1);
+  assert.equal(new Set(pieces.map(item => item.acquisitions[0].id)).size, 4);
+  let save = addCharacter(emptySave(), 'Tenue de Caria');
+  save = toggleFlag(save, 'collection', ids[0]);
+  assert.deepEqual(currentPart(save).character!.collection, { [ids[0]]: true });
+  assert.deepEqual(currentPart(save).run!.pickups, {});
+  assert.deepEqual(currentPart(save).run!.bosses, {});
+  save = addCycle(save, currentPart(save).character!.id);
+  assert.deepEqual(currentPart(save).character!.collection, { [ids[0]]: true });
+  assert.deepEqual(parseBackup(exportSave(save)).data, save);
+});
+
+test('les ennemis uniques de l’équipement restent distincts des rencontres de boss', () => {
+  for (const id of ['item.demi-human-queen-staff', 'item.crystal-burst', 'item.carian-knight-shield', 'item.magic-downpour']) {
+    const acquisition = items.find(item => item.id === id)!.acquisitions[0];
+    assert.equal(acquisition.method, 'enemy_drop');
+    assert.equal(itemActors.find(actor => actor.id === acquisition.sourceEntityId)!.kind, 'enemy');
+    assert.deepEqual(acquisition.probability, { kind: 'guaranteed' });
+  }
+  const staff = items.find(item => item.id === 'item.demi-human-queen-staff')!.acquisitions[0];
+  const spell = items.find(item => item.id === 'item.crystal-burst')!.acquisitions[0];
+  assert.equal(staff.sourceEntityId, spell.sourceEntityId);
+  assert.notEqual(staff.id, spell.id);
 });

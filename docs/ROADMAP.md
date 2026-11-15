@@ -9,7 +9,7 @@ Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
 | 1 — Parties et sauvegarde | Livré web | Personnages/cycles, IndexedDB, export/import avec aperçu et copies. Persistance et erreurs testées. |
 | 2 — Premier suivi de quêtes | Livré web | Roderika, Boc, Kenneth Haight, Ranni et Sellen ; recherche, régions, statut manuel, étapes et branches. |
 | 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
-| 4 — Collection et obtention | Fonctions livrées web ; contenu partiel | 45 objets, 11 catégories, 63 sources, 13 emplacements ; recherche/filtres, fiches, collection par personnage et ramassages par cycle. Catalogue à poursuivre par régions. |
+| 4 — Collection et obtention | Fonctions livrées web ; contenu partiel | 154 objets, 11 catégories, 190 sources, 27 emplacements ; recherche/filtres, fiches, collection par personnage et ramassages par cycle. Catalogue à poursuivre par régions. |
 | 5 — Boss et grâces | À réaliser | Rencontres non réapparaissantes distinctes et grâces activées par cycle ; accès, régions et liens aux objets/quêtes. |
 | 6 — Consolidation | À réaliser | Couverture contrôlée du jeu de base, références, doublons, liens et compteurs sans fausse exhaustivité. |
 | 7 — Comptes privés / MongoDB | À réaliser | API Node.js/TypeScript avec Fastify et pilote MongoDB, invitations, sessions et synchronisation par personnage. |

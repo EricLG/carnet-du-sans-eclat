@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { APP_ID } from '../../src/config/identity.ts';
-import { collectionItems, items, pickups } from '../../src/catalog/items/index.ts';
+import { collectionItems, collectionScope, items, pickups } from '../../src/catalog/items/index.ts';
 import { collectionCategoryLabels } from '../../src/catalog/items/query.ts';
 import { regions } from '../../src/catalog/regions.ts';
 import { browser } from './cdp.mjs';
@@ -53,8 +53,8 @@ try {
   await b.layout('collection-large-tab-labels',390,844); await b.layout('collection-large-tab-labels',360,800);
   assert.equal(await b.evaluate(`window.collectionTabStyles.every(({label})=>{const r=label.getBoundingClientRect();const tab=label.closest('[role="tab"]').getBoundingClientRect();return label.scrollHeight<=label.clientHeight+1 && r.bottom<=tab.bottom+1})`),true);
   await b.evaluate(`window.collectionTabStyles.forEach(({label,previous})=>{if(previous===null)label.removeAttribute('style');else label.setAttribute('style',previous)});delete window.collectionTabStyles`);
-  await b.click('Voir la couverture des objets'); await b.wait('Les objets et leurs sources restent en cours d’enrichissement.');
-  await b.evaluate(`(()=>{const title=[...document.querySelectorAll('[role="heading"]')].find(el=>el.textContent==='Départs en Nécrolimbe et dans la Péninsule larmoyante');title.scrollIntoView({block:'start'})})()`);
+  await b.click('Voir la couverture des objets'); await b.wait(collectionScope.description);
+  await b.evaluate(`(()=>{const title=[...document.querySelectorAll('[role="heading"]')].find(el=>el.textContent===${JSON.stringify(collectionScope.label)});title.scrollIntoView({block:'start'})})()`);
   await b.layout('collection-coverage',390,844); await b.layout('collection-coverage',360,800);
   await b.click('Masquer la couverture des objets');
   await b.fill('Rechercher un objet','EPEE A DOUBLE LAME'); await b.wait('1 résultat parmi les objets');
@@ -80,10 +80,10 @@ try {
   await b.send('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowDown',code:'ArrowDown',windowsVirtualKeyCode:40});
   await b.send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
   await b.send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
-  await b.wait('12 résultats parmi les objets');
-  await selectFilter('Catégorie','armor'); await b.wait('4 résultats parmi les objets');
+  await b.wait(`${collectionItems.filter(item=>item.category==='weapon').length} résultats parmi les objets`);
+  await selectFilter('Catégorie','armor'); await b.wait(`${collectionItems.filter(item=>item.category==='armor').length} résultats parmi les objets`);
   await selectFilter('Catégorie','tool'); await selectFilter('Statut de collection','obtained'); await b.wait('1 résultat parmi les objets');
-  await selectFilter('Statut de collection','missing'); await b.wait('6 résultats parmi les objets');
+  await selectFilter('Statut de collection','missing'); await b.wait(`${collectionItems.filter(item=>item.category==='tool').length-1} résultats parmi les objets`);
   await b.click('Réinitialiser les filtres des objets'); await b.click('Masquer les filtres des objets');
   await b.fill('Rechercher un objet','Lordsworn'); await b.click('Voir l’objet : Épée droite seigneuriale'); await b.wait('Butin aléatoire — 2 %');
   await b.layout('item-drop',390,844); await b.layout('item-drop',360,800);
@@ -94,6 +94,11 @@ try {
   let saved=current(await readSave()); assert.deepEqual(saved.run.bosses,{}); assert.deepEqual(saved.run.quests,{});
   await collection(); await b.fill('Rechercher un objet','Dague en acier-monde'); await b.click('Voir l’objet : Dague en acier-monde');
   await b.click('Parcours associé : Kenneth Haight'); await b.wait('Libérer le fort Haight'); await b.click('Objet associé : Dague en acier-monde'); await b.wait('Récompense de quête');
+  await collection(); await b.fill('Rechercher un objet','Knight Armor'); await b.click('Voir l’objet : Armure de chevalier'); await b.wait('4 500 runes');
+  await b.layout('item-new-armor',390,844); await b.layout('item-new-armor',360,800);
+  await collection(); await b.fill('Rechercher un objet','Carian Slicer'); await b.click('Voir l’objet : Trancheuse de Caria'); await b.wait('Église des vœux');
+  await b.click('Objet requis : Parchemin de la maison royale'); await b.wait('Comment l’obtenir'); await checked('Déjà obtenu : Parchemin de la maison royale',false);
+  await b.layout('item-new-scroll',390,844); await b.layout('item-new-scroll',360,800);
   await collection(); await b.fill('Rechercher un objet','Graine dorée'); await b.wait('0 résultats parmi les objets');
   await b.click('Améliorations du cycle'); await b.wait('6 résultats parmi les emplacements');
   const pickup='Récupéré : Graine dorée · Route de Valorage';
@@ -104,7 +109,7 @@ try {
   await checked(pickup,true);
   assert.equal(await b.evaluate(`!!document.querySelector('[role="checkbox"][aria-label="Déjà obtenu : Graine dorée"]')`),false);
   await b.layout('item-upgrade',390,844); await b.layout('item-upgrade',360,800);
-  await collection(); await b.click('Améliorations du cycle'); await b.wait('13 résultats parmi les emplacements'); await checked(pickup,true);
+  await collection(); await b.click('Améliorations du cycle'); await b.wait(`${pickups.length} résultats parmi les emplacements`); await checked(pickup,true);
   assert.equal(await b.evaluate(`[...document.querySelectorAll('[role="heading"]')].filter(el=>/^(Graine dorée|Larme de vie|Pierre de mémoire|Larme de cristal pourpre) ·/.test(el.textContent)).length`),4);
   for (const place of pickups) {
     const item=items.find(item=>item.id===place.itemId);
@@ -132,7 +137,7 @@ try {
   await b.click('Parties');
   await b.evaluate(`(()=>{const heading=[...document.querySelectorAll('[role="heading"]')].find(el=>el.textContent===${JSON.stringify(name)});const option=[...heading.parentElement.querySelectorAll('[role="radio"]')].find(el=>el.textContent==='NG+');option.click()})()`);
   await b.click('Collection'); await checked('Déjà obtenu : Lanterne',true);
-  assert.equal(items.length,45);
+  assert.equal(items.length,collectionScope.itemIds.length);
   assert.equal(b.errors.length,0,JSON.stringify(b.errors));
   console.log('Lot 4 : recherche, filtres corrélés, acquisitions, liens, coches indépendantes, rechargement, NG+, isolation et formats mobiles vérifiés');
 } finally { b.close(); }

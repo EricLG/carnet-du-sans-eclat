@@ -14,9 +14,9 @@ Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 - Statut global des quêtes manuel et indépendant des étapes.
 - Toutes les informations visibles, points de blocage et références documentaires par fiche.
 - [Périmètre des parcours PNJ](docs/QUEST_COVERAGE.md), consultable aussi dans le carnet.
-- Onglet **Collection** : 41 objets dans 10 catégories et 4 types d’améliorations, avec 63 sources d’obtention documentées.
+- Onglet **Collection** : 150 objets dans 10 catégories et 4 types d’améliorations, avec 190 sources d’obtention documentées.
 - Recherche française/anglaise ; filtres par catégorie, région, méthode et statut.
-- Collection « déjà obtenu » conservée par personnage ; 13 emplacements d’amélioration suivis par cycle.
+- Collection « déjà obtenu » conservée par personnage ; 27 emplacements d’amélioration suivis par cycle.
 - Prix, conditions, grâces de référence, taux sourcés, échanges de souvenir et liens vers les quêtes.
 - [Catalogue d’objets explicitement partiel](docs/ITEM_COVERAGE.md), à enrichir par régions.
 

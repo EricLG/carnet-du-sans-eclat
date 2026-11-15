@@ -4,6 +4,56 @@ import { npcs } from '../quests';
 // Références documentaires : les fiches complètes de boss/grâces arrivent au lot 5.
 // Conserver ces identifiants lors de leur intégration.
 export const itemActors: AcquisitionActor[] = [
+  { id: 'boss.scaly-misbegotten.morne-tunnel', name: 'Chimère écailleuse · Galerie de Vent-Hurlant', kind: 'boss' },
+  { id: 'boss.leonine-misbegotten.morne', name: 'Chimère léonine · Château de Vent-Hurlant', kind: 'boss' },
+  { id: 'boss.loretta.caria-manor', name: 'Loretta, chevaleresse royale · Manoir de Caria', kind: 'boss' },
+  { id: 'boss.alabaster-lord.royal-grave', name: 'Seigneur d’albâtre · Geôle éternelle de la tombe royale', kind: 'boss' },
+  { id: 'enemy.demi-human-queen.forest-ruins', name: 'Reine semi-humaine des ruines sylvestres', kind: 'enemy' },
+  { id: 'enemy.moongrum.raya-lucaria', name: 'Moongrum, chevalier de Caria', kind: 'enemy' },
+  { id: 'enemy.scarab.carian-piercer', name: 'Scarabée d’Empaleuse de Caria', kind: 'enemy' },
+  { id: 'enemy.miriam.carian-study', name: 'Préceptrice Miriam · Salle d’étude non inversée', kind: 'enemy' },
+  ...[
+  {
+    "id": "npc.nomad.north-limgrave",
+    "name": "Marchand nomade du nord de Nécrolimbe",
+    "kind": "npc"
+  },
+  {
+    "id": "npc.nomad.east-limgrave",
+    "name": "Marchand nomade de l’est de Nécrolimbe",
+    "kind": "npc"
+  },
+  {
+    "id": "npc.nomad.west-limgrave",
+    "name": "Marchand nomade de la plage de Nécrolimbe",
+    "kind": "npc"
+  },
+  {
+    "id": "boss.cemetery-shade.tombsward",
+    "name": "Ombre du cimetière · Catacombes du Val-aux-Tombes",
+    "kind": "boss"
+  },
+  {
+    "id": "boss.watchdog.impalers",
+    "name": "Chat de garde funéraire · Catacombes de l’Empaleur",
+    "kind": "boss"
+  },
+  {
+    "id": "boss.demi-human-chiefs.coastal-cave",
+    "name": "Chefs semi-humains · Grotte littorale",
+    "kind": "boss"
+  },
+  {
+    "id": "boss.red-wolf.raya-lucaria",
+    "name": "Loup cramoisi de Radagon · Raya Lucaria",
+    "kind": "boss"
+  },
+  {
+    "id": "boss.maggie.gelmir",
+    "name": "Maggie, reine des semi-humains · Mont Gelmir",
+    "kind": "boss"
+  }
+] as AcquisitionActor[],
   ...npcs.map(npc => ({ id: npc.id, name: npc.name, kind: 'npc' as const })),
   ...[
   {

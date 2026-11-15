@@ -221,5 +221,243 @@ export const pickups: Pickup[] = [
     ],
     "itemId": "item.crimson-crystal-tear",
     "acquisitionId": "acquisition.crimson-crystal-tear.third-marika"
+  },
+  {
+    "id": "pickup.sacred-tear.irith",
+    "name": "Larme de vie · Église d’Irith",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.irith"
+  },
+  {
+    "id": "pickup.sacred-tear.bellum",
+    "name": "Larme de vie · Église de Bellum",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.bellum"
+  },
+  {
+    "id": "pickup.sacred-tear.inhibition",
+    "name": "Larme de vie · Église de l’Inhibition",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.inhibition"
+  },
+  {
+    "id": "pickup.sacred-tear.plague",
+    "name": "Larme de vie · Église de la putréfaction",
+    "content": "base",
+    "regionIds": [
+      "caelid"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.plague"
+  },
+  {
+    "id": "pickup.sacred-tear.second-marika",
+    "name": "Larme de vie · Deuxième église de Marika",
+    "content": "base",
+    "regionIds": [
+      "altus"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.second-marika"
+  },
+  {
+    "id": "pickup.sacred-tear.stormcaller",
+    "name": "Larme de vie · Église de l’orage",
+    "content": "base",
+    "regionIds": [
+      "altus"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.stormcaller"
+  },
+  {
+    "id": "pickup.sacred-tear.repose",
+    "name": "Larme de vie · Église du repos",
+    "content": "base",
+    "regionIds": [
+      "mountaintops"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.repose"
+  },
+  {
+    "id": "pickup.sacred-tear.first-marika",
+    "name": "Larme de vie · Première église de Marika",
+    "content": "base",
+    "regionIds": [
+      "mountaintops"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Sacred Tear",
+        "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.sacred-tear",
+    "acquisitionId": "acquisition.sacred-tear.first-marika"
+  },
+  {
+    "id": "pickup.memory-stone.testu",
+    "name": "Pierre de mémoire · Tour de Testu",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.testu"
+  },
+  {
+    "id": "pickup.memory-stone.converted",
+    "name": "Pierre de mémoire · Tour du converti",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.converted"
+  },
+  {
+    "id": "pickup.memory-stone.seluvis",
+    "name": "Pierre de mémoire · Tour de Seluvis",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.seluvis"
+  },
+  {
+    "id": "pickup.memory-stone.lenne",
+    "name": "Pierre de mémoire · Tour de Lenne",
+    "content": "base",
+    "regionIds": [
+      "caelid"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.lenne"
+  },
+  {
+    "id": "pickup.memory-stone.red-wolf",
+    "name": "Pierre de mémoire · Académie de Raya Lucaria · salon de débat",
+    "content": "base",
+    "regionIds": [
+      "liurnia"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.red-wolf"
+  },
+  {
+    "id": "pickup.memory-stone.maggie",
+    "name": "Pierre de mémoire · Au nord-est du village des ermites",
+    "content": "base",
+    "regionIds": [
+      "gelmir"
+    ],
+    "sources": [
+      {
+        "label": "Eldenpedia — Memory Stone",
+        "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "itemId": "item.memory-stone",
+    "acquisitionId": "acquisition.memory-stone.maggie"
   }
 ];

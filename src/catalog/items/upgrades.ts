@@ -157,13 +157,17 @@ export const upgradesItems: Item[] = [
     "content": "base",
     "regionIds": [
       "limgrave",
-      "weeping"
+      "weeping",
+      "liurnia",
+      "caelid",
+      "altus",
+      "mountaintops"
     ],
     "sources": [
       {
         "label": "Eldenpedia — Sacred Tear",
         "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
-        "verifiedAt": "2026-11-14"
+        "verifiedAt": "2026-11-15"
       }
     ],
     "acquisitions": [
@@ -241,6 +245,150 @@ export const upgradesItems: Item[] = [
             "verifiedAt": "2026-11-14"
           }
         ]
+      },
+      {
+        "id": "acquisition.sacred-tear.irith",
+        "method": "exploration",
+        "regionId": "liurnia",
+        "location": "Église d’Irith",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.bellum",
+        "method": "exploration",
+        "regionId": "liurnia",
+        "location": "Église de Bellum",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.inhibition",
+        "method": "exploration",
+        "regionId": "liurnia",
+        "location": "Église de l’Inhibition",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.plague",
+        "method": "exploration",
+        "regionId": "caelid",
+        "location": "Église de la putréfaction",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.second-marika",
+        "method": "exploration",
+        "regionId": "altus",
+        "location": "Deuxième église de Marika",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.stormcaller",
+        "method": "exploration",
+        "regionId": "altus",
+        "location": "Église de l’orage",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.repose",
+        "method": "exploration",
+        "regionId": "mountaintops",
+        "location": "Église du repos",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.sacred-tear.first-marika",
+        "method": "exploration",
+        "regionId": "mountaintops",
+        "location": "Première église de Marika",
+        "description": "Ramasser la larme au pied de la statue dans l’église.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Sacred Tear",
+            "url": "https://eldenring.wiki.gg/wiki/Sacred_Tear",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
       }
     ]
   },
@@ -255,13 +403,16 @@ export const upgradesItems: Item[] = [
     "content": "base",
     "regionIds": [
       "weeping",
-      "roundtable"
+      "roundtable",
+      "liurnia",
+      "caelid",
+      "gelmir"
     ],
     "sources": [
       {
         "label": "Eldenpedia — Memory Stone",
         "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
-        "verifiedAt": "2026-11-14"
+        "verifiedAt": "2026-11-15"
       }
     ],
     "acquisitions": [
@@ -305,6 +456,120 @@ export const upgradesItems: Item[] = [
         ],
         "sourceEntityId": "npc.twin-maidens",
         "price": "3 000 runes"
+      },
+      {
+        "id": "acquisition.memory-stone.testu",
+        "method": "puzzle",
+        "regionId": "liurnia",
+        "location": "Tour de Testu",
+        "description": "Lire l’énigme à l’entrée, puis trouver et frapper les trois tortues spectrales pour ouvrir la tour et son coffre.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.memory-stone.converted",
+        "method": "exploration",
+        "regionId": "liurnia",
+        "location": "Tour du converti",
+        "description": "Atteindre le coffre à l’étage en escaladant les murs extérieurs avec Torrent ; l’émote Érudition offre un autre accès.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.memory-stone.seluvis",
+        "method": "exploration",
+        "regionId": "liurnia",
+        "location": "Tour de Seluvis",
+        "description": "Ouvrir le coffre au sommet de la tour.",
+        "conditions": [
+          "Entrer au service de Ranni pour accéder à cette partie des Trois Sœurs."
+        ],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.memory-stone.lenne",
+        "method": "exploration",
+        "regionId": "caelid",
+        "location": "Tour de Lenne",
+        "description": "Utiliser la source spirituelle avec Torrent pour atteindre le balcon puis le coffre de la tour.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ]
+      },
+      {
+        "id": "acquisition.memory-stone.red-wolf",
+        "method": "boss_reward",
+        "regionId": "liurnia",
+        "location": "Académie de Raya Lucaria · salon de débat",
+        "description": "Vaincre le Loup cramoisi de Radagon.",
+        "conditions": [
+          "La Clé de pierre d’éclat de l’Académie permet d’entrer dans Raya Lucaria."
+        ],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ],
+        "sourceEntityId": "boss.red-wolf.raya-lucaria"
+      },
+      {
+        "id": "acquisition.memory-stone.maggie",
+        "method": "boss_reward",
+        "regionId": "gelmir",
+        "location": "Au nord-est du village des ermites",
+        "description": "Vaincre Maggie, reine des semi-humains.",
+        "conditions": [],
+        "probability": {
+          "kind": "guaranteed"
+        },
+        "sources": [
+          {
+            "label": "Eldenpedia — Memory Stone",
+            "url": "https://eldenring.wiki.gg/wiki/Memory_Stone",
+            "verifiedAt": "2026-11-15"
+          }
+        ],
+        "sourceEntityId": "boss.maggie.gelmir"
       }
     ]
   },

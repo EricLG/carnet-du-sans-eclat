@@ -6,8 +6,8 @@ Application mobile de suivi des quêtes d’Elden Ring, conçue pour Android et 
 React Native et TypeScript. Le navigateur en émulation mobile sert à valider l’interface.
 Les lots 1 à 3 fournissent les personnages/cycles, la sauvegarde locale, l’import/export
 et 40 parcours PNJ du jeu de base (32 quêtes, 7 rencontres, Melina). La couverture est définie
-dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 13 ramassages d’améliorations
-avec une première sélection de 45 objets dans 11 catégories : catalogue partiel, détaillé dans
+dans `docs/QUEST_COVERAGE.md`. Le lot 4 fournit la collection et 27 ramassages d’améliorations
+avec une sélection de 154 objets dans 11 catégories : catalogue partiel, détaillé dans
 `docs/ITEM_COVERAGE.md`. Les boss/grâces n’ont pas encore leurs listes. La suite est détaillée dans
 `docs/ROADMAP.md` ; ne pas présenter les autres lots comme livrés.
 
