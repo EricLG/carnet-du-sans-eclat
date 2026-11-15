@@ -12,14 +12,23 @@ d’objets (150 dans la collection), 190 acquisitions, 27 ramassages, 32 rencont
 et 40 sites de grâce.
 Aucune fiche de jeu n’est ajoutée dans ce lot. Les données et identifiants précédents
 sont conservés ; seuls les contrôles et la construction des références sont consolidés.
-La [complétion ultérieure des quatre catégories prioritaires](ITEM_COMPLETION.md) porte
-le catalogue à 1 071 types et 1 107 acquisitions ; le rapport d’audit décrit cet état actuel.
+La [complétion des quatre premières catégories](ITEM_COMPLETION.md), publiée en
+`2026.11.15.3`, avait porté le catalogue à 1 071 types et 1 107 acquisitions.
+La [publication `2026.11.15.4`](SECONDARY_ITEM_COMPLETION.md) recense ensuite les talismans,
+incantations et cendres de guerre/d’invocation : **1 418 types**, dont **1 414 objets de
+collection**, **1 454 acquisitions**, **27 ramassages**, **134 boss** et **40 grâces**.
+Les 93 anciennes rencontres sont conservées ; 41 rencontres liées aux nouvelles récompenses
+complètent la sélection. Le rapport d’audit décrit cet état actuel avec **226 URL documentaires distinctes**.
 
 Les totaux documentaires des objets sont centralisés dans `src/catalog/itemCoverage.ts`.
 Ils concernent huit catégories du jeu de base d’origine : 138 types publiés sur 1 376 recensés
 lors de la consolidation initiale, puis 1 040 après la complétion de l’équipement et des sorcelleries.
+La publication `2026.11.15.4` couvre les **1 376 types sur 1 376** de ces huit catégories,
+dont 114 talismans, 101 incantations, 91 cendres de guerre et 64 cendres d’invocation.
 Les outils, objets de progression et améliorations ont un dénominateur inconnu, sans
-pourcentage. Aucun pourcentage global du jeu, des boss ou des grâces n’est déduit de ce sous-total.
+pourcentage : leurs sélections comptent respectivement 8, 30 et 4 types. Les obtentions
+alternatives restent partielles. Aucun pourcentage global du jeu, des boss ou des grâces
+n’est déduit de ce sous-total.
 Les variantes nommées et armures altérées sont distinctes ; les niveaux d’amélioration et
 affinités ne créent pas de types supplémentaires. Le DLC reste exclu de la publication.
 
@@ -53,14 +62,18 @@ Le script utilise les certificats système de Node.js 24, sans désactiver TLS.
 Il ne modifie jamais les dates de revue documentaire. Une réponse HTTP réussie ne prouve
 ni la pertinence du contenu ni l’exactitude des conditions du jeu.
 
-Contrôle HTTP du 15 novembre 2026 : **119 URL accessibles sur 184**, aucune absence confirmée,
+Contrôle HTTP de la consolidation initiale, le 15 novembre 2026 : **119 URL accessibles sur 184**, aucune absence confirmée,
 **65 accès non vérifiés** (57 réponses 429 et 8 réponses 403). Ces accès devront être revus
 ultérieurement ; le lot ne revendique pas une validation en ligne complète.
+L’audit actuel recense 226 URL distinctes ; ce nombre ne vaut pas revalidation HTTP de
+toutes les sources. Les contrôles de la publication `2026.11.15.4` sont détaillés dans
+[SECONDARY_ITEM_COMPLETION.md](SECONDARY_ITEM_COMPLETION.md).
 
 ## Références, compteurs et sauvegardes
 
-Les 16 références de boss et les 20 références de grâces des acquisitions reprennent
-désormais leurs noms et régions depuis le catalogue d’exploration. Les identifiants et les
+Les 16 références de boss et les 20 références de grâces présentes lors de la consolidation
+initiale reprennent leurs noms et régions depuis le catalogue d’exploration. Les références
+ajoutées suivent la même règle. Les identifiants et les
 valeurs publiées restent identiques. Les liens boss/grâce d’arène sont contrôlés dans les
 deux sens. Une récompense liée à un boss exige la méthode `boss_reward`.
 
@@ -82,7 +95,7 @@ Les tests métier couvrent les défauts injectés dans l’audit, les compteurs,
 identifiants, la conservation des coches inconnues à l’export/import et les résultats HTTP
 simulés. La validation web couvre les parcours existants aux formats 390 × 844 et 360 × 800.
 
-Contrôles exécutés le 15 novembre 2026 : **52 tests métier réussis**, ESLint sans avertissement,
+Contrôles de la consolidation initiale, exécutés le 15 novembre 2026 : **52 tests métier réussis**, ESLint sans avertissement,
 TypeScript strict, export web et audit local sans erreur. Les parcours navigateur complets
 (parties, quêtes, collection, exploration, sauvegardes) passent dans Edge aux deux formats,
 avec défilement, persistance, import/export et libellés d’onglets agrandis, sans débordement

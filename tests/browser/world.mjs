@@ -30,7 +30,7 @@ try {
   for (const [w,h] of [[390,844],[360,800]]) await b.layout('world-bosses',w,h);
   await b.click('Voir la couverture de l’exploration'); await b.wait('Catalogue d’exploration partiel');
   await b.layout('world-coverage',360,800); await b.click('Masquer la couverture de l’exploration');
-  await b.fill('Rechercher dans l’exploration','Erdtree Burial Watchdog'); await b.wait('2 résultats parmi les boss');
+  await b.fill('Rechercher dans l’exploration','Erdtree Burial Watchdog'); await b.wait(`${bosses.filter(boss=>boss.aliases.some(alias=>alias.includes('Erdtree Burial Watchdog'))).length} résultats parmi les boss`);
   await b.click('Afficher les filtres d’exploration'); await select('Région d’exploration','weeping'); await b.wait('1 résultat parmi les boss');
   const watchdog = 'Vaincu : Chat de garde funéraire · Catacombes de l’Empaleur';
   await b.click(watchdog); await checked(watchdog,true);

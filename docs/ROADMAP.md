@@ -5,14 +5,15 @@ de collection et une première sélection de contenu, à enrichir par régions. 
 le suivi des boss et des sites de grâce avec un premier catalogue régional.
 Le lot 6 fournit l’audit transversal et les contrôles de compatibilité de cette publication.
 Une fonctionnalité disponible ne signifie pas que son catalogue est exhaustif.
+La publication courante est `2026.11.15.4` : huit catégories d’objets sont recensées par type.
 
 | Lot | État | Livraison et critère |
 | --- | --- | --- |
 | 1 — Parties et sauvegarde | Livré web | Personnages/cycles, IndexedDB, export/import avec aperçu et copies. Persistance et erreurs testées. |
 | 2 — Premier suivi de quêtes | Livré web | Roderika, Boc, Kenneth Haight, Ranni et Sellen ; recherche, régions, statut manuel, étapes et branches. |
 | 3 — Quêtes du jeu de base | Livré web | 40 parcours du périmètre PNJ, regroupement régional, liens entre personnages/quêtes, points de blocage et couverture contrôlée. Vérification documentaire ; pas de test en jeu. |
-| 4 — Collection et obtention | Fonctions livrées web ; quatre catégories recensées | 1 071 types, 11 catégories, 1 107 acquisitions, 27 emplacements. Les 308 armes, 69 boucliers, 559 pièces d’armure et 70 sorcelleries du jeu de base d’origine ont une fiche et au moins une obtention. Autres catégories et obtentions alternatives à poursuivre. |
-| 5 — Boss et grâces | Fonctions livrées web ; contenu partiel | Onglet Exploration, 93 rencontres non réapparaissantes et 40 sites de grâce ; ajout des rencontres liées à l’équipement et aux sorcelleries. Coches par cycle, recherche/filtres, accès, régions et liens aux objets/quêtes. Catalogue à poursuivre. |
+| 4 — Collection et obtention | Fonctions livrées web ; huit catégories recensées | 1 418 types, dont 1 414 dans la collection, 11 catégories, 1 454 acquisitions, 27 emplacements. Armes 308, boucliers 69, armures 559, sorcelleries 70, talismans 114, incantations 101, cendres de guerre 91 et d’invocation 64 : 1 376/1 376 types du jeu de base d’origine, chacun avec au moins une obtention. Outils, progression, améliorations et obtentions alternatives à poursuivre. |
+| 5 — Boss et grâces | Fonctions livrées web ; contenu partiel | Onglet Exploration, 134 rencontres non réapparaissantes et 40 sites de grâce ; ajout des rencontres liées aux objets publiés. Coches par cycle, recherche/filtres, accès, régions et liens aux objets/quêtes. Catalogue à poursuivre. |
 | 6 — Consolidation | Contrôles livrés ; contenu encore partiel | Audit reproductible des périmètres, références, doublons, liens, compteurs et anciens identifiants ; rapport régional et dénominateurs sourcés. Enrichissement du jeu de base et revue des accès documentaires refusés à poursuivre. |
 | 7 — Comptes privés / MongoDB | À réaliser | API Node.js/TypeScript avec Fastify et pilote MongoDB, invitations, sessions et synchronisation par personnage. |
 | 8 — Shadow of the Erdtree | À réaliser | Catalogues et filtres DLC, progression conservée et remplissage régional. |
@@ -38,15 +39,22 @@ Melina distingués des 32 quêtes. Les cinq parcours validés conservent leurs i
 Le lot 4 publie une première [sélection d’objets](ITEM_COVERAGE.md) ; les régions et les sources
 restent partielles. L’[enrichissement des quatre catégories prioritaires](ITEM_COMPLETION.md)
 recense leurs 1 006 types du jeu de base d’origine, sans annoncer toutes les obtentions possibles.
+La [complétion des talismans, incantations et cendres](SECONDARY_ITEM_COMPLETION.md) ajoute
+les quatre autres catégories chiffrées : les huit catégories atteignent 1 376 types sur
+1 376. Les outils permanents (8 types publiés), objets de progression (30) et améliorations
+importantes (4) restent à recenser ; les acquisitions alternatives restent partielles.
 Le lot 5 publie une [sélection de boss et de grâces](WORLD_COVERAGE.md),
 elle aussi partielle, en reprenant les références des objets. Les noms et identifiants pourront être rapprochés
 d’[ERDB](https://github.com/EldenRingDatabase/erdb) sans dépendre d’une API pendant l’utilisation.
 
 Le [lot 6 de consolidation](CONSOLIDATION.md) fournit les commandes d’audit et un
 [rapport de couverture](CATALOG_AUDIT.md). Il ne transforme pas ces sélections en catalogues
-exhaustifs : huit catégories d’objets ont un total documentaire, trois restent à recenser ;
+exhaustifs : huit catégories d’objets ont tous leurs types recensés, trois restent à recenser ;
 aucun pourcentage global du jeu n’est publié. Les contrôles HTTP signalent séparément
 les liens accessibles, les absences confirmées et les accès non vérifiés.
+L’audit courant porte sur 226 URL documentaires uniques. Les trois références historiques
+`catalog-ids.v1.json`, `item-completion-ids.json` et `secondary-item-completion-ids.json`,
+dans `tests/fixtures/`, protègent les identifiants déjà publiés.
 
 Pour les objets : marchand, boss, ennemi, exploration, dialogue PNJ, quête, échange de souvenir,
 énigme et autre. Conserver lieu, conditions, prix éventuel, PNJ/ennemi/boss associé et grâce

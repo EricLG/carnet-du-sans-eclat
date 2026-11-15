@@ -1,0 +1,74 @@
+[
+  {
+    "id": "item.godskin-prayerbook",
+    "name": "Bréviaire sanctechair",
+    "english": "Godskin Prayerbook",
+    "category": "key_item",
+    "textId": "8857",
+    "wiki": "https://eldenring.wiki.gg/wiki/Godskin_Prayerbook"
+  },
+  {
+    "id": "item.fire-monks-prayerbook",
+    "name": "Bréviaire de moine-gardien du feu",
+    "english": "Fire Monks' Prayerbook",
+    "category": "key_item",
+    "textId": "8855",
+    "wiki": "https://eldenring.wiki.gg/wiki/Fire_Monks'_Prayerbook"
+  },
+  {
+    "id": "item.giants-prayerbook",
+    "name": "Bréviaire des Géants",
+    "english": "Giant's Prayerbook",
+    "category": "key_item",
+    "textId": "8856",
+    "wiki": "https://eldenring.wiki.gg/wiki/Giant's_Prayerbook"
+  },
+  {
+    "id": "item.dragon-cult-prayerbook",
+    "name": "Bréviaire du Culte draconique",
+    "english": "Dragon Cult Prayerbook",
+    "category": "key_item",
+    "textId": "8864",
+    "wiki": "https://eldenring.wiki.gg/wiki/Dragon_Cult_Prayerbook"
+  },
+  {
+    "id": "item.ancient-dragon-prayerbook",
+    "name": "Bréviaire du dragon ancien",
+    "english": "Ancient Dragon Prayerbook",
+    "category": "key_item",
+    "textId": "8865",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ancient_Dragon_Prayerbook"
+  },
+  {
+    "id": "item.two-fingers-prayerbook",
+    "name": "Bréviaire des Deux Doigts",
+    "english": "Two Fingers' Prayerbook",
+    "category": "key_item",
+    "textId": "8858",
+    "wiki": "https://eldenring.wiki.gg/wiki/Two_Fingers'_Prayerbook"
+  },
+  {
+    "id": "item.assassins-prayerbook",
+    "name": "Bréviaire de l'assassin",
+    "english": "Assassin's Prayerbook",
+    "category": "key_item",
+    "textId": "8859",
+    "wiki": "https://eldenring.wiki.gg/wiki/Assassin's_Prayerbook"
+  },
+  {
+    "id": "item.golden-order-principia",
+    "name": "Principes de l'Ordre d'or",
+    "english": "Golden Order Principia",
+    "category": "key_item",
+    "textId": "8862",
+    "wiki": "https://eldenring.wiki.gg/wiki/Golden_Order_Principia"
+  },
+  {
+    "id": "item.remembrance-of-the-lichdragon",
+    "name": "Souvenir de la Liche draconique",
+    "english": "Remembrance of the Lichdragon",
+    "category": "key_item",
+    "textId": "2960",
+    "wiki": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Lichdragon"
+  }
+]

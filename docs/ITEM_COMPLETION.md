@@ -4,6 +4,14 @@ Publication `2026.11.15.3`, revue documentaire du 15 novembre 2026.
 Le périmètre demandé est celui des **armes, armures, boucliers et sorcelleries du jeu de base
 d’origine**, sans Shadow of the Erdtree ni ajouts de versions ultérieures.
 
+Ce document décrit la première complétion de quatre catégories. La publication
+[`2026.11.15.4`](SECONDARY_ITEM_COMPLETION.md) complète ensuite les 114 talismans,
+101 incantations, 91 cendres de guerre et 64 cendres d’invocation. Les huit catégories
+représentent désormais **1 376 types sur 1 376 recensés**. Le catalogue actuel contient
+**1 418 types**, **1 414 objets de collection**, **1 454 acquisitions** et conserve les
+**27 ramassages** ; les outils, objets de progression, améliorations et obtentions alternatives
+restent partiels. Les chiffres de livraison ci-dessous restent ceux de `2026.11.15.3`.
+
 | Catégorie | Types présents | Types recensés | Couverture des types |
 | --- | ---: | ---: | ---: |
 | Armes, dont arcs, bâtons, sceaux et torches | 308 | 308 | 100 % |
@@ -89,9 +97,10 @@ publication. Les nouveaux contenus restent disponibles hors ligne avec le reste 
 - Une obtention aléatoire sans taux recoupé reste « taux non renseigné ». Les deux anciens
   taux chiffrés sont conservés ; aucun nouveau pourcentage n’est inventé.
 
-**100 % concerne les types des quatre catégories demandées**, pas tous les itinéraires,
-marchands, équipements initiaux, rattrapages ni toutes les acquisitions possibles. Les autres
-catégories, les améliorations et les catalogues d’exploration restent partiels.
+**100 % concerne ici les types des quatre premières catégories demandées**, pas tous les
+itinéraires, marchands, équipements initiaux, rattrapages ni toutes les acquisitions possibles.
+La publication `2026.11.15.4` porte cette couverture à huit catégories ; les outils, objets
+de progression, améliorations et catalogues d’exploration restent partiels. Le DLC demeure exclu.
 
 Les 15 nouvelles URL documentaires sont accessibles au contrôle HTTP du 15 novembre 2026,
 après correction de l’URL des souvenirs. Cela ne revalide pas les 65 accès 403/429 de l’audit
@@ -109,7 +118,7 @@ La référence `tests/fixtures/item-completion-ids.json` protège les 917 nouvea
 d’objets, leurs acquisitions et les 61 rencontres ajoutées. Elle complète la référence
 historique du lot 6, qui reste inchangée.
 
-Contrôles de livraison : **58 tests métier réussis**, ESLint sans avertissement, TypeScript,
+Contrôles de livraison de `2026.11.15.3` : **58 tests métier réussis**, ESLint sans avertissement, TypeScript,
 audit local sans erreur et export web réussis. Les six parcours navigateur (parties, quêtes,
 collection, exploration, complétion et sauvegardes) passent dans Edge à **390 × 844** et
 **360 × 800**, avec défilement, import/export, persistance et indépendance des coches.

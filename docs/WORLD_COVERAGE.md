@@ -1,30 +1,30 @@
 # Couverture de l’exploration — catalogue partiel du lot 5
 
-Catalogue `2026.11.15.3`, vérification documentaire du 15 novembre 2026.
+Catalogue `2026.11.15.4`, vérification documentaire du 15 novembre 2026.
 
 ## Publication
 
-Le lot 5 fournit les fonctions de suivi dans le navigateur : **93 rencontres de boss**
+Le lot 5 fournit les fonctions de suivi dans le navigateur : **134 rencontres de boss**
 et **40 sites de grâce** du jeu de base. Ce sont des sélections régionales, sans prétention
 d’exhaustivité d’une région ou du jeu. Aucun pourcentage global n’est annoncé.
 
 | Région | Rencontres publiées | Sites de grâce publiés |
 | --- | ---: | ---: |
-| Nécrolimbe, dont Valorage et Voilorage | 19 | 23 |
+| Nécrolimbe, dont Valorage et Voilorage | 20 | 23 |
 | Péninsule larmoyante | 10 | 11 |
-| Liurnia | 10 | 4 |
-| Caelid | 9 | 0 |
-| Plateau Altus | 11 | 0 |
-| Mont Gelmir | 6 | 1 |
-| Leyndell | 4 | 0 |
-| Régions souterraines | 9 | 0 |
-| Cimes des Géants | 6 | 0 |
+| Liurnia | 22 | 4 |
+| Caelid | 18 | 0 |
+| Plateau Altus | 18 | 0 |
+| Mont Gelmir | 8 | 1 |
+| Leyndell | 7 | 0 |
+| Régions souterraines | 12 | 0 |
+| Cimes des Géants | 9 | 0 |
 | Champs enneigés consacrés | 5 | 0 |
 | Arbre-Sacré | 2 | 0 |
-| Farum Azula | 2 | 0 |
+| Farum Azula | 3 | 0 |
 | Table ronde | 0 | 1 |
 | DLC | 0 | 0 |
-| **Total** | **93** | **40** |
+| **Total** | **134** | **40** |
 
 L’inventaire indépendant `src/catalog/world/scope.ts` liste les identifiants attendus.
 Les tests contrôlent les fiches manquantes, les ajouts hors inventaire et les doublons.
@@ -33,8 +33,11 @@ Une recherche vide signifie « absent de la sélection ou des filtres », et non
 ## Rencontres retenues
 
 Les 32 rencontres de la publication initiale sont conservées. La [complétion des objets](ITEM_COMPLETION.md)
-ajoute 61 rencontres nécessaires aux nouvelles récompenses, dans toutes les régions du jeu de base.
-Les grâces restent au nombre de 40. Les fiches ajoutées reprennent le lieu et les conditions
+avait ajouté 61 rencontres nécessaires aux récompenses d’équipement et de sorcelleries,
+portant la sélection à 93 boss dans la publication `2026.11.15.3`.
+La [complétion des talismans, incantations et cendres](SECONDARY_ITEM_COMPLETION.md) ajoute
+41 rencontres liées à ces nouvelles récompenses, pour **134 rencontres** au total.
+Les 93 anciennes fiches et les 40 grâces sont conservées. Les fiches ajoutées reprennent le lieu et les conditions
 de l’obtention documentée, sans inventer une grâce associée ni un lien de quête implicite.
 Les listes ci-dessous décrivent la sélection initiale ; l’inventaire actuel est dans `world/scope.ts`.
 
@@ -67,10 +70,11 @@ rencontres du début du jeu : cette sélection ne constitue pas leur inventaire 
 
 ## Sites de grâce et liens
 
-Les **20 références de grâces** et **16 références de boss** déjà utilisées par les objets
-sont toutes reprises, avec leurs identifiants et leurs noms. Lors de la livraison initiale du lot 5,
+La sélection initiale reprenait les **20 références de grâces** et **16 références de boss**
+déjà utilisées par les objets, avec leurs identifiants et leurs noms. Lors de la livraison initiale du lot 5,
 les 154 fiches d’objets, 190 acquisitions et 27 ramassages n’avaient pas été modifiés.
-L’enrichissement actuel conserve ces données et ajoute les fiches nécessaires aux quatre catégories prioritaires.
+Les enrichissements suivants conservent ces données et ajoutent les fiches nécessaires aux huit
+catégories d’équipement et de magie désormais recensées, sans compléter toutes les rencontres du jeu.
 
 Chaque grâce a un lieu, un accès, un alias anglais et des références. Les grâces d’arène
 de Margit, Godrick, la Tête de citrouille, la Chimère léonine et du Loup cramoisi précisent
@@ -136,11 +140,15 @@ coches rapides, NG+, import/export en copie et erreurs d’écriture.
 Les parcours navigateur vérifient les nouveaux liens, les coches, le rechargement,
 les personnages et cycles, le défilement et les formats 390 × 844 et 360 × 800.
 
-Contrôles exécutés le 15 novembre 2026 : ESLint sans avertissement, TypeScript,
+Contrôles de la livraison initiale du lot 5, exécutés le 15 novembre 2026 : ESLint sans avertissement, TypeScript,
 43 tests métier, export web et parcours navigateur complets réussis. Les quatre onglets
 restent lisibles avec des libellés agrandis ; aucun débordement horizontal ni erreur
 navigateur observé aux deux formats mobiles. La comparaison à l’instantané avant lot 5
 confirme la préservation du catalogue d’objets et de ses références.
+
+Les vérifications de l’enrichissement `2026.11.15.4` sont détaillées dans
+[SECONDARY_ITEM_COMPLETION.md](SECONDARY_ITEM_COMPLETION.md) ; les comptes régionaux ci-dessus
+correspondent à cette publication et au [rapport d’audit actuel](CATALOG_AUDIT.md).
 
 Les prochains ensembles doivent enrichir les régions puis la couverture du jeu de base.
 La [consolidation du lot 6](CONSOLIDATION.md) contrôle désormais les références communes,

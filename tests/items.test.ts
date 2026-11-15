@@ -13,7 +13,7 @@ test('la sélection d’objets et ses emplacements sont valides, sourcés et exp
   assert.deepEqual(validateItems(items, pickups, refs), []);
   assert.deepEqual(validateCollectionScope(items, pickups, collectionScope), []);
   assert.equal(collectionScope.status, 'partial');
-  assert.equal(items.length, 1071);
+  assert.equal(items.length, 1418);
   assert.equal(pickups.length, 27);
   assert.deepEqual([...new Set(items.map(item => item.category))].sort(), [...itemCategorySchema.options].sort());
   assert.equal(new Set(items.filter(item => item.category === 'armor').map(item => item.armorSlot)).size, 4);
@@ -72,7 +72,7 @@ test('méthode et garantie sont indépendantes ; les taux inconnus ne deviennent
 test('recherche française/anglaise, marchand, région, catégorie et statut se combinent', () => {
   const find = (search: string) => filterItems(items, itemActors, { ...emptyCollectionFilter, search }).map(item => item.id);
   assert.deepEqual(find('  ÉPÉE À DOUBLE LAME  '), ['item.twinblade']);
-  assert.deepEqual(find('Twinblade'), ['item.twinblade', 'item.gargoyles-twinblade']);
+  assert.deepEqual(find('Twinblade'), ['item.twinblade', 'item.gargoyles-twinblade', 'item.twinblade-talisman']);
   assert.ok(find('Kalé').includes('item.torch'));
   assert.deepEqual([...new Set(filterItems(items, itemActors, { ...emptyCollectionFilter, category: 'armor' }).map(item => item.armorSlot))].sort(), ['chest', 'hands', 'head', 'legs']);
   assert.deepEqual(filterItems(items, itemActors, { ...emptyCollectionFilter, status: 'obtained' }, { 'item.torch': true, 'item.future': true }).map(item => item.id), ['item.torch']);

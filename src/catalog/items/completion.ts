@@ -4,17 +4,18 @@ import prerequisiteJson from './completion-prerequisites.json';
 import prices from './completion-prices.json';
 import { completionRoutes } from './completion-routes';
 import { completionSource, itemSlug, type InventoryEntry } from './completion-model';
+import { secondaryBaseInventory, secondaryPrerequisites } from './secondary-inventory';
 
 export const completedBaseInventory = inventoryJson as InventoryEntry[];
 const prerequisites = prerequisiteJson as InventoryEntry[];
 const identity = (name: string) => itemSlug(name).replaceAll('-', '');
 const translatedNames = completionSource('Elden Ring Data — noms français du jeu', 'https://github.com/elden-ring-data/msg/blob/4bbba478e478e9018d0293e0b18cd8cf706199e9/frafr/item.msgbnd.dcx.json');
 const inventorySource = (category: Item['category']) => completionSource('Elden Ring Completion Sheets — inventaire du jeu de base',
-  `https://github.com/rdmaw/elden-ring-completion-sheets/blob/151490b721e05fc7138aee9264c2e171fca10c0f/sheets/${category === 'armor' ? 'armor' : category === 'sorcery' ? 'spells' : 'weapons'}.html`);
+  `https://github.com/rdmaw/elden-ring-completion-sheets/blob/151490b721e05fc7138aee9264c2e171fca10c0f/sheets/${category === 'armor' ? 'armor' : ['sorcery', 'incantation'].includes(category) ? 'spells' : category === 'talisman' ? 'talismans' : ['ash_of_war', 'spirit_ash'].includes(category) ? 'ashes' : 'weapons'}.html`);
 
 export function buildCompletionItems(existing: Item[]): Item[] {
   const oldIds = new Set(existing.map(item => item.id));
-  const entries = [...completedBaseInventory, ...prerequisites];
+  const entries = [...completedBaseInventory, ...prerequisites, ...secondaryBaseInventory, ...secondaryPrerequisites];
   const itemIds = new Map([...existing.flatMap(item => [item.name, ...item.aliases].map(name => [identity(name), item.id] as const)),
     ...entries.map(entry => [identity(entry.english), entry.id] as const)]);
   const routes = new Map<string, typeof completionRoutes[number]>();
@@ -27,6 +28,10 @@ export function buildCompletionItems(existing: Item[]): Item[] {
     if (route.required && !requiredItemId) throw new Error(`Prérequis absent : ${route.required}`);
     const summary = entry.category === 'armor' ? `Pièce d’armure ${entry.english.includes('(Altered)') ? 'retouchée, suivie séparément de sa version d’origine' : 'du jeu de base'}.`
       : entry.category === 'sorcery' ? 'Sorcellerie du jeu de base, à mémoriser à un site de grâce et à lancer avec un bâton.'
+      : entry.category === 'incantation' ? 'Incantation du jeu de base, à mémoriser à un site de grâce et à lancer avec un sceau sacré.'
+      : entry.category === 'talisman' ? 'Talisman permanent du jeu de base. Les variantes nommées et les versions +1 ou +2 ont des coches distinctes.'
+      : entry.category === 'ash_of_war' ? 'Cendre de guerre du jeu de base, à appliquer à une arme ou un bouclier compatible depuis un site de grâce.'
+      : entry.category === 'spirit_ash' ? 'Cendres d’invocation du jeu de base. Les niveaux d’amélioration partagent la même coche.'
       : entry.category === 'key_item' ? 'Objet de progression. Son obtention et son utilisation restent indépendantes des autres coches.'
       : `${entry.category === 'shield' ? 'Bouclier' : 'Arme'} du jeu de base ; les niveaux d’amélioration et affinités ne changent pas cette coche.`;
     const item: Item = {
@@ -37,7 +42,7 @@ export function buildCompletionItems(existing: Item[]): Item[] {
         location: route.location, description: route.description, conditions: [...route.conditions],
         ...(route.actor ? { sourceEntityId: route.actor.id } : {}), ...(route.questId ? { relatedQuestId: route.questId } : {}),
         ...(requiredItemId ? { requiredItemId } : {}),
-        ...(route.price ? { price: priceByName.has(identity(entry.english)) ? `${priceByName.get(identity(entry.english))!.toLocaleString('fr-FR').replaceAll('\u202f', ' ')} runes` : route.price } : {}),
+        ...(route.price ? { price: route.method === 'merchant' && priceByName.has(identity(entry.english)) ? `${priceByName.get(identity(entry.english))!.toLocaleString('fr-FR').replaceAll('\u202f', ' ')} runes` : route.price } : {}),
         probability: { kind: route.guaranteed ? 'guaranteed' : 'unknown' }, sources: route.sources! }],
     };
     return item;

@@ -1,16 +1,19 @@
 # Couverture des objets — catalogue partiel du lot 4
 
-Catalogue `2026.11.15.3`, revues documentaires des 14 et 15 novembre 2026.
+Catalogue `2026.11.15.4`, revues documentaires des 14 et 15 novembre 2026.
 
 ## État de publication
 
 Les fonctions de collection et d’obtention sont disponibles dans le navigateur.
-Le catalogue contient **1 071 types d’objets, 1 107 acquisitions et 27 emplacements
-d’amélioration** : 1 067 objets sont affichés dans la collection du personnage et 4 types
+Le catalogue contient **1 418 types d’objets, 1 454 acquisitions et 27 emplacements
+d’amélioration** : 1 414 objets sont affichés dans la collection du personnage et 4 types
 d’améliorations sont réservés au suivi par cycle. Les **308 armes, 69 boucliers, 559 pièces
-d’armure et 70 sorcelleries du jeu de base d’origine** ont une fiche et au moins une obtention.
-Les autres catégories et les itinéraires d’obtention restent **partiels**. Ce catalogue
-n’inclut ni le DLC ni les ajouts de versions ultérieures ; voir [le détail de cette complétion](ITEM_COMPLETION.md).
+d’armure, 70 sorcelleries, 114 talismans, 101 incantations, 91 cendres de guerre et
+64 cendres d’invocation du jeu de base d’origine** ont une fiche et au moins une obtention.
+Les outils permanents, objets de progression, améliorations et itinéraires d’obtention
+alternatifs restent **partiels**. Ce catalogue n’inclut ni le DLC ni les ajouts de versions
+ultérieures ; voir la [première complétion](ITEM_COMPLETION.md) et la
+[complétion des talismans, incantations et cendres](SECONDARY_ITEM_COMPLETION.md).
 
 L’inventaire de publication `src/catalog/items/scope.ts` conserve les identifiants attendus.
 Les contrôles détectent une fiche ou un emplacement manquant, ajouté hors inventaire ou dupliqué.
@@ -21,16 +24,16 @@ Il ne s’agit pas encore d’un inventaire exhaustif des objets à produire.
 | Armes | 308 | 308 | 100,00 % |
 | Boucliers | 69 | 69 | 100,00 % |
 | Pièces d’armure | 559 | 559 | 100,00 % |
-| Talismans | 9 | 114 | 7,89 % |
+| Talismans | 114 | 114 | 100,00 % |
 | Sorcelleries | 70 | 70 | 100,00 % |
-| Incantations | 6 | 101 | 5,94 % |
-| Cendres de guerre | 13 | 91 | 14,29 % |
-| Cendres d’invocation | 6 | 64 | 9,38 % |
+| Incantations | 101 | 101 | 100,00 % |
+| Cendres de guerre | 91 | 91 | 100,00 % |
+| Cendres d’invocation | 64 | 64 | 100,00 % |
 | Outils permanents | 8 | À recenser | — |
-| Objets de progression | 19 | À recenser | — |
+| Objets de progression | 30 | À recenser | — |
 | Améliorations importantes | 4 | À recenser | — |
-| **Sous-total des catégories chiffrées** | **1 040** | **1 376** | **75,58 %** |
-| **Total du catalogue publié** | **1 071** | **À établir** | **—** |
+| **Sous-total des catégories chiffrées** | **1 376** | **1 376** | **100,00 %** |
+| **Total du catalogue publié** | **1 418** | **À établir** | **—** |
 
 Les totaux portent sur les **types du jeu de base d’origine**, hors DLC et ajouts de versions
 ultérieures. La couverture est calculée par `types publiés / total connu × 100`, arrondie à
@@ -72,19 +75,19 @@ ordinaires d’amélioration ne sont pas publiés.
 
 | Région | Sources publiées | État |
 | --- | ---: | --- |
-| Nécrolimbe, dont Voilorage | 191 | Itinéraires sélectionnés, non exhaustifs |
-| Péninsule larmoyante | 48 | Itinéraires sélectionnés, non exhaustifs |
-| Table ronde | 106 | Boutiques, rattrapages, récompenses et échanges sélectionnés |
-| Liurnia | 210 | Itinéraires sélectionnés, non exhaustifs |
-| Caelid | 102 | Itinéraires sélectionnés, non exhaustifs |
-| Plateau Altus | 106 | Itinéraires sélectionnés, non exhaustifs |
-| Mont Gelmir | 69 | Itinéraires sélectionnés, non exhaustifs |
-| Leyndell | 67 | Capitale royale, souterrains et capitale des cendres distingués |
-| Régions souterraines | 66 | Siofra, Ainsel, Nokron, Nokstella, Fonderacine, lac putréfié et Mohgwyn |
-| Cimes des Géants | 61 | Itinéraires sélectionnés, non exhaustifs |
-| Champs enneigés consacrés | 33 | Itinéraires sélectionnés, non exhaustifs |
-| Arbre-Sacré | 26 | Itinéraires sélectionnés, non exhaustifs |
-| Farum Azula | 22 | Itinéraires sélectionnés, non exhaustifs |
+| Nécrolimbe, dont Voilorage | 227 | Itinéraires sélectionnés, non exhaustifs |
+| Péninsule larmoyante | 59 | Itinéraires sélectionnés, non exhaustifs |
+| Table ronde | 127 | Boutiques, rattrapages, récompenses et échanges sélectionnés |
+| Liurnia | 288 | Itinéraires sélectionnés, non exhaustifs |
+| Caelid | 157 | Itinéraires sélectionnés, non exhaustifs |
+| Plateau Altus | 149 | Itinéraires sélectionnés, non exhaustifs |
+| Mont Gelmir | 86 | Itinéraires sélectionnés, non exhaustifs |
+| Leyndell | 87 | Capitale royale, souterrains et capitale des cendres distingués |
+| Régions souterraines | 93 | Siofra, Ainsel, Nokron, Nokstella, Fonderacine, lac putréfié et Mohgwyn |
+| Cimes des Géants | 76 | Itinéraires sélectionnés, non exhaustifs |
+| Champs enneigés consacrés | 37 | Itinéraires sélectionnés, non exhaustifs |
+| Arbre-Sacré | 36 | Itinéraires sélectionnés, non exhaustifs |
+| Farum Azula | 32 | Itinéraires sélectionnés, non exhaustifs |
 | DLC | 0 | Hors de cette publication |
 
 Les sources d’un objet ne sont pas nécessairement toutes répertoriées. Par exemple,
@@ -135,7 +138,9 @@ d’un catalogue futur. Aucune migration ni réinitialisation n’est nécessair
 Les descriptions sont des synthèses françaises rédigées à partir des références propres
 aux acquisitions. La complétion utilise les inventaires de Completion Sheets et Roundtable,
 les noms français extraits du jeu et les obtentions documentées par Tarnished, PowerPyx
-et Eldenpedia. Les révisions et adaptations sont détaillées dans [ITEM_COMPLETION.md](ITEM_COMPLETION.md).
+et Eldenpedia. Les révisions et adaptations sont détaillées dans [ITEM_COMPLETION.md](ITEM_COMPLETION.md)
+et [SECONDARY_ITEM_COMPLETION.md](SECONDARY_ITEM_COMPLETION.md).
+L’audit de cette publication recense 226 URL documentaires uniques dans l’ensemble du catalogue.
 Les données sont livrées avec l’application ; aucune API communautaire n’est nécessaire
 pendant l’utilisation. ERDB n’a pas été importé. Les noms anglais restent des alias de recherche.
 
@@ -143,7 +148,7 @@ pendant l’utilisation. ERDB n’a pas été importé. Les noms anglais restent
 - `src/catalog/items/gear.ts`, `magic.ts`, `tools.ts`, `upgrades.ts` : premières fiches et améliorations.
 - `merchants.ts`, `teachings.ts`, `early-rewards.ts` : boutiques, enseignements et récompenses ajoutés le 15 novembre.
 - `exploration-equipment.ts`, `liurnia-armor.ts`, `regional-sorceries.ts` : nouvel équipement et sorcelleries du jeu de base.
-- `base-inventory.json`, `complete-*.ts`, `completion.ts` : inventaire des quatre catégories, obtentions et adaptation au format du carnet.
+- `base-inventory.json`, `extended-*-inventory.json`, `complete-*.ts`, `completion.ts` : inventaires des huit catégories recensées, obtentions et adaptation au format du carnet.
 - `pickups.ts` : emplacements suivis par cycle ; `scope.ts` : inventaire de publication.
 - `references.ts` : intervenants et grâces nécessaires aux acquisitions.
 - `query.ts` : filtres et contrôle de couverture ; `index.ts` : catalogue agrégé.
@@ -246,20 +251,39 @@ et des 27 ramassages. Le parcours navigateur de collection et quatre nouvelles f
 horizontal ni erreur navigateur. La vérification reste documentaire, sans essai en jeu
 ni validation sur appareil Android/iOS.
 
+## Enrichissement du 15 novembre 2026 — talismans, incantations et cendres
+
+La publication `2026.11.15.4` ajoute **347 types et 347 acquisitions** : les 336 types
+manquants parmi les talismans, incantations, cendres de guerre et cendres d’invocation,
+ainsi que 11 objets de progression nécessaires aux obtentions. Les huit catégories
+chiffrées atteignent **1 376 types sur 1 376**, avec au moins une acquisition par type.
+Les 1 071 fiches précédentes, leurs acquisitions et les 27 ramassages gardent leurs
+identifiants. Les variantes et branches de récompenses restent distinctes.
+
+Les rencontres de boss nécessaires portent l’exploration à 134 rencontres ; les 40 sites
+de grâce restent inchangés. Les invasions et ennemis uniques ordinaires n’ajoutent pas de
+boss. Les sources, conditions manquables et limites sont détaillées dans
+[SECONDARY_ITEM_COMPLETION.md](SECONDARY_ITEM_COMPLETION.md). Les acquisitions alternatives,
+les trois catégories sans total et l’exploration restent partielles.
+
 ## Validation et suite
 
 Les tests métier couvrent le schéma, les doublons, références, prix, souvenirs requis,
 taux invalides/inconnus, catégories, filtres corrélés, indépendance des rubriques,
 coches rapides, erreurs de stockage, NG+, export/import et compatibilité des anciennes données.
+Les références historiques `tests/fixtures/catalog-ids.v1.json`,
+`tests/fixtures/item-completion-ids.json` et `tests/fixtures/secondary-item-completion-ids.json`
+doivent être préservées pour détecter toute suppression ou réaffectation d’un identifiant publié.
 
 Les parcours navigateur vérifient les fiches et filtres, les liens, la persistance,
 les personnages, le NG+, l’export/import réel, les formats 390 × 844 et 360 × 800,
 le défilement et les quatre onglets avec des libellés agrandis.
 Les essais Android/iOS et Firefox sur téléphone restent à effectuer.
 
-La suite du contenu doit compléter les sélections régionales puis publier les autres régions,
-avec leurs sources et emplacements. Garder l’état « partiel » tant que l’inventaire complet
-n’est pas établi et contrôlé. La [consolidation du lot 6](CONSOLIDATION.md) contrôle désormais
+La suite du contenu doit recenser les outils permanents, objets de progression et améliorations,
+puis enrichir les acquisitions alternatives et l’exploration avec leurs sources et emplacements.
+Garder l’état global « partiel » tant que ces inventaires ne sont pas établis et contrôlés.
+La [consolidation du lot 6](CONSOLIDATION.md) contrôle désormais
 les références entre objets, quêtes, boss et grâces, les anciens identifiants et les compteurs.
 Les dénominateurs documentaires sont centralisés dans `src/catalog/itemCoverage.ts` ;
 le [rapport d’audit](CATALOG_AUDIT.md) sépare les huit catégories chiffrées des trois à recenser.

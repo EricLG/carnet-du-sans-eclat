@@ -1,0 +1,1089 @@
+{
+  "publication": "2026.11.15.4",
+  "itemAcquisitions": {
+    "item.crimson-amber-medallion-plus-1": [
+      "acquisition.crimson-amber-medallion-plus-1.base"
+    ],
+    "item.crimson-amber-medallion-plus-2": [
+      "acquisition.crimson-amber-medallion-plus-2.base"
+    ],
+    "item.crimson-seed-talisman": [
+      "acquisition.crimson-seed-talisman.base"
+    ],
+    "item.cerulean-amber-medallion": [
+      "acquisition.cerulean-amber-medallion.base"
+    ],
+    "item.cerulean-amber-medallion-plus-1": [
+      "acquisition.cerulean-amber-medallion-plus-1.base"
+    ],
+    "item.cerulean-amber-medallion-plus-2": [
+      "acquisition.cerulean-amber-medallion-plus-2.base"
+    ],
+    "item.cerulean-seed-talisman": [
+      "acquisition.cerulean-seed-talisman.base"
+    ],
+    "item.viridian-amber-medallion": [
+      "acquisition.viridian-amber-medallion.base"
+    ],
+    "item.viridian-amber-medallion-plus-1": [
+      "acquisition.viridian-amber-medallion-plus-1.base"
+    ],
+    "item.viridian-amber-medallion-plus-2": [
+      "acquisition.viridian-amber-medallion-plus-2.base"
+    ],
+    "item.arsenal-charm-plus-1": [
+      "acquisition.arsenal-charm-plus-1.base"
+    ],
+    "item.great-jars-arsenal": [
+      "acquisition.great-jars-arsenal.base"
+    ],
+    "item.erdtrees-favor-plus-1": [
+      "acquisition.erdtrees-favor-plus-1.base"
+    ],
+    "item.erdtrees-favor-plus-2": [
+      "acquisition.erdtrees-favor-plus-2.base"
+    ],
+    "item.radagons-scarseal": [
+      "acquisition.radagons-scarseal.base"
+    ],
+    "item.radagons-soreseal": [
+      "acquisition.radagons-soreseal.base"
+    ],
+    "item.marikas-scarseal": [
+      "acquisition.marikas-scarseal.base"
+    ],
+    "item.marikas-soreseal": [
+      "acquisition.marikas-soreseal.base"
+    ],
+    "item.starscourge-heirloom": [
+      "acquisition.starscourge-heirloom.base"
+    ],
+    "item.prosthesis-wearer-heirloom": [
+      "acquisition.prosthesis-wearer-heirloom.base"
+    ],
+    "item.stargazer-heirloom": [
+      "acquisition.stargazer-heirloom.base"
+    ],
+    "item.two-fingers-heirloom": [
+      "acquisition.two-fingers-heirloom.base"
+    ],
+    "item.dragoncrest-shield-talisman": [
+      "acquisition.dragoncrest-shield-talisman.base"
+    ],
+    "item.dragoncrest-shield-talisman-plus-1": [
+      "acquisition.dragoncrest-shield-talisman-plus-1.base"
+    ],
+    "item.dragoncrest-shield-talisman-plus-2": [
+      "acquisition.dragoncrest-shield-talisman-plus-2.base"
+    ],
+    "item.dragoncrest-greatshield-talisman": [
+      "acquisition.dragoncrest-greatshield-talisman.base"
+    ],
+    "item.spelldrake-talisman": [
+      "acquisition.spelldrake-talisman.base"
+    ],
+    "item.spelldrake-talisman-plus-1": [
+      "acquisition.spelldrake-talisman-plus-1.base"
+    ],
+    "item.spelldrake-talisman-plus-2": [
+      "acquisition.spelldrake-talisman-plus-2.base"
+    ],
+    "item.flamedrake-talisman-plus-1": [
+      "acquisition.flamedrake-talisman-plus-1.base"
+    ],
+    "item.flamedrake-talisman-plus-2": [
+      "acquisition.flamedrake-talisman-plus-2.base"
+    ],
+    "item.boltdrake-talisman": [
+      "acquisition.boltdrake-talisman.base"
+    ],
+    "item.boltdrake-talisman-plus-1": [
+      "acquisition.boltdrake-talisman-plus-1.base"
+    ],
+    "item.boltdrake-talisman-plus-2": [
+      "acquisition.boltdrake-talisman-plus-2.base"
+    ],
+    "item.haligdrake-talisman": [
+      "acquisition.haligdrake-talisman.base"
+    ],
+    "item.haligdrake-talisman-plus-1": [
+      "acquisition.haligdrake-talisman-plus-1.base"
+    ],
+    "item.haligdrake-talisman-plus-2": [
+      "acquisition.haligdrake-talisman-plus-2.base"
+    ],
+    "item.pearldrake-talisman": [
+      "acquisition.pearldrake-talisman.base"
+    ],
+    "item.pearldrake-talisman-plus-1": [
+      "acquisition.pearldrake-talisman-plus-1.base"
+    ],
+    "item.pearldrake-talisman-plus-2": [
+      "acquisition.pearldrake-talisman-plus-2.base"
+    ],
+    "item.immunizing-horn-charm": [
+      "acquisition.immunizing-horn-charm.base"
+    ],
+    "item.immunizing-horn-charm-plus-1": [
+      "acquisition.immunizing-horn-charm-plus-1.base"
+    ],
+    "item.stalwart-horn-charm": [
+      "acquisition.stalwart-horn-charm.base"
+    ],
+    "item.stalwart-horn-charm-plus-1": [
+      "acquisition.stalwart-horn-charm-plus-1.base"
+    ],
+    "item.clarifying-horn-charm": [
+      "acquisition.clarifying-horn-charm.base"
+    ],
+    "item.clarifying-horn-charm-plus-1": [
+      "acquisition.clarifying-horn-charm-plus-1.base"
+    ],
+    "item.mottled-necklace": [
+      "acquisition.mottled-necklace.base"
+    ],
+    "item.mottled-necklace-plus-1": [
+      "acquisition.mottled-necklace-plus-1.base"
+    ],
+    "item.prince-of-deaths-pustule": [
+      "acquisition.prince-of-deaths-pustule.base"
+    ],
+    "item.prince-of-deaths-cyst": [
+      "acquisition.prince-of-deaths-cyst.base"
+    ],
+    "item.dagger-talisman": [
+      "acquisition.dagger-talisman.base"
+    ],
+    "item.curved-sword-talisman": [
+      "acquisition.curved-sword-talisman.base"
+    ],
+    "item.twinblade-talisman": [
+      "acquisition.twinblade-talisman.base"
+    ],
+    "item.hammer-talisman": [
+      "acquisition.hammer-talisman.base"
+    ],
+    "item.spear-talisman": [
+      "acquisition.spear-talisman.base"
+    ],
+    "item.lance-talisman": [
+      "acquisition.lance-talisman.base"
+    ],
+    "item.greatshield-talisman": [
+      "acquisition.greatshield-talisman.base"
+    ],
+    "item.arrows-sting-talisman": [
+      "acquisition.arrows-sting-talisman.base"
+    ],
+    "item.arrows-reach-talisman": [
+      "acquisition.arrows-reach-talisman.base"
+    ],
+    "item.graven-school-talisman": [
+      "acquisition.graven-school-talisman.base"
+    ],
+    "item.graven-mass-talisman": [
+      "acquisition.graven-mass-talisman.base"
+    ],
+    "item.faithfuls-canvas-talisman": [
+      "acquisition.faithfuls-canvas-talisman.base"
+    ],
+    "item.flocks-canvas-talisman": [
+      "acquisition.flocks-canvas-talisman.base"
+    ],
+    "item.primal-glintstone-blade": [
+      "acquisition.primal-glintstone-blade.base"
+    ],
+    "item.moon-of-nokstella": [
+      "acquisition.moon-of-nokstella.base"
+    ],
+    "item.old-lords-talisman": [
+      "acquisition.old-lords-talisman.base"
+    ],
+    "item.radagon-icon": [
+      "acquisition.radagon-icon.base"
+    ],
+    "item.roar-medallion": [
+      "acquisition.roar-medallion.base"
+    ],
+    "item.companion-jar": [
+      "acquisition.companion-jar.base"
+    ],
+    "item.perfumers-talisman": [
+      "acquisition.perfumers-talisman.base"
+    ],
+    "item.carian-filigreed-crest": [
+      "acquisition.carian-filigreed-crest.base"
+    ],
+    "item.warrior-jar-shard": [
+      "acquisition.warrior-jar-shard.base"
+    ],
+    "item.shard-of-alexander": [
+      "acquisition.shard-of-alexander.base"
+    ],
+    "item.godfrey-icon": [
+      "acquisition.godfrey-icon.base"
+    ],
+    "item.bull-goats-talisman": [
+      "acquisition.bull-goats-talisman.base"
+    ],
+    "item.blue-dancer-charm": [
+      "acquisition.blue-dancer-charm.base"
+    ],
+    "item.magic-scorpion-charm": [
+      "acquisition.magic-scorpion-charm.base"
+    ],
+    "item.fire-scorpion-charm": [
+      "acquisition.fire-scorpion-charm.base"
+    ],
+    "item.lightning-scorpion-charm": [
+      "acquisition.lightning-scorpion-charm.base"
+    ],
+    "item.sacred-scorpion-charm": [
+      "acquisition.sacred-scorpion-charm.base"
+    ],
+    "item.crucible-scale-talisman": [
+      "acquisition.crucible-scale-talisman.base"
+    ],
+    "item.crucible-feather-talisman": [
+      "acquisition.crucible-feather-talisman.base"
+    ],
+    "item.crucible-knot-talisman": [
+      "acquisition.crucible-knot-talisman.base"
+    ],
+    "item.red-feathered-branchsword": [
+      "acquisition.red-feathered-branchsword.base"
+    ],
+    "item.blue-feathered-branchsword": [
+      "acquisition.blue-feathered-branchsword.base"
+    ],
+    "item.ritual-sword-talisman": [
+      "acquisition.ritual-sword-talisman.base"
+    ],
+    "item.ritual-shield-talisman": [
+      "acquisition.ritual-shield-talisman.base"
+    ],
+    "item.assassins-cerulean-dagger": [
+      "acquisition.assassins-cerulean-dagger.base"
+    ],
+    "item.winged-sword-insignia": [
+      "acquisition.winged-sword-insignia.base"
+    ],
+    "item.rotten-winged-sword-insignia": [
+      "acquisition.rotten-winged-sword-insignia.base"
+    ],
+    "item.millicents-prosthesis": [
+      "acquisition.millicents-prosthesis.base"
+    ],
+    "item.godskin-swaddling-cloth": [
+      "acquisition.godskin-swaddling-cloth.base"
+    ],
+    "item.kindred-of-rots-exultation": [
+      "acquisition.kindred-of-rots-exultation.base"
+    ],
+    "item.lord-of-bloods-exultation": [
+      "acquisition.lord-of-bloods-exultation.base"
+    ],
+    "item.takers-cameo": [
+      "acquisition.takers-cameo.base"
+    ],
+    "item.ancestral-spirits-horn": [
+      "acquisition.ancestral-spirits-horn.base"
+    ],
+    "item.gold-scarab": [
+      "acquisition.gold-scarab.base"
+    ],
+    "item.silver-scarab": [
+      "acquisition.silver-scarab.base"
+    ],
+    "item.crepuss-vial": [
+      "acquisition.crepuss-vial.base"
+    ],
+    "item.concealing-veil": [
+      "acquisition.concealing-veil.base"
+    ],
+    "item.longtail-cat-talisman": [
+      "acquisition.longtail-cat-talisman.base"
+    ],
+    "item.furled-fingers-trick-mirror": [
+      "acquisition.furled-fingers-trick-mirror.base"
+    ],
+    "item.hosts-trick-mirror": [
+      "acquisition.hosts-trick-mirror.base"
+    ],
+    "item.shabriris-woe": [
+      "acquisition.shabriris-woe.base"
+    ],
+    "item.daedicars-woe": [
+      "acquisition.daedicars-woe.base"
+    ],
+    "item.great-heal": [
+      "acquisition.great-heal.base"
+    ],
+    "item.lords-heal": [
+      "acquisition.lords-heal.base"
+    ],
+    "item.cure-poison": [
+      "acquisition.cure-poison.base"
+    ],
+    "item.lords-aid": [
+      "acquisition.lords-aid.base"
+    ],
+    "item.lightning-fortification": [
+      "acquisition.lightning-fortification.base"
+    ],
+    "item.divine-fortification": [
+      "acquisition.divine-fortification.base"
+    ],
+    "item.lords-divine-fortification": [
+      "acquisition.lords-divine-fortification.base"
+    ],
+    "item.shadow-bait": [
+      "acquisition.shadow-bait.base"
+    ],
+    "item.darkness": [
+      "acquisition.darkness.base"
+    ],
+    "item.assassins-approach": [
+      "acquisition.assassins-approach.base"
+    ],
+    "item.golden-vow": [
+      "acquisition.golden-vow.base"
+    ],
+    "item.barrier-of-gold": [
+      "acquisition.barrier-of-gold.base"
+    ],
+    "item.golden-lightning-fortification": [
+      "acquisition.golden-lightning-fortification.base"
+    ],
+    "item.protection-of-the-erdtree": [
+      "acquisition.protection-of-the-erdtree.base"
+    ],
+    "item.wrath-of-gold": [
+      "acquisition.wrath-of-gold.base"
+    ],
+    "item.erdtree-heal": [
+      "acquisition.erdtree-heal.base"
+    ],
+    "item.blessings-boon": [
+      "acquisition.blessings-boon.base"
+    ],
+    "item.blessing-of-the-erdtree": [
+      "acquisition.blessing-of-the-erdtree.base"
+    ],
+    "item.aspects-of-the-crucible-breath": [
+      "acquisition.aspects-of-the-crucible-breath.base"
+    ],
+    "item.aspects-of-the-crucible-tail": [
+      "acquisition.aspects-of-the-crucible-tail.base"
+    ],
+    "item.aspects-of-the-crucible-horns": [
+      "acquisition.aspects-of-the-crucible-horns.base"
+    ],
+    "item.elden-stars": [
+      "acquisition.elden-stars.base"
+    ],
+    "item.black-blade": [
+      "acquisition.black-blade.base"
+    ],
+    "item.discus-of-light": [
+      "acquisition.discus-of-light.base"
+    ],
+    "item.triple-rings-of-light": [
+      "acquisition.triple-rings-of-light.base"
+    ],
+    "item.radagons-rings-of-light": [
+      "acquisition.radagons-rings-of-light.base"
+    ],
+    "item.litany-of-proper-death": [
+      "acquisition.litany-of-proper-death.base"
+    ],
+    "item.order-healing": [
+      "acquisition.order-healing.base"
+    ],
+    "item.orders-blade": [
+      "acquisition.orders-blade.base"
+    ],
+    "item.immutable-shield": [
+      "acquisition.immutable-shield.base"
+    ],
+    "item.law-of-causality": [
+      "acquisition.law-of-causality.base"
+    ],
+    "item.law-of-regression": [
+      "acquisition.law-of-regression.base"
+    ],
+    "item.lightning-spear": [
+      "acquisition.lightning-spear.base"
+    ],
+    "item.lightning-strike": [
+      "acquisition.lightning-strike.base"
+    ],
+    "item.honed-bolt": [
+      "acquisition.honed-bolt.base"
+    ],
+    "item.ancient-dragons-lightning-spear": [
+      "acquisition.ancient-dragons-lightning-spear.base"
+    ],
+    "item.ancient-dragons-lightning-strike": [
+      "acquisition.ancient-dragons-lightning-strike.base"
+    ],
+    "item.lansseaxs-glaive": [
+      "acquisition.lansseaxs-glaive.base"
+    ],
+    "item.fortissaxs-lightning-spear": [
+      "acquisition.fortissaxs-lightning-spear.base"
+    ],
+    "item.frozen-lightning-spear": [
+      "acquisition.frozen-lightning-spear.base"
+    ],
+    "item.death-lightning": [
+      "acquisition.death-lightning.base"
+    ],
+    "item.electrify-armament": [
+      "acquisition.electrify-armament.base"
+    ],
+    "item.dragonbolt-blessing": [
+      "acquisition.dragonbolt-blessing.base"
+    ],
+    "item.vykes-dragonbolt": [
+      "acquisition.vykes-dragonbolt.base"
+    ],
+    "item.catch-flame": [
+      "acquisition.catch-flame.base"
+    ],
+    "item.o-flame": [
+      "acquisition.o-flame.base"
+    ],
+    "item.giantsflame-take-thee": [
+      "acquisition.giantsflame-take-thee.base"
+    ],
+    "item.flame-fall-upon-them": [
+      "acquisition.flame-fall-upon-them.base"
+    ],
+    "item.flame-of-the-fell-god": [
+      "acquisition.flame-of-the-fell-god.base"
+    ],
+    "item.surge-o-flame": [
+      "acquisition.surge-o-flame.base"
+    ],
+    "item.whirl-o-flame": [
+      "acquisition.whirl-o-flame.base"
+    ],
+    "item.burn-o-flame": [
+      "acquisition.burn-o-flame.base"
+    ],
+    "item.flame-cleanse-me": [
+      "acquisition.flame-cleanse-me.base"
+    ],
+    "item.flame-protect-me": [
+      "acquisition.flame-protect-me.base"
+    ],
+    "item.flame-grant-me-strength": [
+      "acquisition.flame-grant-me-strength.base"
+    ],
+    "item.fires-deadly-sin": [
+      "acquisition.fires-deadly-sin.base"
+    ],
+    "item.black-flame": [
+      "acquisition.black-flame.base"
+    ],
+    "item.scouring-black-flame": [
+      "acquisition.scouring-black-flame.base"
+    ],
+    "item.black-flame-ritual": [
+      "acquisition.black-flame-ritual.base"
+    ],
+    "item.black-flame-blade": [
+      "acquisition.black-flame-blade.base"
+    ],
+    "item.black-flames-protection": [
+      "acquisition.black-flames-protection.base"
+    ],
+    "item.noble-presence": [
+      "acquisition.noble-presence.base"
+    ],
+    "item.beast-claw": [
+      "acquisition.beast-claw.base"
+    ],
+    "item.gurranqs-beast-claw": [
+      "acquisition.gurranqs-beast-claw.base"
+    ],
+    "item.bestial-sling": [
+      "acquisition.bestial-sling.base"
+    ],
+    "item.stone-of-gurranq": [
+      "acquisition.stone-of-gurranq.base"
+    ],
+    "item.bestial-constitution": [
+      "acquisition.bestial-constitution.base"
+    ],
+    "item.bestial-vitality": [
+      "acquisition.bestial-vitality.base"
+    ],
+    "item.swarm-of-flies": [
+      "acquisition.swarm-of-flies.base"
+    ],
+    "item.bloodflame-talons": [
+      "acquisition.bloodflame-talons.base"
+    ],
+    "item.bloodboon": [
+      "acquisition.bloodboon.base"
+    ],
+    "item.bloodflame-blade": [
+      "acquisition.bloodflame-blade.base"
+    ],
+    "item.poison-mist": [
+      "acquisition.poison-mist.base"
+    ],
+    "item.poison-armament": [
+      "acquisition.poison-armament.base"
+    ],
+    "item.pest-threads": [
+      "acquisition.pest-threads.base"
+    ],
+    "item.scarlet-aeonia": [
+      "acquisition.scarlet-aeonia.base"
+    ],
+    "item.the-flame-of-frenzy": [
+      "acquisition.the-flame-of-frenzy.base"
+    ],
+    "item.unendurable-frenzy": [
+      "acquisition.unendurable-frenzy.base"
+    ],
+    "item.frenzied-burst": [
+      "acquisition.frenzied-burst.base"
+    ],
+    "item.howl-of-shabriri": [
+      "acquisition.howl-of-shabriri.base"
+    ],
+    "item.inescapable-frenzy": [
+      "acquisition.inescapable-frenzy.base"
+    ],
+    "item.dragonfire": [
+      "acquisition.dragonfire.base"
+    ],
+    "item.agheels-flame": [
+      "acquisition.agheels-flame.base"
+    ],
+    "item.magma-breath": [
+      "acquisition.magma-breath.base"
+    ],
+    "item.theodorixs-magma": [
+      "acquisition.theodorixs-magma.base"
+    ],
+    "item.glintstone-breath": [
+      "acquisition.glintstone-breath.base"
+    ],
+    "item.smarags-glintstone-breath": [
+      "acquisition.smarags-glintstone-breath.base"
+    ],
+    "item.rotten-breath": [
+      "acquisition.rotten-breath.base"
+    ],
+    "item.ekzykess-decay": [
+      "acquisition.ekzykess-decay.base"
+    ],
+    "item.dragonice": [
+      "acquisition.dragonice.base"
+    ],
+    "item.borealiss-mist": [
+      "acquisition.borealiss-mist.base"
+    ],
+    "item.placidusaxs-ruin": [
+      "acquisition.placidusaxs-ruin.base"
+    ],
+    "item.dragonclaw": [
+      "acquisition.dragonclaw.base"
+    ],
+    "item.dragonmaw": [
+      "acquisition.dragonmaw.base"
+    ],
+    "item.greyolls-roar": [
+      "acquisition.greyolls-roar.base"
+    ],
+    "item.nomad-ashes": [
+      "acquisition.nomad-ashes.base"
+    ],
+    "item.putrid-corpse-ashes": [
+      "acquisition.putrid-corpse-ashes.base"
+    ],
+    "item.skeletal-militiaman-ashes": [
+      "acquisition.skeletal-militiaman-ashes.base"
+    ],
+    "item.skeletal-bandit-ashes": [
+      "acquisition.skeletal-bandit-ashes.base"
+    ],
+    "item.albinauric-ashes": [
+      "acquisition.albinauric-ashes.base"
+    ],
+    "item.winged-misbegotten-ashes": [
+      "acquisition.winged-misbegotten-ashes.base"
+    ],
+    "item.clayman-ashes": [
+      "acquisition.clayman-ashes.base"
+    ],
+    "item.oracle-envoy-ashes": [
+      "acquisition.oracle-envoy-ashes.base"
+    ],
+    "item.rotten-stray-ashes": [
+      "acquisition.rotten-stray-ashes.base"
+    ],
+    "item.giant-rat-ashes": [
+      "acquisition.giant-rat-ashes.base"
+    ],
+    "item.warhawk-ashes": [
+      "acquisition.warhawk-ashes.base"
+    ],
+    "item.land-squirt-ashes": [
+      "acquisition.land-squirt-ashes.base"
+    ],
+    "item.miranda-sprout-ashes": [
+      "acquisition.miranda-sprout-ashes.base"
+    ],
+    "item.fanged-imp-ashes": [
+      "acquisition.fanged-imp-ashes.base"
+    ],
+    "item.soldjars-of-fortune-ashes": [
+      "acquisition.soldjars-of-fortune-ashes.base"
+    ],
+    "item.archer-ashes": [
+      "acquisition.archer-ashes.base"
+    ],
+    "item.greatshield-soldier-ashes": [
+      "acquisition.greatshield-soldier-ashes.base"
+    ],
+    "item.page-ashes": [
+      "acquisition.page-ashes.base"
+    ],
+    "item.vulgar-militia-ashes": [
+      "acquisition.vulgar-militia-ashes.base"
+    ],
+    "item.marionette-soldier-ashes": [
+      "acquisition.marionette-soldier-ashes.base"
+    ],
+    "item.avionette-soldier-ashes": [
+      "acquisition.avionette-soldier-ashes.base"
+    ],
+    "item.kaiden-sellsword-ashes": [
+      "acquisition.kaiden-sellsword-ashes.base"
+    ],
+    "item.mad-pumpkin-head-ashes": [
+      "acquisition.mad-pumpkin-head-ashes.base"
+    ],
+    "item.fire-monk-ashes": [
+      "acquisition.fire-monk-ashes.base"
+    ],
+    "item.ancestral-follower-ashes": [
+      "acquisition.ancestral-follower-ashes.base"
+    ],
+    "item.azula-beastman-ashes": [
+      "acquisition.azula-beastman-ashes.base"
+    ],
+    "item.man-serpent-ashes": [
+      "acquisition.man-serpent-ashes.base"
+    ],
+    "item.crystalian-ashes": [
+      "acquisition.crystalian-ashes.base"
+    ],
+    "item.kindred-of-rot-ashes": [
+      "acquisition.kindred-of-rot-ashes.base"
+    ],
+    "item.glintstone-sorcerer-ashes": [
+      "acquisition.glintstone-sorcerer-ashes.base"
+    ],
+    "item.twinsage-sorcerer-ashes": [
+      "acquisition.twinsage-sorcerer-ashes.base"
+    ],
+    "item.godrick-soldier-ashes": [
+      "acquisition.godrick-soldier-ashes.base"
+    ],
+    "item.raya-lucaria-soldier-ashes": [
+      "acquisition.raya-lucaria-soldier-ashes.base"
+    ],
+    "item.leyndell-soldier-ashes": [
+      "acquisition.leyndell-soldier-ashes.base"
+    ],
+    "item.radahn-soldier-ashes": [
+      "acquisition.radahn-soldier-ashes.base"
+    ],
+    "item.haligtree-soldier-ashes": [
+      "acquisition.haligtree-soldier-ashes.base"
+    ],
+    "item.mausoleum-soldier-ashes": [
+      "acquisition.mausoleum-soldier-ashes.base"
+    ],
+    "item.stormhawk-deenh": [
+      "acquisition.stormhawk-deenh.base"
+    ],
+    "item.banished-knight-oleg": [
+      "acquisition.banished-knight-oleg.base"
+    ],
+    "item.banished-knight-engvall": [
+      "acquisition.banished-knight-engvall.base"
+    ],
+    "item.bloodhound-knight-floh": [
+      "acquisition.bloodhound-knight-floh.base"
+    ],
+    "item.battlemage-hugues": [
+      "acquisition.battlemage-hugues.base"
+    ],
+    "item.latenna-the-albinauric": [
+      "acquisition.latenna-the-albinauric.base"
+    ],
+    "item.perfumer-tricia": [
+      "acquisition.perfumer-tricia.base"
+    ],
+    "item.depraved-perfumer-carmaan": [
+      "acquisition.depraved-perfumer-carmaan.base"
+    ],
+    "item.omenkiller-rollo": [
+      "acquisition.omenkiller-rollo.base"
+    ],
+    "item.blackflame-monk-amon": [
+      "acquisition.blackflame-monk-amon.base"
+    ],
+    "item.ancient-dragon-knight-kristoff": [
+      "acquisition.ancient-dragon-knight-kristoff.base"
+    ],
+    "item.redmane-knight-ogha": [
+      "acquisition.redmane-knight-ogha.base"
+    ],
+    "item.cleanrot-knight-finlay": [
+      "acquisition.cleanrot-knight-finlay.base"
+    ],
+    "item.black-knife-tiche": [
+      "acquisition.black-knife-tiche.base"
+    ],
+    "item.mimic-tear-ashes": [
+      "acquisition.mimic-tear-ashes.base"
+    ],
+    "item.finger-maiden-therolina-puppet": [
+      "acquisition.finger-maiden-therolina-puppet.base"
+    ],
+    "item.jarwight-puppet": [
+      "acquisition.jarwight-puppet.base"
+    ],
+    "item.dolores-the-sleeping-arrow-puppet": [
+      "acquisition.dolores-the-sleeping-arrow-puppet.base"
+    ],
+    "item.nepheli-loux-puppet": [
+      "acquisition.nepheli-loux-puppet.base"
+    ],
+    "item.dung-eater-puppet": [
+      "acquisition.dung-eater-puppet.base"
+    ],
+    "item.nightmaiden-swordstress-puppets": [
+      "acquisition.nightmaiden-swordstress-puppets.base"
+    ],
+    "item.ash-of-war-stamp-sweep": [
+      "acquisition.ash-of-war-stamp-sweep.base"
+    ],
+    "item.ash-of-war-wild-strikes": [
+      "acquisition.ash-of-war-wild-strikes.base"
+    ],
+    "item.ash-of-war-lions-claw": [
+      "acquisition.ash-of-war-lions-claw.base"
+    ],
+    "item.ash-of-war-cragblade": [
+      "acquisition.ash-of-war-cragblade.base"
+    ],
+    "item.ash-of-war-ground-slam": [
+      "acquisition.ash-of-war-ground-slam.base"
+    ],
+    "item.ash-of-war-earthshaker": [
+      "acquisition.ash-of-war-earthshaker.base"
+    ],
+    "item.ash-of-war-hoarah-louxs-earthshaker": [
+      "acquisition.ash-of-war-hoarah-louxs-earthshaker.base"
+    ],
+    "item.ash-of-war-barbaric-roar": [
+      "acquisition.ash-of-war-barbaric-roar.base"
+    ],
+    "item.ash-of-war-braggarts-roar": [
+      "acquisition.ash-of-war-braggarts-roar.base"
+    ],
+    "item.ash-of-war-trolls-roar": [
+      "acquisition.ash-of-war-trolls-roar.base"
+    ],
+    "item.ash-of-war-piercing-fang": [
+      "acquisition.ash-of-war-piercing-fang.base"
+    ],
+    "item.ash-of-war-repeating-thrust": [
+      "acquisition.ash-of-war-repeating-thrust.base"
+    ],
+    "item.ash-of-war-double-slash": [
+      "acquisition.ash-of-war-double-slash.base"
+    ],
+    "item.ash-of-war-sword-dance": [
+      "acquisition.ash-of-war-sword-dance.base"
+    ],
+    "item.ash-of-war-unsheathe": [
+      "acquisition.ash-of-war-unsheathe.base"
+    ],
+    "item.ash-of-war-bloodhounds-step": [
+      "acquisition.ash-of-war-bloodhounds-step.base"
+    ],
+    "item.ash-of-war-raptor-of-the-mists": [
+      "acquisition.ash-of-war-raptor-of-the-mists.base"
+    ],
+    "item.ash-of-war-beasts-roar": [
+      "acquisition.ash-of-war-beasts-roar.base"
+    ],
+    "item.ash-of-war-square-off": [
+      "acquisition.ash-of-war-square-off.base"
+    ],
+    "item.ash-of-war-charge-forth": [
+      "acquisition.ash-of-war-charge-forth.base"
+    ],
+    "item.ash-of-war-spinning-strikes": [
+      "acquisition.ash-of-war-spinning-strikes.base"
+    ],
+    "item.ash-of-war-giant-hunt": [
+      "acquisition.ash-of-war-giant-hunt.base"
+    ],
+    "item.ash-of-war-storm-assault": [
+      "acquisition.ash-of-war-storm-assault.base"
+    ],
+    "item.ash-of-war-stormcaller": [
+      "acquisition.ash-of-war-stormcaller.base"
+    ],
+    "item.ash-of-war-vacuum-slice": [
+      "acquisition.ash-of-war-vacuum-slice.base"
+    ],
+    "item.ash-of-war-phantom-slash": [
+      "acquisition.ash-of-war-phantom-slash.base"
+    ],
+    "item.ash-of-war-royal-knights-resolve": [
+      "acquisition.ash-of-war-royal-knights-resolve.base"
+    ],
+    "item.ash-of-war-glintstone-pebble": [
+      "acquisition.ash-of-war-glintstone-pebble.base"
+    ],
+    "item.ash-of-war-glintblade-phalanx": [
+      "acquisition.ash-of-war-glintblade-phalanx.base"
+    ],
+    "item.ash-of-war-carian-greatsword": [
+      "acquisition.ash-of-war-carian-greatsword.base"
+    ],
+    "item.ash-of-war-carian-grandeur": [
+      "acquisition.ash-of-war-carian-grandeur.base"
+    ],
+    "item.ash-of-war-spinning-weapon": [
+      "acquisition.ash-of-war-spinning-weapon.base"
+    ],
+    "item.ash-of-war-lorettas-slash": [
+      "acquisition.ash-of-war-lorettas-slash.base"
+    ],
+    "item.ash-of-war-waves-of-darkness": [
+      "acquisition.ash-of-war-waves-of-darkness.base"
+    ],
+    "item.ash-of-war-gravitas": [
+      "acquisition.ash-of-war-gravitas.base"
+    ],
+    "item.ash-of-war-flaming-strike": [
+      "acquisition.ash-of-war-flaming-strike.base"
+    ],
+    "item.ash-of-war-flame-of-the-redmanes": [
+      "acquisition.ash-of-war-flame-of-the-redmanes.base"
+    ],
+    "item.ash-of-war-eruption": [
+      "acquisition.ash-of-war-eruption.base"
+    ],
+    "item.ash-of-war-prelates-charge": [
+      "acquisition.ash-of-war-prelates-charge.base"
+    ],
+    "item.ash-of-war-black-flame-tornado": [
+      "acquisition.ash-of-war-black-flame-tornado.base"
+    ],
+    "item.ash-of-war-thunderbolt": [
+      "acquisition.ash-of-war-thunderbolt.base"
+    ],
+    "item.ash-of-war-lightning-slash": [
+      "acquisition.ash-of-war-lightning-slash.base"
+    ],
+    "item.ash-of-war-lightning-ram": [
+      "acquisition.ash-of-war-lightning-ram.base"
+    ],
+    "item.ash-of-war-sacred-blade": [
+      "acquisition.ash-of-war-sacred-blade.base"
+    ],
+    "item.ash-of-war-prayerful-strike": [
+      "acquisition.ash-of-war-prayerful-strike.base"
+    ],
+    "item.ash-of-war-sacred-ring-of-light": [
+      "acquisition.ash-of-war-sacred-ring-of-light.base"
+    ],
+    "item.ash-of-war-sacred-order": [
+      "acquisition.ash-of-war-sacred-order.base"
+    ],
+    "item.ash-of-war-shared-order": [
+      "acquisition.ash-of-war-shared-order.base"
+    ],
+    "item.ash-of-war-golden-land": [
+      "acquisition.ash-of-war-golden-land.base"
+    ],
+    "item.ash-of-war-golden-slam": [
+      "acquisition.ash-of-war-golden-slam.base"
+    ],
+    "item.ash-of-war-golden-vow": [
+      "acquisition.ash-of-war-golden-vow.base"
+    ],
+    "item.ash-of-war-vow-of-the-indomitable": [
+      "acquisition.ash-of-war-vow-of-the-indomitable.base"
+    ],
+    "item.ash-of-war-holy-ground": [
+      "acquisition.ash-of-war-holy-ground.base"
+    ],
+    "item.ash-of-war-poisonous-mist": [
+      "acquisition.ash-of-war-poisonous-mist.base"
+    ],
+    "item.ash-of-war-poison-moth-flight": [
+      "acquisition.ash-of-war-poison-moth-flight.base"
+    ],
+    "item.ash-of-war-blood-blade": [
+      "acquisition.ash-of-war-blood-blade.base"
+    ],
+    "item.ash-of-war-blood-tax": [
+      "acquisition.ash-of-war-blood-tax.base"
+    ],
+    "item.ash-of-war-seppuku": [
+      "acquisition.ash-of-war-seppuku.base"
+    ],
+    "item.ash-of-war-ice-spear": [
+      "acquisition.ash-of-war-ice-spear.base"
+    ],
+    "item.ash-of-war-chilling-mist": [
+      "acquisition.ash-of-war-chilling-mist.base"
+    ],
+    "item.ash-of-war-hoarfrost-stomp": [
+      "acquisition.ash-of-war-hoarfrost-stomp.base"
+    ],
+    "item.ash-of-war-spectral-lance": [
+      "acquisition.ash-of-war-spectral-lance.base"
+    ],
+    "item.ash-of-war-lifesteal-fist": [
+      "acquisition.ash-of-war-lifesteal-fist.base"
+    ],
+    "item.ash-of-war-white-shadows-lure": [
+      "acquisition.ash-of-war-white-shadows-lure.base"
+    ],
+    "item.ash-of-war-assassins-gambit": [
+      "acquisition.ash-of-war-assassins-gambit.base"
+    ],
+    "item.ash-of-war-mighty-shot": [
+      "acquisition.ash-of-war-mighty-shot.base"
+    ],
+    "item.ash-of-war-through-and-through": [
+      "acquisition.ash-of-war-through-and-through.base"
+    ],
+    "item.ash-of-war-barrage": [
+      "acquisition.ash-of-war-barrage.base"
+    ],
+    "item.ash-of-war-sky-shot": [
+      "acquisition.ash-of-war-sky-shot.base"
+    ],
+    "item.ash-of-war-enchanted-shot": [
+      "acquisition.ash-of-war-enchanted-shot.base"
+    ],
+    "item.ash-of-war-rain-of-arrows": [
+      "acquisition.ash-of-war-rain-of-arrows.base"
+    ],
+    "item.ash-of-war-golden-parry": [
+      "acquisition.ash-of-war-golden-parry.base"
+    ],
+    "item.ash-of-war-storm-wall": [
+      "acquisition.ash-of-war-storm-wall.base"
+    ],
+    "item.ash-of-war-shield-bash": [
+      "acquisition.ash-of-war-shield-bash.base"
+    ],
+    "item.ash-of-war-shield-crash": [
+      "acquisition.ash-of-war-shield-crash.base"
+    ],
+    "item.ash-of-war-barricade-shield": [
+      "acquisition.ash-of-war-barricade-shield.base"
+    ],
+    "item.ash-of-war-thopss-barrier": [
+      "acquisition.ash-of-war-thopss-barrier.base"
+    ],
+    "item.ash-of-war-carian-retaliation": [
+      "acquisition.ash-of-war-carian-retaliation.base"
+    ],
+    "item.amber-starlight": [
+      "acquisition.amber-starlight.base"
+    ],
+    "item.alexanders-innards": [
+      "acquisition.alexanders-innards.base"
+    ],
+    "item.godskin-prayerbook": [
+      "acquisition.godskin-prayerbook.base"
+    ],
+    "item.fire-monks-prayerbook": [
+      "acquisition.fire-monks-prayerbook.base"
+    ],
+    "item.giants-prayerbook": [
+      "acquisition.giants-prayerbook.base"
+    ],
+    "item.dragon-cult-prayerbook": [
+      "acquisition.dragon-cult-prayerbook.base"
+    ],
+    "item.ancient-dragon-prayerbook": [
+      "acquisition.ancient-dragon-prayerbook.base"
+    ],
+    "item.two-fingers-prayerbook": [
+      "acquisition.two-fingers-prayerbook.base"
+    ],
+    "item.assassins-prayerbook": [
+      "acquisition.assassins-prayerbook.base"
+    ],
+    "item.golden-order-principia": [
+      "acquisition.golden-order-principia.base"
+    ],
+    "item.remembrance-of-the-lichdragon": [
+      "acquisition.remembrance-of-the-lichdragon.base"
+    ]
+  },
+  "bossIds": [
+    "boss.bloodhound-knight.lakeside-cave",
+    "boss.beastmen.dragonbarrow-cave",
+    "boss.black-knife.black-knife-catacombs",
+    "boss.cleanrot-knight.stillwater-cave",
+    "boss.godefroy.golden-lineage",
+    "boss.guardian-golem.highroad-cave",
+    "boss.omenkiller.albinauric-village",
+    "boss.deathbird.liurnia",
+    "boss.cleanrot-duo.abandoned-cave",
+    "boss.black-knife.sages-cave",
+    "boss.kindred-of-rot.seethewater-cave",
+    "boss.esgar.leyndell-catacombs",
+    "boss.spiritcaller-snail.godskin-cave",
+    "boss.dragonkin.nokstella",
+    "boss.lansseax.altus",
+    "boss.adan.malefactor",
+    "boss.mohg.forsaken-cathedral",
+    "boss.nights-cavalry.lenne",
+    "boss.nights-cavalry.forbidden-lands",
+    "boss.nights-cavalry.altus-junction",
+    "boss.nights-cavalry.south-caelid",
+    "boss.nights-cavalry.gate-town",
+    "boss.godskin-duo.farum",
+    "boss.alecto.ringleader",
+    "boss.spirit-caller-snail.roads-end",
+    "boss.watchdog.cliffbottom",
+    "boss.tibia-mariner.liurnia",
+    "boss.cemetery-shade.black-knife",
+    "boss.hugues.sellia-evergaol",
+    "boss.cemetery-shade.caelid",
+    "boss.watchdogs.minor-erdtree",
+    "boss.frenzied-duelist.gaol-cave",
+    "boss.putrid-tree-spirit.war-dead",
+    "boss.ancient-hero.sainted-hero",
+    "boss.red-wolf.gelmir-hero",
+    "boss.tricia-misbegotten.unsightly",
+    "boss.fell-twins.east-altus",
+    "boss.grave-warden.auriza-side",
+    "boss.stray-mimic.hidden-path",
+    "boss.ancestor-spirit.siofra",
+    "boss.fortissax.fias-dream"
+  ]
+}

@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "item.wandering-noble-ashes",
+    "name": "Cendres de nobles errants",
+    "english": "Wandering Noble Ashes",
+    "category": "spirit_ash",
+    "textId": "240000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Wandering_Noble_Ashes"
+  },
+  {
+    "id": "item.noble-sorcerer-ashes",
+    "name": "Cendres de noble sorcier",
+    "english": "Noble Sorcerer Ashes",
+    "category": "spirit_ash",
+    "textId": "241000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Noble_Sorcerer_Ashes"
+  },
+  {
+    "id": "item.nomad-ashes",
+    "name": "Cendres de nomade",
+    "english": "Nomad Ashes",
+    "category": "spirit_ash",
+    "textId": "205000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Nomad_Ashes"
+  },
+  {
+    "id": "item.putrid-corpse-ashes",
+    "name": "Cendres de cadavres putrides",
+    "english": "Putrid Corpse Ashes",
+    "category": "spirit_ash",
+    "textId": "215000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Putrid_Corpse_Ashes"
+  },
+  {
+    "id": "item.skeletal-militiaman-ashes",
+    "name": "Cendres de miliciens squelettes",
+    "english": "Skeletal Militiaman Ashes",
+    "category": "spirit_ash",
+    "textId": "212000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Skeletal_Militiaman_Ashes"
+  },
+  {
+    "id": "item.skeletal-bandit-ashes",
+    "name": "Cendres de bandit squelette",
+    "english": "Skeletal Bandit Ashes",
+    "category": "spirit_ash",
+    "textId": "213000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Skeletal_Bandit_Ashes"
+  },
+  {
+    "id": "item.albinauric-ashes",
+    "name": "Cendres d'Albinauriques",
+    "english": "Albinauric Ashes",
+    "category": "spirit_ash",
+    "textId": "211000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Albinauric_Ashes"
+  },
+  {
+    "id": "item.winged-misbegotten-ashes",
+    "name": "Cendres de chimère ailée",
+    "english": "Winged Misbegotten Ashes",
+    "category": "spirit_ash",
+    "textId": "210000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Winged_Misbegotten_Ashes"
+  },
+  {
+    "id": "item.demi-human-ashes",
+    "name": "Cendres de semi-humains",
+    "english": "Demi-Human Ashes",
+    "category": "spirit_ash",
+    "textId": "234000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Demi-Human_Ashes"
+  },
+  {
+    "id": "item.clayman-ashes",
+    "name": "Cendres de boueux",
+    "english": "Clayman Ashes",
+    "category": "spirit_ash",
+    "textId": "222000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Clayman_Ashes"
+  },
+  {
+    "id": "item.oracle-envoy-ashes",
+    "name": "Cendres d'émissaires de l'oracle",
+    "english": "Oracle Envoy Ashes",
+    "category": "spirit_ash",
+    "textId": "214000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Oracle_Envoy_Ashes"
+  },
+  {
+    "id": "item.lone-wolf-ashes",
+    "name": "Cendres de loups solitaires",
+    "english": "Lone Wolf Ashes",
+    "category": "spirit_ash",
+    "textId": "232000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Lone_Wolf_Ashes"
+  },
+  {
+    "id": "item.rotten-stray-ashes",
+    "name": "Cendres de chien sauvage putréfié",
+    "english": "Rotten Stray Ashes",
+    "category": "spirit_ash",
+    "textId": "235000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Rotten_Stray_Ashes"
+  },
+  {
+    "id": "item.giant-rat-ashes",
+    "name": "Cendres de rats géants",
+    "english": "Giant Rat Ashes",
+    "category": "spirit_ash",
+    "textId": "233000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Giant_Rat_Ashes"
+  },
+  {
+    "id": "item.warhawk-ashes",
+    "name": "Cendres de faucon de guerre",
+    "english": "Warhawk Ashes",
+    "category": "spirit_ash",
+    "textId": "237000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Warhawk_Ashes"
+  },
+  {
+    "id": "item.land-squirt-ashes",
+    "name": "Cendres de tuniciers terrestres",
+    "english": "Land Squirt Ashes",
+    "category": "spirit_ash",
+    "textId": "244000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Land_Squirt_Ashes"
+  },
+  {
+    "id": "item.jellyfish-ashes",
+    "name": "Cendres de méduse spirituelle",
+    "english": "Spirit Jellyfish Ashes",
+    "category": "spirit_ash",
+    "textId": "236000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Spirit_Jellyfish_Ashes"
+  },
+  {
+    "id": "item.miranda-sprout-ashes",
+    "name": "Cendres de fleurs de Miranda",
+    "english": "Miranda Sprout Ashes",
+    "category": "spirit_ash",
+    "textId": "245000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Miranda_Sprout_Ashes"
+  },
+  {
+    "id": "item.fanged-imp-ashes",
+    "name": "Cendres de diablotins dentus",
+    "english": "Fanged Imp Ashes",
+    "category": "spirit_ash",
+    "textId": "203000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Fanged_Imp_Ashes"
+  },
+  {
+    "id": "item.soldjars-of-fortune-ashes",
+    "name": "Cendres de la faïence tous risques",
+    "english": "Soldjars of Fortune Ashes",
+    "category": "spirit_ash",
+    "textId": "246000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Soldjars_of_Fortune_Ashes"
+  },
+  {
+    "id": "item.archer-ashes",
+    "name": "Cendres d'archers",
+    "english": "Archer Ashes",
+    "category": "spirit_ash",
+    "textId": "249000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Archer_Ashes"
+  },
+  {
+    "id": "item.greatshield-soldier-ashes",
+    "name": "Cendres de soldats au pavois",
+    "english": "Greatshield Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "248000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Greatshield_Soldier_Ashes"
+  },
+  {
+    "id": "item.page-ashes",
+    "name": "Cendres de page",
+    "english": "Page Ashes",
+    "category": "spirit_ash",
+    "textId": "220000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Page_Ashes"
+  },
+  {
+    "id": "item.vulgar-militia-ashes",
+    "name": "Cendres de miliciens vulgaires",
+    "english": "Vulgar Militia Ashes",
+    "category": "spirit_ash",
+    "textId": "242000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Vulgar_Militia_Ashes"
+  },
+  {
+    "id": "item.marionette-soldier-ashes",
+    "name": "Cendres de soldats pantins",
+    "english": "Marionette Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "225000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Marionette_Soldier_Ashes"
+  },
+  {
+    "id": "item.avionette-soldier-ashes",
+    "name": "Cendres de soldats pantins aviaires",
+    "english": "Avionette Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "226000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Avionette_Soldier_Ashes"
+  },
+  {
+    "id": "item.kaiden-sellsword-ashes",
+    "name": "Cendres de mercenaire de Kaiden",
+    "english": "Kaiden Sellsword Ashes",
+    "category": "spirit_ash",
+    "textId": "231000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Kaiden_Sellsword_Ashes"
+  },
+  {
+    "id": "item.mad-pumpkin-head-ashes",
+    "name": "Cendres de tête de citrouille démente",
+    "english": "Mad Pumpkin Head Ashes",
+    "category": "spirit_ash",
+    "textId": "243000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Mad_Pumpkin_Head_Ashes"
+  },
+  {
+    "id": "item.fire-monk-ashes",
+    "name": "Cendres de moine-gardien du feu",
+    "english": "Fire Monk Ashes",
+    "category": "spirit_ash",
+    "textId": "227000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Fire_Monk_Ashes"
+  },
+  {
+    "id": "item.ancestral-follower-ashes",
+    "name": "Cendres de disciple ancestral",
+    "english": "Ancestral Follower Ashes",
+    "category": "spirit_ash",
+    "textId": "209000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ancestral_Follower_Ashes"
+  },
+  {
+    "id": "item.azula-beastman-ashes",
+    "name": "Cendres d'hommes-bêtes d'Azula",
+    "english": "Azula Beastman Ashes",
+    "category": "spirit_ash",
+    "textId": "230000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Azula_Beastman_Ashes"
+  },
+  {
+    "id": "item.man-serpent-ashes",
+    "name": "Cendres de reptilien",
+    "english": "Man-Serpent Ashes",
+    "category": "spirit_ash",
+    "textId": "229000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Man-Serpent_Ashes"
+  },
+  {
+    "id": "item.crystalian-ashes",
+    "name": "Cendres de cristalien",
+    "english": "Crystalian Ashes",
+    "category": "spirit_ash",
+    "textId": "208000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Crystalian_Ashes"
+  },
+  {
+    "id": "item.kindred-of-rot-ashes",
+    "name": "Cendres d'adepte de la putréfaction",
+    "english": "Kindred of Rot Ashes",
+    "category": "spirit_ash",
+    "textId": "224000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Kindred_of_Rot_Ashes"
+  },
+  {
+    "id": "item.glintstone-sorcerer-ashes",
+    "name": "Cendres de sorcier des pierres d'éclat",
+    "english": "Glintstone Sorcerer Ashes",
+    "category": "spirit_ash",
+    "textId": "218000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Glintstone_Sorcerer_Ashes"
+  },
+  {
+    "id": "item.twinsage-sorcerer-ashes",
+    "name": "Cendres de sorcier bicéphale",
+    "english": "Twinsage Sorcerer Ashes",
+    "category": "spirit_ash",
+    "textId": "219000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Twinsage_Sorcerer_Ashes"
+  },
+  {
+    "id": "item.godrick-soldier-ashes",
+    "name": "Cendres de soldats de Godrick",
+    "english": "Godrick Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "250000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Godrick_Soldier_Ashes"
+  },
+  {
+    "id": "item.raya-lucaria-soldier-ashes",
+    "name": "Cendres de soldats de Raya Lucaria",
+    "english": "Raya Lucaria Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "251000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Raya_Lucaria_Soldier_Ashes"
+  },
+  {
+    "id": "item.leyndell-soldier-ashes",
+    "name": "Cendres de soldats de Leyndell",
+    "english": "Leyndell Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "252000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Leyndell_Soldier_Ashes"
+  },
+  {
+    "id": "item.radahn-soldier-ashes",
+    "name": "Cendres de soldats de Radahn",
+    "english": "Radahn Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "253000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Radahn_Soldier_Ashes"
+  },
+  {
+    "id": "item.haligtree-soldier-ashes",
+    "name": "Cendres de soldats de l'Arbre-Sacré",
+    "english": "Haligtree Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "255000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Haligtree_Soldier_Ashes"
+  },
+  {
+    "id": "item.mausoleum-soldier-ashes",
+    "name": "Cendres de soldats du Mausolée",
+    "english": "Mausoleum Soldier Ashes",
+    "category": "spirit_ash",
+    "textId": "254000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Mausoleum_Soldier_Ashes"
+  },
+  {
+    "id": "item.stormhawk-deenh",
+    "name": "Deenh le faucon des tempêtes",
+    "english": "Stormhawk Deenh",
+    "category": "spirit_ash",
+    "textId": "238000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Stormhawk_Deenh"
+  },
+  {
+    "id": "item.banished-knight-oleg",
+    "name": "Chevalier banni Oleg",
+    "english": "Banished Knight Oleg",
+    "category": "spirit_ash",
+    "textId": "201000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Banished_Knight_Oleg"
+  },
+  {
+    "id": "item.banished-knight-engvall",
+    "name": "Chevalier banni Engvall",
+    "english": "Banished Knight Engvall",
+    "category": "spirit_ash",
+    "textId": "202000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Banished_Knight_Engvall"
+  },
+  {
+    "id": "item.bloodhound-knight-floh",
+    "name": "Floh, Chevalier-limier",
+    "english": "Bloodhound Knight Floh",
+    "category": "spirit_ash",
+    "textId": "239000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Bloodhound_Knight_Floh"
+  },
+  {
+    "id": "item.battlemage-hugues",
+    "name": "Mage de bataille Hugues",
+    "english": "Battlemage Hugues",
+    "category": "spirit_ash",
+    "textId": "221000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Battlemage_Hugues_(Spirit_Ash)"
+  },
+  {
+    "id": "item.latenna-the-albinauric",
+    "name": "Latenna l'Albinaurique",
+    "english": "Latenna the Albinauric",
+    "category": "spirit_ash",
+    "textId": "204000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Latenna_the_Albinauric_(Spirit_Ash)"
+  },
+  {
+    "id": "item.perfumer-tricia",
+    "name": "Parfumeuse Tricia",
+    "english": "Perfumer Tricia",
+    "category": "spirit_ash",
+    "textId": "217000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Perfumer_Tricia"
+  },
+  {
+    "id": "item.depraved-perfumer-carmaan",
+    "name": "Carmaan le Parfumeur déchu",
+    "english": "Depraved Perfumer Carmaan",
+    "category": "spirit_ash",
+    "textId": "216000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Depraved_Perfumer_Carmaan"
+  },
+  {
+    "id": "item.omenkiller-rollo",
+    "name": "Rollo, tueur de Réprouvés",
+    "english": "Omenkiller Rollo",
+    "category": "spirit_ash",
+    "textId": "247000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Omenkiller_Rollo"
+  },
+  {
+    "id": "item.blackflame-monk-amon",
+    "name": "Amon, moine de la Flamme noire",
+    "english": "Blackflame Monk Amon",
+    "category": "spirit_ash",
+    "textId": "228000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Blackflame_Monk_Amon"
+  },
+  {
+    "id": "item.ancient-dragon-knight-kristoff",
+    "name": "Kristoff, chevalier des dragons anciens",
+    "english": "Ancient Dragon Knight Kristoff",
+    "category": "spirit_ash",
+    "textId": "256000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ancient_Dragon_Knight_Kristoff"
+  },
+  {
+    "id": "item.redmane-knight-ogha",
+    "name": "Ogha, chevalier du Lion rouge",
+    "english": "Redmane Knight Ogha",
+    "category": "spirit_ash",
+    "textId": "257000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Redmane_Knight_Ogha"
+  },
+  {
+    "id": "item.lhutel-headless",
+    "name": "Lhutel l’Acéphale",
+    "english": "Lhutel the Headless",
+    "category": "spirit_ash",
+    "textId": "258000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Lhutel_the_Headless"
+  },
+  {
+    "id": "item.cleanrot-knight-finlay",
+    "name": "Finlay, chev. de la Noble putréfaction",
+    "english": "Cleanrot Knight Finlay",
+    "category": "spirit_ash",
+    "textId": "223000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Cleanrot_Knight_Finlay"
+  },
+  {
+    "id": "item.black-knife-tiche",
+    "name": "Tiche des Couteaux noirs",
+    "english": "Black Knife Tiche",
+    "category": "spirit_ash",
+    "textId": "200000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Black_Knife_Tiche"
+  },
+  {
+    "id": "item.mimic-tear-ashes",
+    "name": "Cendres de larme imitatrice",
+    "english": "Mimic Tear Ashes",
+    "category": "spirit_ash",
+    "textId": "207000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Mimic_Tear_Ashes"
+  },
+  {
+    "id": "item.finger-maiden-therolina-puppet",
+    "name": "Pantin de Therolina la Servante",
+    "english": "Finger Maiden Therolina Puppet",
+    "category": "spirit_ash",
+    "textId": "261000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Finger_Maiden_Therolina_Puppet"
+  },
+  {
+    "id": "item.jarwight-puppet",
+    "name": "Pantin d'homme-jarre",
+    "english": "Jarwight Puppet",
+    "category": "spirit_ash",
+    "textId": "263000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Jarwight_Puppet"
+  },
+  {
+    "id": "item.dolores-the-sleeping-arrow-puppet",
+    "name": "Pantin de Dolores la Flèche silencieuse",
+    "english": "Dolores the Sleeping Arrow Puppet",
+    "category": "spirit_ash",
+    "textId": "262000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Dolores_the_Sleeping_Arrow_Puppet"
+  },
+  {
+    "id": "item.nepheli-loux-puppet",
+    "name": "Pantin de Nepheli Loux",
+    "english": "Nepheli Loux Puppet",
+    "category": "spirit_ash",
+    "textId": "259000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Nepheli_Loux_Puppet"
+  },
+  {
+    "id": "item.dung-eater-puppet",
+    "name": "Pantin du Coprophage",
+    "english": "Dung Eater Puppet",
+    "category": "spirit_ash",
+    "textId": "260000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Dung_Eater_Puppet"
+  },
+  {
+    "id": "item.nightmaiden-swordstress-puppets",
+    "name": "Pantins de noctedame et d'épéiste",
+    "english": "Nightmaiden & Swordstress Puppets",
+    "category": "spirit_ash",
+    "textId": "206000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Nightmaiden_%26_Swordstress_Puppets"
+  },
+  {
+    "id": "item.stamp-upward-cut",
+    "name": "Piétinement (frappe ascendante)",
+    "english": "Ash of War: Stamp (Upward Cut)",
+    "category": "ash_of_war",
+    "textId": "10600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Stamp_(Upward_Cut)"
+  },
+  {
+    "id": "item.ash-of-war-stamp-sweep",
+    "name": "Balayage tournoyant",
+    "english": "Ash of War: Stamp (Sweep)",
+    "category": "ash_of_war",
+    "textId": "10700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Stamp_(Sweep)"
+  },
+  {
+    "id": "item.ash-of-war-wild-strikes",
+    "name": "Frappes déchaînées",
+    "english": "Ash of War: Wild Strikes",
+    "category": "ash_of_war",
+    "textId": "11000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Wild_Strikes"
+  },
+  {
+    "id": "item.ash-of-war-lions-claw",
+    "name": "Griffe du lion",
+    "english": "Ash of War: Lion's Claw",
+    "category": "ash_of_war",
+    "textId": "10000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Lion%27s_Claw"
+  },
+  {
+    "id": "item.ash-of-war-cragblade",
+    "name": "Lame rocheuse",
+    "english": "Ash of War: Cragblade",
+    "category": "ash_of_war",
+    "textId": "60700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Cragblade"
+  },
+  {
+    "id": "item.kick",
+    "name": "Coup de pied",
+    "english": "Ash of War: Kick",
+    "category": "ash_of_war",
+    "textId": "50300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Kick"
+  },
+  {
+    "id": "item.endure",
+    "name": "Endurance",
+    "english": "Ash of War: Endure",
+    "category": "ash_of_war",
+    "textId": "70000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Endure"
+  },
+  {
+    "id": "item.ash-of-war-ground-slam",
+    "name": "Bond fracassant",
+    "english": "Ash of War: Ground Slam",
+    "category": "ash_of_war",
+    "textId": "50600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Ground_Slam"
+  },
+  {
+    "id": "item.ash-of-war-earthshaker",
+    "name": "Tremblement de terre",
+    "english": "Ash of War: Earthshaker",
+    "category": "ash_of_war",
+    "textId": "21200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Earthshaker"
+  },
+  {
+    "id": "item.ash-of-war-hoarah-louxs-earthshaker",
+    "name": "Séisme de Hoarah Loux",
+    "english": "Ash of War: Hoarah Loux's Earthshaker",
+    "category": "ash_of_war",
+    "textId": "50900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Hoarah_Loux%27s_Earthshaker"
+  },
+  {
+    "id": "item.war-cry",
+    "name": "Cri de guerre",
+    "english": "Ash of War: War Cry",
+    "category": "ash_of_war",
+    "textId": "65100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_War_Cry"
+  },
+  {
+    "id": "item.ash-of-war-barbaric-roar",
+    "name": "Cri barbare",
+    "english": "Ash of War: Barbaric Roar",
+    "category": "ash_of_war",
+    "textId": "65000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Barbaric_Roar"
+  },
+  {
+    "id": "item.ash-of-war-braggarts-roar",
+    "name": "Cri du hâbleur",
+    "english": "Ash of War: Braggart's Roar",
+    "category": "ash_of_war",
+    "textId": "65400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Braggart%27s_Roar"
+  },
+  {
+    "id": "item.ash-of-war-trolls-roar",
+    "name": "Cri de troll",
+    "english": "Ash of War: Troll's Roar",
+    "category": "ash_of_war",
+    "textId": "65300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Troll%27s_Roar"
+  },
+  {
+    "id": "item.spinning-slash",
+    "name": "Entaille tournoyante",
+    "english": "Ash of War: Spinning Slash",
+    "category": "ash_of_war",
+    "textId": "10300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Spinning_Slash"
+  },
+  {
+    "id": "item.impaling-thrust",
+    "name": "Empalement",
+    "english": "Ash of War: Impaling Thrust",
+    "category": "ash_of_war",
+    "textId": "10100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Impaling_Thrust"
+  },
+  {
+    "id": "item.ash-of-war-piercing-fang",
+    "name": "Croc perçant",
+    "english": "Ash of War: Piercing Fang",
+    "category": "ash_of_war",
+    "textId": "10200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Piercing_Fang"
+  },
+  {
+    "id": "item.ash-of-war-repeating-thrust",
+    "name": "Estoc répété",
+    "english": "Ash of War: Repeating Thrust",
+    "category": "ash_of_war",
+    "textId": "10900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Repeating_Thrust"
+  },
+  {
+    "id": "item.ash-of-war-double-slash",
+    "name": "Cendres de g. : Enchaîn. de tailles",
+    "english": "Ash of War: Double Slash",
+    "category": "ash_of_war",
+    "textId": "11200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Double_Slash"
+  },
+  {
+    "id": "item.ash-of-war-sword-dance",
+    "name": "Danse des lames",
+    "english": "Ash of War: Sword Dance",
+    "category": "ash_of_war",
+    "textId": "12400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Sword_Dance"
+  },
+  {
+    "id": "item.ash-of-war-unsheathe",
+    "name": "Dégainer",
+    "english": "Ash of War: Unsheathe",
+    "category": "ash_of_war",
+    "textId": "11400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Unsheathe"
+  },
+  {
+    "id": "item.quickstep",
+    "name": "Pas-vif",
+    "english": "Ash of War: Quickstep",
+    "category": "ash_of_war",
+    "textId": "80000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Quickstep"
+  },
+  {
+    "id": "item.ash-of-war-bloodhounds-step",
+    "name": "Pas de Chevalier-limier",
+    "english": "Ash of War: Bloodhound's Step",
+    "category": "ash_of_war",
+    "textId": "80100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Bloodhound%27s_Step"
+  },
+  {
+    "id": "item.ash-of-war-raptor-of-the-mists",
+    "name": "Rapace des brumes",
+    "english": "Ash of War: Raptor of the Mists",
+    "category": "ash_of_war",
+    "textId": "80200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Raptor_of_the_Mists"
+  },
+  {
+    "id": "item.ash-of-war-beasts-roar",
+    "name": "Cri bestial",
+    "english": "Ash of War: Beast's Roar",
+    "category": "ash_of_war",
+    "textId": "65200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Beast%27s_Roar"
+  },
+  {
+    "id": "item.ash-of-war-square-off",
+    "name": "En garde",
+    "english": "Ash of War: Square Off",
+    "category": "ash_of_war",
+    "textId": "11500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Square_Off"
+  },
+  {
+    "id": "item.ash-of-war-charge-forth",
+    "name": "Charge",
+    "english": "Ash of War: Charge Forth",
+    "category": "ash_of_war",
+    "textId": "10500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Charge_Forth"
+  },
+  {
+    "id": "item.ash-of-war-spinning-strikes",
+    "name": "Frappes tournoyantes",
+    "english": "Ash of War: Spinning Strikes",
+    "category": "ash_of_war",
+    "textId": "11100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Spinning_Strikes"
+  },
+  {
+    "id": "item.ash-of-war-giant-hunt",
+    "name": "Traque-Géant",
+    "english": "Ash of War: Giant Hunt",
+    "category": "ash_of_war",
+    "textId": "11600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Giant_Hunt"
+  },
+  {
+    "id": "item.storm-blade",
+    "name": "Lame de tempête",
+    "english": "Ash of War: Storm Blade",
+    "category": "ash_of_war",
+    "textId": "21000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Storm_Blade"
+  },
+  {
+    "id": "item.ash-of-war-storm-assault",
+    "name": "Piqué tempétueux",
+    "english": "Ash of War: Storm Assault",
+    "category": "ash_of_war",
+    "textId": "12200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Storm_Assault"
+  },
+  {
+    "id": "item.ash-of-war-stormcaller",
+    "name": "Mande-orage",
+    "english": "Ash of War: Stormcaller",
+    "category": "ash_of_war",
+    "textId": "12300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Stormcaller"
+  },
+  {
+    "id": "item.storm-stomp",
+    "name": "Piétinement orageux",
+    "english": "Ash of War: Storm Stomp",
+    "category": "ash_of_war",
+    "textId": "50200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Storm_Stomp"
+  },
+  {
+    "id": "item.ash-of-war-vacuum-slice",
+    "name": "Entaille du vide",
+    "english": "Ash of War: Vacuum Slice",
+    "category": "ash_of_war",
+    "textId": "22000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Vacuum_Slice"
+  },
+  {
+    "id": "item.ash-of-war-phantom-slash",
+    "name": "Entaille fantomatique",
+    "english": "Ash of War: Phantom Slash",
+    "category": "ash_of_war",
+    "textId": "22500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Phantom_Slash"
+  },
+  {
+    "id": "item.determination",
+    "name": "Détermination",
+    "english": "Ash of War: Determination",
+    "category": "ash_of_war",
+    "textId": "60000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Determination"
+  },
+  {
+    "id": "item.ash-of-war-royal-knights-resolve",
+    "name": "Résolut. de chevalier royal",
+    "english": "Ash of War: Royal Knight's Resolve",
+    "category": "ash_of_war",
+    "textId": "60100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Royal_Knight%27s_Resolve"
+  },
+  {
+    "id": "item.ash-of-war-glintstone-pebble",
+    "name": "Flèche de pierre d'éclat",
+    "english": "Ash of War: Glintstone Pebble",
+    "category": "ash_of_war",
+    "textId": "20300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Glintstone_Pebble"
+  },
+  {
+    "id": "item.ash-of-war-glintblade-phalanx",
+    "name": "Phalange de laméclats",
+    "english": "Ash of War: Glintblade Phalanx",
+    "category": "ash_of_war",
+    "textId": "20000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Glintblade_Phalanx"
+  },
+  {
+    "id": "item.ash-of-war-carian-greatsword",
+    "name": "Espadon de Caria",
+    "english": "Ash of War: Carian Greatsword",
+    "category": "ash_of_war",
+    "textId": "21900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Carian_Greatsword"
+  },
+  {
+    "id": "item.ash-of-war-carian-grandeur",
+    "name": "Grandeur de Caria",
+    "english": "Ash of War: Carian Grandeur",
+    "category": "ash_of_war",
+    "textId": "21800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Carian_Grandeur"
+  },
+  {
+    "id": "item.ash-of-war-spinning-weapon",
+    "name": "Arme tournoyante",
+    "english": "Ash of War: Spinning Weapon",
+    "category": "ash_of_war",
+    "textId": "12000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Spinning_Weapon"
+  },
+  {
+    "id": "item.ash-of-war-lorettas-slash",
+    "name": "Entaille de Loretta",
+    "english": "Ash of War: Loretta's Slash",
+    "category": "ash_of_war",
+    "textId": "11800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Loretta%27s_Slash"
+  },
+  {
+    "id": "item.ash-of-war-waves-of-darkness",
+    "name": "Vagues ténébreuses",
+    "english": "Ash of War: Waves of Darkness",
+    "category": "ash_of_war",
+    "textId": "50800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Waves_of_Darkness"
+  },
+  {
+    "id": "item.ash-of-war-gravitas",
+    "name": "Gravité",
+    "english": "Ash of War: Gravitas",
+    "category": "ash_of_war",
+    "textId": "20900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Gravitas"
+  },
+  {
+    "id": "item.ash-of-war-flaming-strike",
+    "name": "Frappe ardente",
+    "english": "Ash of War: Flaming Strike",
+    "category": "ash_of_war",
+    "textId": "21400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Flaming_Strike"
+  },
+  {
+    "id": "item.ash-of-war-flame-of-the-redmanes",
+    "name": "Cendres de g. : Flamme des Lions rouges",
+    "english": "Ash of War: Flame of the Redmanes",
+    "category": "ash_of_war",
+    "textId": "50500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Flame_of_the_Redmanes"
+  },
+  {
+    "id": "item.ash-of-war-eruption",
+    "name": "Éruption",
+    "english": "Ash of War: Eruption",
+    "category": "ash_of_war",
+    "textId": "20700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Eruption"
+  },
+  {
+    "id": "item.ash-of-war-prelates-charge",
+    "name": "Charge du prélat",
+    "english": "Ash of War: Prelate's Charge",
+    "category": "ash_of_war",
+    "textId": "11300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Prelate%27s_Charge"
+  },
+  {
+    "id": "item.ash-of-war-black-flame-tornado",
+    "name": "Cendres de g. : Tornade de la Flamme noire",
+    "english": "Ash of War: Black Flame Tornado",
+    "category": "ash_of_war",
+    "textId": "22100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Black_Flame_Tornado"
+  },
+  {
+    "id": "item.ash-of-war-thunderbolt",
+    "name": "Éclair",
+    "english": "Ash of War: Thunderbolt",
+    "category": "ash_of_war",
+    "textId": "21600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Thunderbolt"
+  },
+  {
+    "id": "item.ash-of-war-lightning-slash",
+    "name": "Entaille foudroyante",
+    "english": "Ash of War: Lightning Slash",
+    "category": "ash_of_war",
+    "textId": "21700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Lightning_Slash"
+  },
+  {
+    "id": "item.ash-of-war-lightning-ram",
+    "name": "Cendres de g. : Roulade foudroyante",
+    "english": "Ash of War: Lightning Ram",
+    "category": "ash_of_war",
+    "textId": "50400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Lightning_Ram"
+  },
+  {
+    "id": "item.ash-of-war-sacred-blade",
+    "name": "Lame sacrée",
+    "english": "Ash of War: Sacred Blade",
+    "category": "ash_of_war",
+    "textId": "20100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Sacred_Blade"
+  },
+  {
+    "id": "item.ash-of-war-prayerful-strike",
+    "name": "Frappe pieuse",
+    "english": "Ash of War: Prayerful Strike",
+    "category": "ash_of_war",
+    "textId": "20800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Prayerful_Strike"
+  },
+  {
+    "id": "item.ash-of-war-sacred-ring-of-light",
+    "name": "Halo sacré",
+    "english": "Ash of War: Sacred Ring of Light",
+    "category": "ash_of_war",
+    "textId": "22200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Sacred_Ring_of_Light"
+  },
+  {
+    "id": "item.ash-of-war-sacred-order",
+    "name": "Ordre sacré",
+    "english": "Ash of War: Sacred Order",
+    "category": "ash_of_war",
+    "textId": "60400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Sacred_Order"
+  },
+  {
+    "id": "item.ash-of-war-shared-order",
+    "name": "Ordre partagé",
+    "english": "Ash of War: Shared Order",
+    "category": "ash_of_war",
+    "textId": "60500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Shared_Order"
+  },
+  {
+    "id": "item.ash-of-war-golden-land",
+    "name": "Terre dorée",
+    "english": "Ash of War: Golden Land",
+    "category": "ash_of_war",
+    "textId": "21300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Golden_Land"
+  },
+  {
+    "id": "item.ash-of-war-golden-slam",
+    "name": "Bond fracassant doré",
+    "english": "Ash of War: Golden Slam",
+    "category": "ash_of_war",
+    "textId": "50700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Golden_Slam"
+  },
+  {
+    "id": "item.ash-of-war-golden-vow",
+    "name": "Serment doré",
+    "english": "Ash of War: Golden Vow",
+    "category": "ash_of_war",
+    "textId": "60300",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Golden_Vow"
+  },
+  {
+    "id": "item.ash-of-war-vow-of-the-indomitable",
+    "name": "Vœu d'inflexibilité",
+    "english": "Ash of War: Vow of the Indomitable",
+    "category": "ash_of_war",
+    "textId": "70100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Vow_of_the_Indomitable"
+  },
+  {
+    "id": "item.ash-of-war-holy-ground",
+    "name": "Terre sacrée",
+    "english": "Ash of War: Holy Ground",
+    "category": "ash_of_war",
+    "textId": "70200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Holy_Ground"
+  },
+  {
+    "id": "item.ash-of-war-poisonous-mist",
+    "name": "Brume empoisonnée",
+    "english": "Ash of War: Poisonous Mist",
+    "category": "ash_of_war",
+    "textId": "22800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Poisonous_Mist"
+  },
+  {
+    "id": "item.ash-of-war-poison-moth-flight",
+    "name": "Envol venimeux",
+    "english": "Ash of War: Poison Moth Flight",
+    "category": "ash_of_war",
+    "textId": "11900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Poison_Moth_Flight"
+  },
+  {
+    "id": "item.ash-of-war-blood-blade",
+    "name": "Lame de sang",
+    "english": "Ash of War: Blood Blade",
+    "category": "ash_of_war",
+    "textId": "22400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Blood_Blade"
+  },
+  {
+    "id": "item.bloody-slash",
+    "name": "Entaille sanglante",
+    "english": "Ash of War: Bloody Slash",
+    "category": "ash_of_war",
+    "textId": "20400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Bloody_Slash"
+  },
+  {
+    "id": "item.ash-of-war-blood-tax",
+    "name": "Dîme de sang",
+    "english": "Ash of War: Blood Tax",
+    "category": "ash_of_war",
+    "textId": "10800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Blood_Tax"
+  },
+  {
+    "id": "item.ash-of-war-seppuku",
+    "name": "Seppuku",
+    "english": "Ash of War: Seppuku",
+    "category": "ash_of_war",
+    "textId": "60600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Seppuku"
+  },
+  {
+    "id": "item.ash-of-war-ice-spear",
+    "name": "Lance de glace",
+    "english": "Ash of War: Ice Spear",
+    "category": "ash_of_war",
+    "textId": "20200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Ice_Spear"
+  },
+  {
+    "id": "item.ash-of-war-chilling-mist",
+    "name": "Brume de givre",
+    "english": "Ash of War: Chilling Mist",
+    "category": "ash_of_war",
+    "textId": "22700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Chilling_Mist"
+  },
+  {
+    "id": "item.ash-of-war-hoarfrost-stomp",
+    "name": "Piétinement givrant",
+    "english": "Ash of War: Hoarfrost Stomp",
+    "category": "ash_of_war",
+    "textId": "50100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Hoarfrost_Stomp"
+  },
+  {
+    "id": "item.ash-of-war-spectral-lance",
+    "name": "Lance spectrale",
+    "english": "Ash of War: Spectral Lance",
+    "category": "ash_of_war",
+    "textId": "22600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Spectral_Lance"
+  },
+  {
+    "id": "item.ash-of-war-lifesteal-fist",
+    "name": "Poing sangsue",
+    "english": "Ash of War: Lifesteal Fist",
+    "category": "ash_of_war",
+    "textId": "20500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Lifesteal_Fist"
+  },
+  {
+    "id": "item.ash-of-war-white-shadows-lure",
+    "name": "Leurre blanc",
+    "english": "Ash of War: White Shadow's Lure",
+    "category": "ash_of_war",
+    "textId": "85000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_White_Shadow%27s_Lure"
+  },
+  {
+    "id": "item.ash-of-war-assassins-gambit",
+    "name": "Manœuvre d'assassin",
+    "english": "Ash of War: Assassin's Gambit",
+    "category": "ash_of_war",
+    "textId": "60200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Assassin%27s_Gambit"
+  },
+  {
+    "id": "item.ash-of-war-mighty-shot",
+    "name": "Tir puissant",
+    "english": "Ash of War: Mighty Shot",
+    "category": "ash_of_war",
+    "textId": "40200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Mighty_Shot"
+  },
+  {
+    "id": "item.ash-of-war-through-and-through",
+    "name": "Projectile perforant",
+    "english": "Ash of War: Through and Through",
+    "category": "ash_of_war",
+    "textId": "40000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Through_and_Through"
+  },
+  {
+    "id": "item.ash-of-war-barrage",
+    "name": "Barrage",
+    "english": "Ash of War: Barrage",
+    "category": "ash_of_war",
+    "textId": "40100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Barrage"
+  },
+  {
+    "id": "item.ash-of-war-sky-shot",
+    "name": "Tir céleste",
+    "english": "Ash of War: Sky Shot",
+    "category": "ash_of_war",
+    "textId": "40500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Sky_Shot"
+  },
+  {
+    "id": "item.ash-of-war-enchanted-shot",
+    "name": "Tir enchanté",
+    "english": "Ash of War: Enchanted Shot",
+    "category": "ash_of_war",
+    "textId": "40400",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Enchanted_Shot"
+  },
+  {
+    "id": "item.ash-of-war-rain-of-arrows",
+    "name": "Pluie de flèches",
+    "english": "Ash of War: Rain of Arrows",
+    "category": "ash_of_war",
+    "textId": "40600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Rain_of_Arrows"
+  },
+  {
+    "id": "item.parry",
+    "name": "Parade",
+    "english": "Ash of War: Parry",
+    "category": "ash_of_war",
+    "textId": "30200",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Parry"
+  },
+  {
+    "id": "item.ash-of-war-golden-parry",
+    "name": "Parade dorée",
+    "english": "Ash of War: Golden Parry",
+    "category": "ash_of_war",
+    "textId": "30700",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Golden_Parry"
+  },
+  {
+    "id": "item.ash-of-war-storm-wall",
+    "name": "Mur tempétueux",
+    "english": "Ash of War: Storm Wall",
+    "category": "ash_of_war",
+    "textId": "30600",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Storm_Wall"
+  },
+  {
+    "id": "item.ash-of-war-shield-bash",
+    "name": "Coup de bouclier",
+    "english": "Ash of War: Shield Bash",
+    "category": "ash_of_war",
+    "textId": "30000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Shield_Bash"
+  },
+  {
+    "id": "item.ash-of-war-shield-crash",
+    "name": "Fracas de bouclier",
+    "english": "Ash of War: Shield Crash",
+    "category": "ash_of_war",
+    "textId": "30800",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Shield_Crash"
+  },
+  {
+    "id": "item.ash-of-war-barricade-shield",
+    "name": "Rempart inébranlable",
+    "english": "Ash of War: Barricade Shield",
+    "category": "ash_of_war",
+    "textId": "30100",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Barricade_Shield"
+  },
+  {
+    "id": "item.ash-of-war-thopss-barrier",
+    "name": "Champ de force de Thops",
+    "english": "Ash of War: Thops's Barrier",
+    "category": "ash_of_war",
+    "textId": "31000",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Thops%27s_Barrier"
+  },
+  {
+    "id": "item.ash-of-war-carian-retaliation",
+    "name": "Représailles de Caria",
+    "english": "Ash of War: Carian Retaliation",
+    "category": "ash_of_war",
+    "textId": "30500",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_Carian_Retaliation"
+  },
+  {
+    "id": "item.no-skill",
+    "name": "Aucune compétence",
+    "english": "Ash of War: No Skill",
+    "category": "ash_of_war",
+    "textId": "30900",
+    "wiki": "https://eldenring.wiki.gg/wiki/Ash_of_War:_No_Skill"
+  }
+]

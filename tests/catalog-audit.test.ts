@@ -15,19 +15,19 @@ test('l’audit consolidé contrôle tous les catalogues et sépare publication 
   const report = auditCatalog(publishedCatalog, asOf);
   assert.deepEqual(report.errors, []);
   assert.deepEqual(publishedCatalog, before);
-  assert.deepEqual(report.publication, { quests: 40, items: 1071, collection: 1067, acquisitions: 1107, pickups: 27, bosses: 93, graces: 40 });
-  assert.deepEqual(report.knownSubtotal, { published: 1040, knownTotal: 1376 });
+  assert.deepEqual(report.publication, { quests: 40, items: 1418, collection: 1414, acquisitions: 1454, pickups: 27, bosses: 134, graces: 40 });
+  assert.deepEqual(report.knownSubtotal, { published: 1376, knownTotal: 1376 });
   for (const category of ['tool', 'key_item', 'upgrade']) {
     const row = report.itemCoverage.find(row => row.category === category)!;
     assert.equal(row.knownTotal, null); assert.equal(row.percent, null);
   }
   assert.equal(report.regionalCoverage.length, publishedCatalog.regions.length);
   assert.ok(report.regionalCoverage.some(row => row.graces === 0));
-  assert.equal(report.sources.unique, 199);
+  assert.equal(report.sources.unique, 226);
   assert.equal(report.sources.versionedCitations, 0);
   assert.ok(report.limits.some(limit => limit.includes('aucun pourcentage global')));
   const markdown = formatCatalogAudit(report);
-  assert.match(markdown, /1040\/1376/); assert.match(markdown, /À recenser/); assert.match(markdown, /disponibilité actuelle des pages/);
+  assert.match(markdown, /1376\/1376/); assert.match(markdown, /À recenser/); assert.match(markdown, /disponibilité actuelle des pages/);
 });
 test('l’audit détecte une collision entre catalogues et un doublon probable sans les fusionner', () => {
   const collision = clone();
@@ -84,7 +84,7 @@ test('les compteurs partagés ignorent doublons, anciennes améliorations et coc
   const original = structuredClone(save);
   assert.deepEqual(catalogProgress(entries, currentPart(save).character!.collection), { done: 1, total: 2 });
   const bosses = publishedCatalog.bosses;
-  assert.deepEqual(worldProgress([...bosses, bosses[0]], currentPart(save).run!.bosses), { done: 1, total: 93 });
+  assert.deepEqual(worldProgress([...bosses, bosses[0]], currentPart(save).run!.bosses), { done: 1, total: 134 });
   assert.deepEqual(save, original);
   const copied = importCopies(save, parseBackup(exportSave(save)));
   assert.deepEqual(copied.characters[0], original.characters[0]);

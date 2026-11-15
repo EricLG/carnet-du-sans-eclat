@@ -1,6 +1,7 @@
 ﻿# Carnet du sans éclat
 
 Un carnet de voyage en français, sous Expo + React Native + TypeScript.
+Catalogue publié : `2026.11.15.4`.
 
 ## Fonctionnalités disponibles
 
@@ -14,19 +15,21 @@ Un carnet de voyage en français, sous Expo + React Native + TypeScript.
 - Statut global des quêtes manuel et indépendant des étapes.
 - Toutes les informations visibles, points de blocage et références documentaires par fiche.
 - [Périmètre des parcours PNJ](docs/QUEST_COVERAGE.md), consultable aussi dans le carnet.
-- Onglet **Collection** : 1 067 objets dans 10 catégories et 4 types d’améliorations, avec 1 107 acquisitions documentées.
-- Types du jeu de base d’origine répertoriés pour les 308 armes, 69 boucliers, 559 pièces d’armure et 70 sorcelleries ; [périmètre de cette complétion](docs/ITEM_COMPLETION.md).
+- Onglet **Collection** : 1 414 objets dans 10 catégories et 4 types d’améliorations, soit 1 418 types et 1 454 acquisitions documentées.
+- Huit catégories du jeu de base d’origine recensées : 308 armes, 69 boucliers, 559 pièces d’armure, 70 sorcelleries, 114 talismans, 101 incantations, 91 cendres de guerre et 64 cendres d’invocation, soit 1 376/1 376 types avec au moins une obtention ; [première complétion](docs/ITEM_COMPLETION.md) et [talismans, incantations et cendres](docs/SECONDARY_ITEM_COMPLETION.md).
 - Recherche française/anglaise ; filtres par catégorie, région, méthode et statut.
 - Collection « déjà obtenu » conservée par personnage ; 27 emplacements d’amélioration suivis par cycle.
 - Prix, conditions, grâces de référence, taux sourcés, échanges de souvenir et liens vers les quêtes.
 - [Catalogue d’objets explicitement partiel](docs/ITEM_COVERAGE.md), à enrichir par régions.
-- Onglet **Exploration** : 93 rencontres de boss et 40 sites de grâce du jeu de base,
+- Onglet **Exploration** : 134 rencontres de boss et 40 sites de grâce du jeu de base,
   avec recherche, filtres, coches par cycle et liens aux objets et quêtes.
 - [Couverture de l’exploration explicitement partielle](docs/WORLD_COVERAGE.md).
 - [Consolidation et compatibilité du catalogue](docs/CONSOLIDATION.md), avec un
   [rapport de couverture reproductible](docs/CATALOG_AUDIT.md) et des contrôles transversaux.
 
-Les autres catégories d’objets, les obtentions alternatives, les boss et les grâces restent à enrichir. MongoDB et le DLC sont décrits dans
+Les outils permanents (8 types), objets de progression (30), améliorations importantes (4),
+obtentions alternatives, boss et grâces restent à enrichir. Le catalogue exclut le DLC et les
+ajouts de versions ultérieures du jeu. MongoDB et le DLC sont décrits dans
 [la feuille de route](docs/ROADMAP.md) et ne sont pas encore implémentés. Les adaptateurs de stockage et d’import/export natifs sont
 présents ; Android et iOS ne sont pas encore validés sur appareil.
 
@@ -99,8 +102,10 @@ stockage, les exports/imports, les versions incompatibles, les branches de quêt
 et la compatibilité des identifiants des cinq parcours initiaux. Ils couvrent aussi les objets à
 sources multiples, les taux inconnus/invalides, les filtres région-méthode, les emplacements,
 les coches indépendantes et leur conservation à l’export.
-L’audit transversal contrôle les références et dénominateurs sourcés. Une référence historique
-protège les identifiants déjà publiés ; les compteurs ignorent les coches inconnues sans les
+L’audit transversal contrôle les références, les dénominateurs sourcés et 226 URL documentaires uniques.
+Les références historiques `tests/fixtures/catalog-ids.v1.json`,
+`tests/fixtures/item-completion-ids.json` et `tests/fixtures/secondary-item-completion-ids.json`
+protègent les identifiants déjà publiés ; les compteurs ignorent les coches inconnues sans les
 effacer. Le contrôle réseau reste distinct et ne modifie pas les dates de revue documentaire.
 
 Pour les parcours navigateur, laisser Expo démarré et lancer une **instance Edge dédiée aux tests**

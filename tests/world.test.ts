@@ -14,7 +14,7 @@ test('le catalogue d’exploration reprend toutes les références existantes et
   assert.deepEqual(validateWorld(bosses, graces, refs), []);
   assert.deepEqual(validateWorldScope(bosses, graces, worldScope), []);
   assert.equal(worldScope.status, 'partial');
-  assert.equal(bosses.length, 93); assert.equal(graces.length, 40);
+  assert.equal(bosses.length, 134); assert.equal(graces.length, 40);
   assert.ok([...bosses, ...graces].every(entry => entry.content === 'base'));
   for (const actor of itemActors.filter(actor => actor.kind === 'boss')) assert.equal(bosses.find(boss => boss.id === actor.id)!.name, actor.name);
   for (const grace of itemGraces) assert.equal(graces.find(entry => entry.id === grace.id)!.name, grace.name);
@@ -42,13 +42,13 @@ test('une grâce d’arène ne peut pas être présentée comme point de repère
 });
 test('la recherche française et anglaise distingue les homonymes par région et les compteurs ignorent les coches inconnues', () => {
   const watchdogs = filterWorld(bosses, { ...emptyWorldFilter, search: 'Erdtree Burial Watchdog' });
-  assert.equal(watchdogs.length, 2); assert.notEqual(watchdogs[0].id, watchdogs[1].id);
+  assert.equal(watchdogs.length, 4); assert.equal(new Set(watchdogs.map(boss => boss.id)).size, 4);
   assert.deepEqual(filterWorld(watchdogs, { ...emptyWorldFilter, region: 'weeping' }).map(entry => entry.id), ['boss.watchdog.impalers']);
   assert.ok(filterWorld(graces, { ...emptyWorldFilter, search: '  EGLISE D’ELLEH ' }).some(entry => entry.id === 'grace.elleh'));
   assert.deepEqual(filterWorld(graces, { ...emptyWorldFilter, search: 'Church of Elleh' }).map(entry => entry.id), ['grace.elleh']);
   const flags = { 'boss.watchdog.impalers': true, 'boss.future': true };
-  assert.deepEqual(worldProgress(bosses, flags), { done: 1, total: 93 });
-  assert.equal(filterWorld(bosses, { ...emptyWorldFilter, status: 'missing' }, flags).length, 92);
+  assert.deepEqual(worldProgress(bosses, flags), { done: 1, total: 134 });
+  assert.equal(filterWorld(bosses, { ...emptyWorldFilter, status: 'missing' }, flags).length, 133);
   assert.deepEqual(filterWorld(bosses, { ...emptyWorldFilter, status: 'done' }, flags).map(entry => entry.id), ['boss.watchdog.impalers']);
 });
 test('les liens aux objets décrivent la même acquisition et ne créent pas de nouvelles récompenses', () => {
